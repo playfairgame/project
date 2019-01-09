@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import com.qa.meschino.basepages.BasePage;
 
 public class LaunchPage extends BasePage{
-	
+	WebDriver driver;
 	public LaunchPage(WebDriver driver){
 		
-	super(driver);
+	this.driver=driver;
 		
 	}
 	
