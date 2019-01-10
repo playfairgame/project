@@ -19,7 +19,7 @@ public class LoginPage extends BasePage{
 	
 	//**********Page Objects**************
 	
-	@FindBy(id="UserName")
+	@FindBy(xpath="//input[@id='UserName']")
 	WebElement userName;
 	
 	@FindBy(id="Password")
@@ -31,11 +31,7 @@ public class LoginPage extends BasePage{
 	
 	//**************Functions*********************
 	
-	public void browseUrl(){
-		driver.get("https://www.meschinowellness.com");
-	}
 	
-
 	public LandingPage doLogin(String uName, String password){
 		
 		userName.sendKeys(uName);
