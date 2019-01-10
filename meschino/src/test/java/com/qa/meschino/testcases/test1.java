@@ -17,13 +17,12 @@ WebDriver driver;
 	@Test
 	public void t1(){
 		
-	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+	
 		
 	LoginPage lpage = PageFactory.initElements(driver, LoginPage.class);
 		lpage.browseUrl();
 		LandingPage landingpage = lpage.doLogin("Neil@peter.com", "Test@123");
 		
-		
+		landingpage.getProfile().chageProfilePic();
 	}
 }
