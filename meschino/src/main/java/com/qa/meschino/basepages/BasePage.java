@@ -28,6 +28,7 @@ public class BasePage {
 	
 	//********************Functions**********************
 	
+	//************Common Page******************
 	public ProfilePage getProfile(){
 		return profile;
 	}

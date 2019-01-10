@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22116" started-at="2019-01-10T14:55:30Z" finished-at="2019-01-10T14:55:52Z">
+  <suite name="Default suite" duration-ms="11477" started-at="2019-01-10T21:26:13Z" finished-at="2019-01-10T21:26:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22116" started-at="2019-01-10T14:55:30Z" finished-at="2019-01-10T14:55:52Z">
-      <class name="com.qa.meschino.testcases.test1">
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.test1@6d78f375]" name="startup" is-config="true" duration-ms="20120" started-at="2019-01-10T09:55:30Z" finished-at="2019-01-10T09:55:50Z">
+    <test name="Default test" duration-ms="11477" started-at="2019-01-10T21:26:13Z" finished-at="2019-01-10T21:26:24Z">
+      <class name="com.qa.meschino.testcases.verifyLogin">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@5f375618]" name="loginTest" duration-ms="11275" started-at="2019-01-10T16:26:13Z" finished-at="2019-01-10T16:26:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="t1()[pri:0, instance:com.qa.meschino.testcases.test1@6d78f375]" name="t1" duration-ms="1830" started-at="2019-01-10T09:55:50Z" finished-at="2019-01-10T09:55:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t1 -->
-      </class> <!-- com.qa.meschino.testcases.test1 -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- com.qa.meschino.testcases.verifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

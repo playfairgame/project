@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 
 public class ProfilePage {
 	
-	public WebDriver driver;
+	WebDriver driver;
+	
+	//******************Profile Page is Common for all Pages and can be accessed from all pages*****************
 	
 	//***************Constructor*******************************
 
