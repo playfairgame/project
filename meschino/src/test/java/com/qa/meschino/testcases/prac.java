@@ -5,24 +5,29 @@ import java.util.Date;
 
 import org.testng.annotations.Test;
 
+import com.qa.meschino.utils.Xls_Reader;
+
 public class prac {
 	
 	@Test
 	public void pracTest(){
 		
-		//C:\Users\aneel.bhullar\Desktop
+		Xls_Reader xls = new Xls_Reader("C:\\Users\\aneel.bhullar\\Desktop\\data.xlsx");
 		
-		Date d = new Date();
 		
-		String name = d.toString().replace(" ", "_").replace(":", "_");
-        String path= "C:\\Users\\aneel.bhullar\\Desktop\\"+name+".jpg";
-		System.out.println(path);
-        File f = new File(path);
+		System.out.println("Number of Rows "+ xls.getRowCount("Login"));
+		
+	System.out.println("Number of cols "+xls.getColumnCount("Login"));
 	
+	for(int r=2;r<=xls.getRowCount("Login");r++){
+		for(int c=0;c<xls.getColumnCount("Login");c++){
+			
+			System.out.print(xls.getCellData("Login", c, r));
+			
+		}
+		System.out.println("");
+	}
 		
-		
-		System.out.println(f.exists());
-		System.out.println("Hello");
 	}
 
 }

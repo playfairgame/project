@@ -26,7 +26,7 @@ public class verifyLogin extends BaseTest{
 	}
 	*/
 	@Test
-	public void loginTest(){
+	public void loginTest() throws InterruptedException{
 		
 		logger = extent.startTest("login");
 		
@@ -40,6 +40,7 @@ public class verifyLogin extends BaseTest{
 		PageFactory.initElements(driver, lp);
 		
 		LandingPage landing = lp.doLogin("Neil@peter.com", "Test@123");
+		Thread.sleep(5000);
 		
 		landing.takeScreenshot();
 		

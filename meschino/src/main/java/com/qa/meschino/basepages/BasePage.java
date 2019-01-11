@@ -73,8 +73,9 @@ public class BasePage {
 		// code
 		Date d = new Date();
 		String fName = d.toString().replace(" ", "_").replace(":","_")+".png";
-		
+		// Create file path with complete file name
 		String filePath=MWConstants.SCREENSHOTS_PATH+fName;
+		
 		// cast driver into TakeScreensshot interface
 		
 		TakesScreenshot srcShot = (TakesScreenshot) driver;
@@ -95,19 +96,7 @@ public class BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		/*
-		// store screenshot in that file
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		try {
-			FileUtils.copyFile(scrFile, new File(filePath));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		*/
+				
 		logger.log(LogStatus.INFO,logger.addScreenCapture(filePath));
 		
 	}
