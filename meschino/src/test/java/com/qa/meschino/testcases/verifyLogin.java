@@ -2,10 +2,14 @@ package com.qa.meschino.testcases;
 
 import java.util.Date;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.qa.meschino.basepages.BasePage;
+import com.qa.meschino.pages.LandingPage;
+import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 import com.qa.meschino.utils.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -24,14 +28,20 @@ public class verifyLogin extends BaseTest{
 	@Test
 	public void loginTest(){
 		
-		test = extent.startTest("login");
+		logger = extent.startTest("login");
 		
-		test.log(LogStatus.INFO, "Opeining test");
+		logger.log(LogStatus.INFO, "Opeining test");
 		
-		test.log(LogStatus.PASS,"Test Passed");
+		init("Chrome");
 		
+		//logger.log(LogStatus.PASS,"Test Passed");
 		
+		LoginPage lp = new LoginPage(driver, logger);
+		PageFactory.initElements(driver, lp);
 		
+		LandingPage landing = lp.doLogin("Neil@peter.com", "Test@123");
+		
+		landing.takeScreenshot();
 		
 		
 	}
@@ -39,7 +49,7 @@ public class verifyLogin extends BaseTest{
 	@AfterMethod
 	public void endTest(){
 		if(extent!=null){
-			extent.endTest(test);
+			extent.endTest(logger);
 			extent.flush();
 		}
 	}

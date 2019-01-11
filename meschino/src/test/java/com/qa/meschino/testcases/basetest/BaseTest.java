@@ -17,14 +17,14 @@ public class BaseTest {
 	public WebDriver driver;
 	
 	public ExtentReports extent = ExtentManager.getInstance();
-	public ExtentTest test;
+	public ExtentTest logger;
 	
 	public void init(String browser){
 		
 		if(browser.equalsIgnoreCase("Mozilla"))
 		{
 			System.setProperty("webdriver.geckodriver.driver", MWConstants.CHROME_DRIVER_EXE);
-			test.log(LogStatus.INFO, "Launching Browser");
+			logger.log(LogStatus.INFO, "Launching Browser");
 			 driver = new FirefoxDriver();
 			
 		}else if (browser.equalsIgnoreCase("Chrome")){
@@ -37,7 +37,7 @@ public class BaseTest {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		test.log(LogStatus.INFO, "Launching Url");
+		logger.log(LogStatus.INFO, "Launching Url");
 		driver.get(MWConstants.PROD_URL);
 		
 	}

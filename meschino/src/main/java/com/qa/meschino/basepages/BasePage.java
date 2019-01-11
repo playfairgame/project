@@ -1,8 +1,16 @@
 package com.qa.meschino.basepages;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.pages.ProfilePage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -11,7 +19,7 @@ public class BasePage {
 
 	
 	public WebDriver driver;
-	public ExtentTest test;
+	public ExtentTest logger;
 	
 	public ProfilePage profile;
 	
@@ -22,11 +30,11 @@ public class BasePage {
 	}
 	
 	//*****************Constructor**********************
-	public BasePage(WebDriver driver,ExtentTest test){
+	public BasePage(WebDriver driver,ExtentTest logger){
 		this.driver=driver;
-		this.test=test;
+		this.logger=logger;
 		
-		profile = new ProfilePage(driver, test);
+		profile = new ProfilePage(driver, logger);
 		PageFactory.initElements(driver, profile);
 		
 		//profile = PageFactory.initElements(driver, ProfilePage.class);
@@ -61,7 +69,48 @@ public class BasePage {
 		return false;
 	}
 	
+	public void takeScreenshot(){
+		// code
+		Date d = new Date();
+		String fName = d.toString().replace(" ", "_").replace(":","_")+".png";
+		
+		String filePath=MWConstants.SCREENSHOTS_PATH+fName;
+		// cast driver into TakeScreensshot interface
+		
+		TakesScreenshot srcShot = (TakesScreenshot) driver;
 	
+		// call getScreenshotAs function to create image file 
+		
+		File srcFile = srcShot.getScreenshotAs(OutputType.FILE);
+		
+		// Move image file to destination
+		
+		File destFile = new File(filePath);
+		
+		// Copy file  to destination
+		
+		try {
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*
+		// store screenshot in that file
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		try {
+			FileUtils.copyFile(scrFile, new File(filePath));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		*/
+		logger.log(LogStatus.INFO,logger.addScreenCapture(filePath));
+		
+	}
 
 	
 	

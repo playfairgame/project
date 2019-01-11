@@ -14,6 +14,9 @@ public class MWConstants {
 	// REPORT PATH
 	public static final String REPORTS_PATH =System.getProperty("user.dir")+"//Reports//";
 	
+	public static final String SCREENSHOTS_PATH =System.getProperty("user.dir")+"//ScreenShots//";
+	
+	
 	//locators
 	
 	

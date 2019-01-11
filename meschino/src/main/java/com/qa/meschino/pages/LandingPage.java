@@ -11,9 +11,9 @@ public class LandingPage extends BasePage{
 //***********Constructor*****************************
 
 
- public LandingPage(WebDriver driver,ExtentTest test){
+ public LandingPage(WebDriver driver,ExtentTest logger){
 	 
-	 super(driver, test);
+	 super(driver, logger);
  }
 
 

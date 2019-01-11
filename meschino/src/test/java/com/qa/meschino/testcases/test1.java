@@ -21,7 +21,7 @@ public class test1 extends BaseTest{
 
 @BeforeMethod
 public void startup(){
-	test = extent.startTest("Starting test case t1");
+	logger = extent.startTest("Starting test case t1");
 	init("Chrome");
 }
 	@Test
@@ -29,7 +29,7 @@ public void startup(){
 		
 		
 		
-		LoginPage lpage = new LoginPage(driver, test);
+		LoginPage lpage = new LoginPage(driver, logger);
 		
 		PageFactory.initElements(driver, lpage);
 		
@@ -37,7 +37,7 @@ public void startup(){
 		
 	//LoginPage lpage = PageFactory.initElements(driver, LoginPage.class);
 		
-		test.log(LogStatus.INFO, "Enter Login Details");
+		logger.log(LogStatus.INFO, "Enter Login Details");
 		LandingPage landingpage = lpage.doLogin("Neil@peter.com", "Test@123");
 		
 		landingpage.profile.chageProfilePic();
@@ -48,10 +48,10 @@ public void startup(){
 	@AfterMethod
 	public void quit(){
 		
-		test.log(LogStatus.INFO, "Closing Browser");
+		logger.log(LogStatus.INFO, "Closing Browser");
 		driver.quit();
 		if(extent!=null){
-		extent.endTest(test);
+		extent.endTest(logger);
 	    extent.flush();	
 		}
 	}

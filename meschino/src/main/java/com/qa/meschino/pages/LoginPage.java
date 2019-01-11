@@ -13,9 +13,9 @@ public class LoginPage extends BasePage{
 	
 	
 	//************Constructor*********************
-	public LoginPage(WebDriver driver, ExtentTest test){
+	public LoginPage(WebDriver driver, ExtentTest logger){
 		
-	super(driver, test);
+	super(driver, logger);
 		
 	}
 	
@@ -36,13 +36,13 @@ public class LoginPage extends BasePage{
 	
 	public LandingPage doLogin(String uName, String password){
 		
-		test.log(LogStatus.INFO, "Entering Login Credentails");
+		logger.log(LogStatus.INFO, "Entering Login Credentails");
 		userName.sendKeys(uName);
 		passWord.sendKeys(password);
-		test.log(LogStatus.INFO, "Entered Login Credentails");
+		logger.log(LogStatus.INFO, "Entered Login Credentails");
 		loginButton.click();
 		
-		LandingPage landingpage = new LandingPage(driver, test);
+		LandingPage landingpage = new LandingPage(driver, logger);
 		PageFactory.initElements(driver, landingpage);
 		
 		return landingpage;

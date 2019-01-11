@@ -8,23 +8,23 @@ import com.relevantcodes.extentreports.LogStatus;
 public class ProfilePage {
 	
 	WebDriver driver;
-	ExtentTest test;
+	ExtentTest logger;
 	
 	
 	//******************Profile Page is Common for all Pages and can be accessed from all pages*****************
 	
 	//***************Constructor*******************************
 
-	public ProfilePage(WebDriver driver, ExtentTest test){
+	public ProfilePage(WebDriver driver, ExtentTest logger){
 		
 		this.driver=driver;
-		this.test=test;
+		this.logger=logger;
 		
 		
 	}
 	
 	public void chageProfilePic(){
-	test.log(LogStatus.INFO, "changinf profile pic on profile page");
+		logger.log(LogStatus.INFO, "changinf profile pic on profile page");
 		System.out.println("Profile pic changed");
 	}
 	

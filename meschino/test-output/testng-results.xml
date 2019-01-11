@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13244" started-at="2019-01-11T01:21:56Z" finished-at="2019-01-11T01:22:09Z">
+  <suite name="Default suite" duration-ms="42928" started-at="2019-01-11T19:00:00Z" finished-at="2019-01-11T19:00:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13244" started-at="2019-01-11T01:21:56Z" finished-at="2019-01-11T01:22:09Z">
-      <class name="com.qa.meschino.testcases.test1">
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.test1@4f063c0a]" name="startup" is-config="true" duration-ms="11505" started-at="2019-01-10T20:21:56Z" finished-at="2019-01-10T20:22:08Z">
+    <test name="Default test" duration-ms="42928" started-at="2019-01-11T19:00:00Z" finished-at="2019-01-11T19:00:43Z">
+      <class name="com.qa.meschino.testcases.verifyLogin">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@68bbe345]" name="loginTest" duration-ms="37827" started-at="2019-01-11T14:00:00Z" finished-at="2019-01-11T14:00:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="t1()[pri:0, instance:com.qa.meschino.testcases.test1@4f063c0a]" name="t1" duration-ms="588" started-at="2019-01-10T20:22:08Z" finished-at="2019-01-10T20:22:08Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@68bbe345]" name="endTest" is-config="true" duration-ms="4811" started-at="2019-01-11T14:00:38Z" finished-at="2019-01-11T14:00:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- t1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.qa.meschino.testcases.test1@4f063c0a]" name="quit" is-config="true" duration-ms="1091" started-at="2019-01-10T20:22:08Z" finished-at="2019-01-10T20:22:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- com.qa.meschino.testcases.test1 -->
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.verifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
