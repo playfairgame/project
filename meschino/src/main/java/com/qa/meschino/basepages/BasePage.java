@@ -4,11 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.meschino.pages.ProfilePage;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class BasePage {
 
 	
 	public WebDriver driver;
+	public ExtentTest test;
 	
 	public ProfilePage profile;
 	
@@ -19,9 +22,14 @@ public class BasePage {
 	}
 	
 	//*****************Constructor**********************
-	public BasePage(WebDriver driver){
+	public BasePage(WebDriver driver,ExtentTest test){
 		this.driver=driver;
-		profile = PageFactory.initElements(driver, ProfilePage.class);
+		this.test=test;
+		
+		profile = new ProfilePage(driver, test);
+		PageFactory.initElements(driver, profile);
+		
+		//profile = PageFactory.initElements(driver, ProfilePage.class);
 		
 	}
 	
@@ -30,6 +38,8 @@ public class BasePage {
 	
 	//************Common Page******************
 	public ProfilePage getProfile(){
+		
+		
 		return profile;
 	}
 	

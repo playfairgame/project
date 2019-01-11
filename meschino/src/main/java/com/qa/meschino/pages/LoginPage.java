@@ -6,14 +6,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.meschino.basepages.BasePage;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class LoginPage extends BasePage{
 	
 	
 	//************Constructor*********************
-	public LoginPage(WebDriver driver){
+	public LoginPage(WebDriver driver, ExtentTest test){
 		
-	super(driver);
+	super(driver, test);
 		
 	}
 	
@@ -34,11 +36,16 @@ public class LoginPage extends BasePage{
 	
 	public LandingPage doLogin(String uName, String password){
 		
+		test.log(LogStatus.INFO, "Entering Login Credentails");
 		userName.sendKeys(uName);
 		passWord.sendKeys(password);
+		test.log(LogStatus.INFO, "Entered Login Credentails");
 		loginButton.click();
 		
-		return PageFactory.initElements(driver, LandingPage.class);
+		LandingPage landingpage = new LandingPage(driver, test);
+		PageFactory.initElements(driver, landingpage);
+		
+		return landingpage;
 		
 	}
 }

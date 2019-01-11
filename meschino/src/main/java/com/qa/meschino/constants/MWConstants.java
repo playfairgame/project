@@ -8,7 +8,7 @@ public class MWConstants {
 	
 
 	// URLs
-	public static final String PROD_URL = "Https://www.meschinowellness.com";
+	public static final String PROD_URL = "https://www.meschinowellness.com";
 	
 	
 	// REPORT PATH

@@ -5,6 +5,7 @@
     <classes>
       <class name="com.qa.meschino.testcases.test1">
         <methods>
+          <include name="quit"/>
           <include name="t1"/>
           <include name="startup"/>
         </methods>

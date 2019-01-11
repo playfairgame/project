@@ -2,6 +2,7 @@ package com.qa.meschino.testcases;
 
 import java.util.Date;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,18 +24,24 @@ public class verifyLogin extends BaseTest{
 	@Test
 	public void loginTest(){
 		
-		ExtentReports extent = ExtentManager.getInstance();
-		ExtentTest log = extent.startTest("login");
+		test = extent.startTest("login");
 		
-		log.log(LogStatus.INFO, "Opeining test");
+		test.log(LogStatus.INFO, "Opeining test");
 		
-		log.log(LogStatus.PASS,"Test Passed");
-		
-		extent.endTest(log);
-		extent.flush();
+		test.log(LogStatus.PASS,"Test Passed");
 		
 		
 		
+		
+		
+	}
+	
+	@AfterMethod
+	public void endTest(){
+		if(extent!=null){
+			extent.endTest(test);
+			extent.flush();
+		}
 	}
 
 }
