@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\aneel.bhullar\AppData\Local\Temp\testng-eclipse--1654524792\testng-customsuite.xml</span>
+                    <span>C:\Users\Navneet\AppData\Local\Temp\testng-eclipse-1705144194\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.meschino.testcases.prac" hash-for-method="pracTest">pracTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.meschino.testcases.prac" hash-for-method="pracTest({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener})">pracTest({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.qa.meschino.testcases.prac" hash-for-method="pracTest({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale})">pracTest({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -124,9 +129,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="pracTest">
-                  </a> <!-- pracTest -->
+                  <a name="pracTest({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener})">
+                  </a> <!-- pracTest({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener}) -->
                   <span class="method-name">pracTest</span>
+                  <span class="parameters">({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pracTest({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale})">
+                  </a> <!-- pracTest({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale}) -->
+                  <span class="method-name">pracTest</span>
+                  <span class="parameters">({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\aneel.bhullar\AppData\Local\Temp\testng-eclipse--1654524792\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Navneet\AppData\Local\Temp\testng-eclipse-1705144194\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -183,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'pracTest')
 data.setCell(0, 2, 'com.qa.meschino.testcases.prac')
-data.setCell(0, 3, 7661);
+data.setCell(0, 3, 9);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'pracTest')
+data.setCell(1, 2, 'com.qa.meschino.testcases.prac')
+data.setCell(1, 3, 3);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 12 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,8 +238,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.prac</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">pracTest</span>
+                <span class="method-name">pracTest({Name=Peter, Age =qa, Sex =Male, DOB=an, Address=Kitchener})</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pracTest({Name=Sam, Age =qa, Sex =Male, DOB=ab, Address=Yale})</span>
+                <span class="method-start">10 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
