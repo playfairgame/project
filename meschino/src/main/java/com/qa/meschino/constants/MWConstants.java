@@ -17,7 +17,11 @@ public class MWConstants {
 	public static final String SCREENSHOTS_PATH =System.getProperty("user.dir")+"//ScreenShots//";
 	
 	
-	//locators
+	//**************LOCATORS***************************
+	
+	// LoginPage
+	public static final String HEADER_LOCATOR ="//h2[contains(text(),'My Wellness Wallet')]";
+	
 	
 	
 	

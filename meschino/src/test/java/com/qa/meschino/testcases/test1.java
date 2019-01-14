@@ -22,6 +22,8 @@ public class test1 extends BaseTest{
 @BeforeMethod
 public void startup(){
 	logger = extent.startTest("Starting test case t1");
+	
+	
 	init("Chrome");
 }
 	@Test
@@ -38,9 +40,23 @@ public void startup(){
 	//LoginPage lpage = PageFactory.initElements(driver, LoginPage.class);
 		
 		logger.log(LogStatus.INFO, "Enter Login Details");
-		LandingPage landingpage = lpage.doLogin("Neil@peter.com", "Test@123");
+		Object page = lpage.doLogin("Neil@peter.com", "Test@123");
 		
-		landingpage.profile.chageProfilePic();
+		String actualResult ="";
+		
+		if(page instanceof LandingPage){
+			
+			actualResult="Success";
+			LandingPage landingpage = (LandingPage) page;
+		    	
+			landingpage.profile.chageProfilePic();
+		}
+		
+		actualResult= "Unsuccessfull";
+	//	if(actualResult.equalsIgnoreCase(arg0))
+		
+		
+		
 		//landingpage.getProfile().chageProfilePic();
 	}
 	

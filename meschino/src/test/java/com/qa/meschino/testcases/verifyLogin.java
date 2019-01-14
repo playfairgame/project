@@ -39,10 +39,14 @@ public class verifyLogin extends BaseTest{
 		LoginPage lp = new LoginPage(driver, logger);
 		PageFactory.initElements(driver, lp);
 		
-		LandingPage landing = lp.doLogin("Neil@peter.com", "Test@123");
+		Object page = lp.doLogin("Neil@peter.com", "Test@123");
 		Thread.sleep(5000);
 		
-		landing.takeScreenshot();
+		if(page instanceof LandingPage){
+			LandingPage landingpage = (LandingPage) page;
+			landingpage.takeScreenshot();
+		}
+		
 		
 		
 	}
