@@ -1,16 +1,25 @@
 package com.qa.meschino.testcases.basetest;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.utils.ExtentManager;
+import com.qa.meschino.utils.Xls_Reader;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import junit.framework.Assert;
 
 public class BaseTest {
 
@@ -18,6 +27,7 @@ public class BaseTest {
 	
 	public ExtentReports extent = ExtentManager.getInstance();
 	public ExtentTest logger;
+	public Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
 	
 	public void init(String browser){
 		
@@ -42,6 +52,45 @@ public class BaseTest {
 		
 	}
 	
+	public void reportFailure(String message){
+		
+		logger.log(LogStatus.FAIL, message);
+		takeScreenshot();
+		Assert.fail(message);
+		
+	}
+	
+	public void takeScreenshot(){
+		// code
+		Date d = new Date();
+		String fName = d.toString().replace(" ", "_").replace(":","_")+".png";
+		// Create file path with complete file name
+		String filePath=MWConstants.SCREENSHOTS_PATH+fName;
+		
+		// cast driver into TakeScreensshot interface
+		
+		TakesScreenshot srcShot = (TakesScreenshot) driver;
+	
+		// call getScreenshotAs function to create image file 
+		
+		File srcFile = srcShot.getScreenshotAs(OutputType.FILE);
+		
+		// Move image file to destination
+		
+		File destFile = new File(filePath);
+		
+		// Copy file  to destination
+		
+		try {
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		logger.log(LogStatus.INFO,logger.addScreenCapture(filePath));
+		
+	}
 	
 	
 	

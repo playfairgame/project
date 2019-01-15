@@ -1,16 +1,21 @@
 package com.qa.meschino.testcases;
 
 import java.util.Date;
+import java.util.Hashtable;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.meschino.basepages.BasePage;
 import com.qa.meschino.pages.LandingPage;
 import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
+import com.qa.meschino.utils.DataUtils;
 import com.qa.meschino.utils.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -18,37 +23,63 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class verifyLogin extends BaseTest{
 	
-	/*
+	String testCaseName="LoginTest";
+	
+
 	@BeforeMethod
 	public void startup(){
-		
-		init("Firefox");
-	}
-	*/
-	@Test
-	public void loginTest() throws InterruptedException{
-		
 		logger = extent.startTest("login");
+				
+	}
+
+	@Test(dataProvider="getData")
+	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
 		
-		logger.log(LogStatus.INFO, "Opeining test");
+		if(data.get("Runmode").equals("N")){
+			System.out.println("checking runmode");
+			logger.log(LogStatus.SKIP, "Skipping Test"+ data.get("Description"));
+			throw new SkipException("Skipping Test case  as runmode is No");
+		}
 		
-		init("Chrome");
+		logger.log(LogStatus.INFO, "Start Running test ");
+		
+		init(data.get("Browser"));
 		
 		//logger.log(LogStatus.PASS,"Test Passed");
 		
 		LoginPage lp = new LoginPage(driver, logger);
 		PageFactory.initElements(driver, lp);
 		
-		Object page = lp.doLogin("Neil@peter.com", "Test@123");
+		Object page = lp.doLogin(data.get("UserName"), data.get("Password"));
 		Thread.sleep(5000);
+		String actualResult ="";
 		
 		if(page instanceof LandingPage){
+		
+			actualResult ="Success";
+		    logger.log(LogStatus.PASS, data.get("Description"));
 			LandingPage landingpage = (LandingPage) page;
-			landingpage.takeScreenshot();
+			
+		
+		}else
+		{
+					actualResult="Unsuccessfull";
+				
+					               
+	     
+		}
+		
+		if(!actualResult.equals(data.get("Expected"))){
+			
+		logger.log(LogStatus.FAIL, data.get("Description"));
+			reportFailure(data.get("Description"));
 		}
 		
 		
-		
+	}
+	@DataProvider
+	public Object[][] getData(){
+		return DataUtils.getData(xls, testCaseName);
 	}
 	
 	@AfterMethod
@@ -57,6 +88,11 @@ public class verifyLogin extends BaseTest{
 			extent.endTest(logger);
 			extent.flush();
 		}
+		
+	}
+	@AfterTest
+	public void close(){
+		driver.quit();
 	}
 
 }

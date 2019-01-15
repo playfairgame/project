@@ -29,7 +29,7 @@ public void startup(){
 	@Test
 	public void t1(){
 		
-		
+		System.out.println(System.getProperty("user.dir"));
 		
 		LoginPage lpage = new LoginPage(driver, logger);
 		
