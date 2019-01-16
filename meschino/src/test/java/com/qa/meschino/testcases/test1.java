@@ -24,40 +24,19 @@ public void startup(){
 	logger = extent.startTest("Starting test case t1");
 	
 	
-	init("Chrome");
+	
 }
 	@Test
 	public void t1(){
-		
-		System.out.println(System.getProperty("user.dir"));
-		
-		LoginPage lpage = new LoginPage(driver, logger);
-		
-		PageFactory.initElements(driver, lpage);
-		
-	
-		
-	//LoginPage lpage = PageFactory.initElements(driver, LoginPage.class);
-		
-		logger.log(LogStatus.INFO, "Enter Login Details");
-		Object page = lpage.doLogin("Neil@peter.com", "Test@123");
-		
-		String actualResult ="";
-		
-		if(page instanceof LandingPage){
+		String testCaseName= "LoginTest";
+		String sheetName = MWConstants.DATASHEET_NAME;
+		int row=1;
+		while(!xls.getCellData(sheetName, 0, row).equals(testCaseName)){
 			
-			actualResult="Success";
-			LandingPage landingpage = (LandingPage) page;
-		    	
-			landingpage.profile.chageProfilePic();
+			
 		}
 		
-		actualResult= "Unsuccessfull";
-	//	if(actualResult.equalsIgnoreCase(arg0))
 		
-		
-		
-		//landingpage.getProfile().chageProfilePic();
 	}
 	
 	

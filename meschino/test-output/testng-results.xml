@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" total="3" passed="1">
+<testng-results skipped="2" failed="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87908" started-at="2019-01-15T21:26:50Z" finished-at="2019-01-15T21:28:18Z">
+  <suite name="Default suite" duration-ms="54714" started-at="2019-01-16T01:21:48Z" finished-at="2019-01-16T01:22:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87908" started-at="2019-01-15T21:26:50Z" finished-at="2019-01-15T21:28:18Z">
+    <test name="Default test" duration-ms="54714" started-at="2019-01-16T01:21:48Z" finished-at="2019-01-16T01:22:43Z">
       <class name="com.qa.meschino.testcases.verifyLogin">
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="startup" is-config="true" duration-ms="198" started-at="2019-01-15T16:26:51Z" finished-at="2019-01-15T16:26:51Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="startup" is-config="true" duration-ms="10568" started-at="2019-01-15T20:21:48Z" finished-at="2019-01-15T20:21:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="SKIP" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="LoginTest" duration-ms="27" started-at="2019-01-15T16:26:51Z" data-provider="getData" finished-at="2019-01-15T16:26:51Z">
+        <test-method status="SKIP" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="LoginTest" duration-ms="16" started-at="2019-01-15T20:21:58Z" data-provider="getData" finished-at="2019-01-15T20:21:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, Result=, Browser=Chrome}]]>
+                <![CDATA[{Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, Result=}]]>
               </value>
             </param>
           </params>
@@ -25,7 +25,7 @@
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.verifyLogin.LoginTest(verifyLogin.java:41)
+	at com.qa.meschino.testcases.verifyLogin.LoginTest(verifyLogin.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -56,46 +56,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="endTest" is-config="true" duration-ms="4416" started-at="2019-01-15T16:26:51Z" finished-at="2019-01-15T16:26:55Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="endTest" is-config="true" duration-ms="1438" started-at="2019-01-15T20:21:58Z" finished-at="2019-01-15T20:22:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="startup" is-config="true" duration-ms="1" started-at="2019-01-15T16:26:55Z" finished-at="2019-01-15T16:26:55Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="startup" is-config="true" duration-ms="9150" started-at="2019-01-15T20:22:00Z" finished-at="2019-01-15T20:22:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="LoginTest" duration-ms="43810" started-at="2019-01-15T16:26:55Z" data-provider="getData" finished-at="2019-01-15T16:27:39Z">
+        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="LoginTest" duration-ms="22767" started-at="2019-01-15T20:22:09Z" data-provider="getData" finished-at="2019-01-15T20:22:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, Result=, Browser=Chrome}]]>
+                <![CDATA[{Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, Result=}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="endTest" is-config="true" duration-ms="122" started-at="2019-01-15T16:27:39Z" finished-at="2019-01-15T16:27:39Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="endTest" is-config="true" duration-ms="802" started-at="2019-01-15T20:22:32Z" finished-at="2019-01-15T20:22:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="FAIL" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="LoginTest" duration-ms="37976" started-at="2019-01-15T16:27:39Z" data-provider="getData" finished-at="2019-01-15T16:28:17Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="startup" is-config="true" duration-ms="9057" started-at="2019-01-15T20:22:33Z" finished-at="2019-01-15T20:22:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="LoginTest" duration-ms="2" started-at="2019-01-15T20:22:42Z" data-provider="getData" finished-at="2019-01-15T20:22:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, Result=, Browser=Chrome}]]>
+                <![CDATA[{Password=Test@123, Runmode=N, Expected=Success, UserName=qa@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, Result=}]]>
               </value>
             </param>
           </params>
-          <exception class="junit.framework.AssertionFailedError">
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[Verify that, system does not allow to login with Invalid Credentials]]>
+              <![CDATA[Skipping Test case  as runmode is No]]>
             </message>
             <full-stacktrace>
-              <![CDATA[junit.framework.AssertionFailedError: Verify that, system does not allow to login with Invalid Credentials
-	at junit.framework.Assert.fail(Assert.java:50)
-	at com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:59)
-	at com.qa.meschino.testcases.verifyLogin.LoginTest(verifyLogin.java:75)
+              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.verifyLogin.LoginTest(verifyLogin.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -122,22 +124,14 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- junit.framework.AssertionFailedError -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="startup" is-config="true" duration-ms="0" started-at="2019-01-15T16:27:39Z" finished-at="2019-01-15T16:27:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="endTest" is-config="true" duration-ms="99" started-at="2019-01-15T16:28:17Z" finished-at="2019-01-15T16:28:17Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@36ebc363]" name="endTest" is-config="true" duration-ms="831" started-at="2019-01-15T20:22:42Z" finished-at="2019-01-15T20:22:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.qa.meschino.testcases.verifyLogin@411f53a0]" name="close" is-config="true" duration-ms="827" started-at="2019-01-15T16:28:17Z" finished-at="2019-01-15T16:28:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
       </class> <!-- com.qa.meschino.testcases.verifyLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

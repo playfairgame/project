@@ -6,7 +6,6 @@
       <class name="com.qa.meschino.testcases.verifyLogin">
         <methods>
           <include name="LoginTest" invocation-numbers="0 2"/>
-          <include name="close"/>
           <include name="endTest"/>
           <include name="startup"/>
         </methods>

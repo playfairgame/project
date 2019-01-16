@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -66,7 +67,17 @@ public class BasePage {
 	
 	public boolean isElementPresent(String locator){
 		
+		logger.log(LogStatus.INFO, "Trying to find the element "+locator);
+		int s = driver.findElements(By.xpath(locator)).size();
+		if(s>0)
+		{
+			logger.log(LogStatus.INFO, "Element found ");
+			return true;
+		}
+		else
+		{	logger.log(LogStatus.INFO, "Element not found ");
 		return false;
+	}
 	}
 	
 	public void takeScreenshot(){

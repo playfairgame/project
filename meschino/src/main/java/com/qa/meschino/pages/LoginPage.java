@@ -45,7 +45,8 @@ public class LoginPage extends BasePage{
 		loginButton.click();
 		
 		Boolean result;
-		if (driver.findElements(By.xpath(MWConstants.HEADER_LOCATOR)).size()>0){
+		if(isElementPresent(MWConstants.HEADER_LOCATOR))
+		{
 			
 			result = true;
 		}
