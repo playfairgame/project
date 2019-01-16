@@ -1,4 +1,4 @@
-package com.qa.meschino.testcases;
+package com.qa.meschino.testcases.AsthmaTracker;
 
 
 
@@ -28,13 +28,16 @@ public void startup(){
 }
 	@Test
 	public void t1(){
-		String testCaseName= "LoginTest";
-		String sheetName = MWConstants.DATASHEET_NAME;
-		int row=1;
-		while(!xls.getCellData(sheetName, 0, row).equals(testCaseName)){
+		
+		init("Chrome");
+		
+		
+		LoginPage lp = new LoginPage(driver, logger);
+PageFactory.initElements(driver, lp);
+
+lp.lo("aneel");
 			
-			
-		}
+		
 		
 		
 	}
@@ -43,8 +46,7 @@ public void startup(){
 	@AfterMethod
 	public void quit(){
 		
-		logger.log(LogStatus.INFO, "Closing Browser");
-		driver.quit();
+		
 		if(extent!=null){
 		extent.endTest(logger);
 	    extent.flush();	

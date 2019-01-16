@@ -9,7 +9,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.pages.ProfilePage;
@@ -112,6 +115,19 @@ public class BasePage {
 		
 	}
 
+	public WebElement findAndWait(WebElement e, int sec){
+		
+		try{
+		WebDriverWait wdw = new WebDriverWait(driver, sec);
+		wdw.until(ExpectedConditions.visibilityOf(e));
+		if(e.isDisplayed())
+			return e;
+				}
+		catch(Throwable t){
+			logger.log(LogStatus.ERROR, t);
+		}
+		return e;
+	}
 	
 	
 	

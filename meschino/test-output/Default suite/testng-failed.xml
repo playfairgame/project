@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.verifyLogin">
+      <class name="com.qa.meschino.testcases.test1">
         <methods>
-          <include name="LoginTest" invocation-numbers="0 2"/>
-          <include name="endTest"/>
+          <include name="quit"/>
+          <include name="t1"/>
           <include name="startup"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.verifyLogin -->
+      </class> <!-- com.qa.meschino.testcases.test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

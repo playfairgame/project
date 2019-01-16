@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name = "TestNg datadriver Suite" >
+
+ <!--  Suite name = "Suite Name" -->>
+
+ <suit-files>
+    
+      
+      <suite-file path ="LoginSuit.xml"/>
+      <suite-file path ="AsthmaTrackerSuit.xml"/>
+ <!--   <suite-file path ="Hra_MaleSuit.xml"/> -->   
+  </suit-files>
+
+
+</suite> <!-- Suite -->

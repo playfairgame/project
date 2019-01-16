@@ -1,4 +1,4 @@
-package com.qa.meschino.testcases;
+package com.qa.meschino.testcases.Login;
 
 import java.util.Date;
 import java.util.Hashtable;

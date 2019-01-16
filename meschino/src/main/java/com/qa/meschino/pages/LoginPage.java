@@ -35,7 +35,11 @@ public class LoginPage extends BasePage{
 	
 	//**************Functions*********************
 	
-	
+	public void lo(String a){
+		findAndWait(userName, 10).sendKeys(a);
+		
+		
+	}
 	public Object doLogin(String uName, String password){
 		
 		logger.log(LogStatus.INFO, "Entering Login Credentails");

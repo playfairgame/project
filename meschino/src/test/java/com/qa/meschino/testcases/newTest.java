@@ -17,6 +17,7 @@ public class newTest extends BaseTest{
 		System.out.println("name is  "+ data.get("Name"));
 		
 	
+		
 	}
 
 	

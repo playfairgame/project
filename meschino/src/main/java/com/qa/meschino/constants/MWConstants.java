@@ -19,13 +19,14 @@ public class MWConstants {
 	public static final String DATASHEET_PATH = System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\testdata\\data.xlsx";
 	
 	public static final String DATASHEET_NAME = "Test";
-	
+	public static final String SUITE_SHEET_NAME = "Suits";
 	
 	
 	//**************LOCATORS***************************
 	
 	// LoginPage
 	public static final String HEADER_LOCATOR ="//h2[contains(text(),'My Wellness Wallet')]";
+	
 	
 	
 	

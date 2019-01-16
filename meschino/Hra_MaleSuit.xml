@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="com.qa.meschino.testcases.prac"/>
+      <class name="com.qa.meschino.testcases.Login.verifyLogin"/>
+      <class name="com.qa.meschino.testcases.test1"/>
+      <class name="com.qa.meschino.testcases.newTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

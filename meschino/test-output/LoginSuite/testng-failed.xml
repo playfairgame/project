@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LoginSuite]">
+  <test name="Login(failed)">
+    <classes>
+      <class name="com.qa.meschino.testcases.Login.verifyLogin">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="run"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.Login.verifyLogin -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [LoginSuite] -->
