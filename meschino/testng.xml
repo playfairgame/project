@@ -5,8 +5,13 @@
 
  <!--  Suite name = "Suite Name" -->>
 
+  <listeners>
+ <listener class-name= "com.qa.meschino.extentReportListener.Listeners" />
+ 
+
+ </listeners>
  <suit-files>
-    
+   
       
       <suite-file path ="LoginSuite.xml"/>
       <suite-file path ="AsthmaTrackerSuit.xml"/>

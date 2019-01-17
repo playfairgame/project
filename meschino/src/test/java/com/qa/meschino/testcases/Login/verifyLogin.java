@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Hashtable;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -22,7 +23,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class verifyLogin extends BaseTest{
+public class verifyLogin extends BasePage{
 	
 	String testCaseName="LoginTest";
 	
@@ -30,22 +31,22 @@ public class verifyLogin extends BaseTest{
 	@BeforeMethod
 	public void startup(){
 		logger = extent.startTest("VerifyLogin");
-		init("Chrome");	
+			
 	}
 
 	@Test(dataProvider="getData")
 	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
+		logger.log(LogStatus.INFO, data.get("Description"));
+		
 		
 		if(data.get("Runmode").equals("N")){
-			System.out.println("checking runmode");
-			logger.log(LogStatus.SKIP,  data.get("Description"));
+			
+			logger.log(LogStatus.SKIP, "Test Case Skipped");
 			throw new SkipException("Skipping Test case  as runmode is No");
+			
 		}
 		
-		logger.log(LogStatus.INFO, "Start Running test ");
-		
-		
-		
+		init("Chrome");
 		//logger.log(LogStatus.PASS,"Test Passed");
 		
 		LoginPage lp = new LoginPage(driver, logger);
@@ -58,7 +59,7 @@ public class verifyLogin extends BaseTest{
 		if(page instanceof LandingPage){
 		
 			actualResult ="Success";
-		    logger.log(LogStatus.PASS, data.get("Description"));
+		 //   logger.log(LogStatus.PASS, data.get("Description"));
 		//	LandingPage landingpage = (LandingPage) page;
 			
 		
@@ -70,12 +71,15 @@ public class verifyLogin extends BaseTest{
 		
 		if(!actualResult.equals(data.get("Expected"))){
 			
-		//logger.log(LogStatus.FAIL, data.get("Description"));
+			
+			logger.log(LogStatus.FAIL, "Test case failed");
 			reportFailure(data.get("Description"));
-		}else
+		}
+		
+		
 		{
 			
-			logger.log(LogStatus.PASS, data.get("Description"));
+			logger.log(LogStatus.PASS, "Test case Passed");
 			
 		}
 		
@@ -85,10 +89,13 @@ public class verifyLogin extends BaseTest{
 	public Object[][] getData(){
 		return DataUtils.getData(xls, testCaseName);
 	}
-	
+/*	
 	@AfterMethod
-	public void endTest(){
+	public void endTest(ITestResult result ){
 		if(extent!=null){
+			if(result.getStatus()==ITestResult.FAILURE)
+				
+				logger.log(LogStatus.FAIL, result.getThrowable());
 			extent.endTest(logger);
 			extent.flush();
 			driver.quit();
@@ -98,6 +105,6 @@ public class verifyLogin extends BaseTest{
 		
 	}
 	
-	
+	*/
 
 }

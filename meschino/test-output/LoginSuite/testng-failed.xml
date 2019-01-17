@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [LoginSuite]">
+  <listeners>
+    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
+  </listeners>
   <test name="Login(failed)">
     <classes>
       <class name="com.qa.meschino.testcases.Login.verifyLogin">
         <methods>
-          <include name="LoginTest" invocation-numbers="2"/>
-          <include name="closeSuite"/>
-          <include name="endTest"/>
           <include name="run"/>
+          <include name="endTest"/>
+          <include name="LoginTest" invocation-numbers="0 1"/>
           <include name="startup"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.Login.verifyLogin -->

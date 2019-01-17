@@ -14,7 +14,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -118,7 +120,7 @@ public class BaseTest {
 			if(xls.getCellData(sheetName, 0, r).equalsIgnoreCase(suiteName)){
 				
 				if(xls.getCellData(sheetName, 1, r).equalsIgnoreCase("N")){
-				//	logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
+					//logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
 					throw new SkipException("run mode of the suite is NO");
 				}
 			}
@@ -126,7 +128,7 @@ public class BaseTest {
 		
 	}
 
-	 
+	
 	@AfterSuite
 	public void closeSuite(){
 	

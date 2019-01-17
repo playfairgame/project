@@ -43,10 +43,15 @@ public class LoginPage extends BasePage{
 	public Object doLogin(String uName, String password){
 		
 		logger.log(LogStatus.INFO, "Entering Login Credentails");
-		userName.sendKeys(uName);
-		passWord.sendKeys(password);
+		findAndWait(userName, 10).sendKeys(uName);
+	//	userName.sendKeys(uName);
+		
+		findAndWait(passWord,10).sendKeys(password);
+	//	passWord.sendKeys(password);
+		
 		logger.log(LogStatus.INFO, "Entered Login Credentails");
-		loginButton.click();
+		findAndWait(loginButton,10).click();
+	//	loginButton.click();
 		
 		Boolean result;
 		if(isElementPresent(MWConstants.HEADER_LOCATOR))

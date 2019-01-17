@@ -3,6 +3,7 @@ package com.qa.meschino.basepages;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -10,12 +11,23 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeSuite;
 
 import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.pages.ProfilePage;
+import com.qa.meschino.utils.ExtentManager;
+import com.qa.meschino.utils.Xls_Reader;
+import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -130,5 +142,91 @@ public class BasePage {
 	}
 	
 	
+	//*****************************************Base Test Class*************************************************************
+	
+	
+	
+	
+	
+	public ExtentReports extent = ExtentManager.getInstance();
+//	public ExtentTest logger;
+	public Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
+	
+	
+	// intialize browsers
+	
+	public void init(String browser){
+		
+		if(browser.equalsIgnoreCase("Mozilla"))
+		{
+			System.setProperty("webdriver.geckodriver.driver", MWConstants.CHROME_DRIVER_EXE);
+			logger.log(LogStatus.INFO, "Launching Browser");
+			 driver = new FirefoxDriver();
+			
+		}else if (browser.equalsIgnoreCase("Chrome")){
+			
+			System.setProperty("webdriver.chrome.driver", MWConstants.FIREFOX_DRIVER_EXE);
+			 driver = new ChromeDriver();
+		}
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		logger.log(LogStatus.INFO, "Launching Url");
+		driver.get(MWConstants.PROD_URL);
+		
+	}
+	
+	public void reportFailure(String message){
+		
+		logger.log(LogStatus.FAIL, message);
+		takeScreenshot();
+		Assert.fail(message);
+		
+	}
+	
+	public void sendemail(){
+		
+		System.out.println("sending email");
+	}
+	
+	@BeforeSuite
+	public void run(ITestContext ctx){
+		
+		
+		String sheetName = MWConstants.SUITE_SHEET_NAME;
+		
+		String suiteName = ctx.getSuite().getName();
+		int rows = xls.getRowCount(sheetName);
+		
+		for(int r=2; r<=rows;r++){
+			
+			if(xls.getCellData(sheetName, 0, r).equalsIgnoreCase(suiteName)){
+				
+				if(xls.getCellData(sheetName, 1, r).equalsIgnoreCase("N")){
+					//logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
+					throw new SkipException("run mode of the suite is NO");
+				}
+			}
+		}
+		
+		
+		}
+	
+	@AfterMethod
+	public void endTest(ITestResult result ){
+		if(extent!=null){
+			if(result.getStatus()==ITestResult.FAILURE)
+				
+				logger.log(LogStatus.FAIL, result.getThrowable());
+			extent.endTest(logger);
+			extent.flush();
+			driver.quit();
+			
+		}
+		
+		
+	}
 	
 }
