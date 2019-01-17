@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">3 suites</span>
+      <span class="top-banner-font-1">3 suites, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-LoginSuite">
-              <span class="suite-name border-skipped">LoginSuite</span>
+              <span class="suite-name border-failed">LoginSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-LoginSuite">
-                    <span>P:\git\project\meschino\LoginSuit.xml</span>
+                    <span>C:\Users\Navneet\git\project\meschino\LoginSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,31 +90,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,  3 skipped,  </span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-LoginSuite" class="hide-methods skipped suite-LoginSuite"> (hide)</a> <!-- hide-methods skipped suite-LoginSuite -->
-                      <a href="#" panel-name="suite-LoginSuite" class="show-methods skipped suite-LoginSuite"> (show)</a> <!-- show-methods skipped suite-LoginSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-LoginSuite" class="hide-methods failed suite-LoginSuite"> (hide)</a> <!-- hide-methods failed suite-LoginSuite -->
+                      <a href="#" panel-name="suite-LoginSuite" class="show-methods failed suite-LoginSuite"> (show)</a> <!-- show-methods failed suite-LoginSuite -->
                     </span>
-                    <div class="method-list-content skipped suite-LoginSuite">
+                    <div class="method-list-content failed suite-LoginSuite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-LoginSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-LoginSuite" class="hide-methods passed suite-LoginSuite"> (hide)</a> <!-- hide-methods passed suite-LoginSuite -->
+                      <a href="#" panel-name="suite-LoginSuite" class="show-methods passed suite-LoginSuite"> (show)</a> <!-- show-methods passed suite-LoginSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-LoginSuite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-LoginSuite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-LoginSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -137,7 +146,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-AsthmaTrackerSuite">
-                    <span>P:\git\project\meschino\AsthmaTrackerSuit.xml</span>
+                    <span>C:\Users\Navneet\git\project\meschino\AsthmaTrackerSuit.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -205,9 +214,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-LoginSuite" class="panel LoginSuite">
-          <div class="suite-LoginSuite-class-skipped">
+          <div class="suite-LoginSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.qa.meschino.testcases.Login.verifyLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -216,27 +225,69 @@
                   <a name="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)">
                   </a> <!-- LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...) -->
                   <span class="method-name">LoginTest</span>
-                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system does not allow to login with Invalid Credentials})</span>
+                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, TCID=TC03})</span>
+                  <div class="stack-trace"><b>"java.lang.AssertionError: Verify that, system does not allow to login with Invalid Credentials
+	at com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:68)
+	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:74)
+... Removed 26 stack frames<br/> java.lang.AssertionError: Verify that, system does not allow to login with Invalid Credentials
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:68)
+	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+"</b><br>org.testng.Assert.fail(Assert.java:94)<br>com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:68)<br>com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:74)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">
-                  </a> <!-- LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...) -->
-                  <span class="method-name">LoginTest</span>
-                  <span class="parameters">({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-LoginSuite-class-failed -->
+          <div class="suite-LoginSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.meschino.testcases.Login.verifyLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)">
                   </a> <!-- LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...) -->
                   <span class="method-name">LoginTest</span>
-                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials})</span>
+                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, TCID=TC02})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">
+                  </a> <!-- LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC01})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-LoginSuite-class-skipped -->
+          </div> <!-- suite-LoginSuite-class-passed -->
         </div> <!-- panel LoginSuite -->
         <div panel-name="suite-AsthmaTrackerSuite" class="panel AsthmaTrackerSuite">
           <div class="suite-AsthmaTrackerSuite-class-skipped">
@@ -259,7 +310,7 @@
         </div> <!-- panel TestNg_datadriver_Suite -->
         <div panel-name="test-xml-LoginSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">P:\git\project\meschino\LoginSuit.xml</span>
+            <span class="header-content">C:\Users\Navneet\git\project\meschino\LoginSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -277,7 +328,7 @@
         </div> <!-- panel -->
         <div panel-name="test-xml-AsthmaTrackerSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">P:\git\project\meschino\AsthmaTrackerSuit.xml</span>
+            <span class="header-content">C:\Users\Navneet\git\project\meschino\AsthmaTrackerSuit.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -295,7 +346,7 @@
         </div> <!-- panel -->
         <div panel-name="test-xml-TestNg_datadriver_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">P:\git\project\meschino\testng.xml</span>
+            <span class="header-content">C:\Users\Navneet\git\project\meschino\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -303,7 +354,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;TestNg datadriver Suite&quot;&gt;
   &lt;suite-files&gt;
-    &lt;suite-file path=&quot;LoginSuit.xml&quot;/&gt;
+    &lt;suite-file path=&quot;LoginSuite.xml&quot;/&gt;
     &lt;suite-file path=&quot;AsthmaTrackerSuit.xml&quot;/&gt;
   &lt;/suite-files&gt;
 &lt;/suite&gt; &lt;!-- TestNg datadriver Suite --&gt;
@@ -382,20 +433,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'com.qa.meschino.testcases.Login.verifyLogin')
-data.setCell(0, 3, 4);
+data.setCell(0, 3, 23044);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LoginTest')
 data.setCell(1, 2, 'com.qa.meschino.testcases.Login.verifyLogin')
-data.setCell(1, 3, 3);
+data.setCell(1, 3, 22581);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'LoginTest')
 data.setCell(2, 2, 'com.qa.meschino.testcases.Login.verifyLogin')
-data.setCell(2, 3, 1);
+data.setCell(2, 3, 8394);
 window.suiteTableData['LoginSuite']= { tableData: data, tableDiv: 'times-div-LoginSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 ms</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-LoginSuite">
               </div> <!-- times-div-LoginSuite -->
             </div> <!-- times-div -->
@@ -504,35 +555,61 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
+                <span class="method-name">run(org.testng.TestRunner@41c07648)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">29 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
+                <span class="method-start">9782 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">18181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">19286 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">731 ms</span>
+                <span class="method-start">28316 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">50899 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">51809 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)</span>
-                <span class="method-start">744 ms</span>
+                <span class="method-start">61395 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">84444 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeSuite</span>
+                <span class="method-start">85325 ms</span>
+              </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
-                <span class="method-start">1464 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@70e0accd)</span>
+                <span class="method-start">85331 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">1488 ms</span>
+                <span class="method-start">85340 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -544,35 +621,61 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
+                <span class="method-name">run(org.testng.TestRunner@41c07648)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">29 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
+                <span class="method-start">9782 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">18181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">19286 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">731 ms</span>
+                <span class="method-start">28316 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">50899 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">51809 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)</span>
-                <span class="method-start">744 ms</span>
+                <span class="method-start">61395 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">84444 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeSuite</span>
+                <span class="method-start">85325 ms</span>
+              </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
-                <span class="method-start">1464 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@70e0accd)</span>
+                <span class="method-start">85331 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">1488 ms</span>
+                <span class="method-start">85340 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -584,35 +687,61 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
+                <span class="method-name">run(org.testng.TestRunner@41c07648)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">29 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
+                <span class="method-start">9782 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">18181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">19286 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">731 ms</span>
+                <span class="method-start">28316 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">50899 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startup</span>
+                <span class="method-start">51809 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=qa@x.com, Description=Verify that, system ...)</span>
-                <span class="method-start">744 ms</span>
+                <span class="method-start">61395 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endTest</span>
+                <span class="method-start">84444 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeSuite</span>
+                <span class="method-start">85325 ms</span>
+              </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">run</span>
-                <span class="method-start">1464 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@70e0accd)</span>
+                <span class="method-start">85331 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">1488 ms</span>
+                <span class="method-start">85340 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

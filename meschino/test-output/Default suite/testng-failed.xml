@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.test1">
+      <class name="com.qa.meschino.testcases.onetest">
         <methods>
-          <include name="quit"/>
-          <include name="t1"/>
-          <include name="startup"/>
+          <include name="te"/>
+          <include name="run"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.test1 -->
+      </class> <!-- com.qa.meschino.testcases.onetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

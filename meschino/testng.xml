@@ -8,7 +8,7 @@
  <suit-files>
     
       
-      <suite-file path ="LoginSuit.xml"/>
+      <suite-file path ="LoginSuite.xml"/>
       <suite-file path ="AsthmaTrackerSuit.xml"/>
  <!--   <suite-file path ="Hra_MaleSuit.xml"/> -->   
   </suit-files>

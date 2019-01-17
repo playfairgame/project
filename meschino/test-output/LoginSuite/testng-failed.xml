@@ -5,8 +5,11 @@
     <classes>
       <class name="com.qa.meschino.testcases.Login.verifyLogin">
         <methods>
-          <include name="LoginTest"/>
+          <include name="LoginTest" invocation-numbers="2"/>
+          <include name="closeSuite"/>
+          <include name="endTest"/>
           <include name="run"/>
+          <include name="startup"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.Login.verifyLogin -->
     </classes>

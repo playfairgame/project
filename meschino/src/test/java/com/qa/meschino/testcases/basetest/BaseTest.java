@@ -13,7 +13,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.SkipException;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.qa.meschino.constants.MWConstants;
@@ -103,41 +105,33 @@ public class BaseTest {
 	
 	// Before suits to check the runmode of suite
 	@BeforeSuite
-	public void run(){
+	public void run(ITestContext ctx){
 		
-		Hashtable<String,String> ta = suiteRunmode();
-		if(!ta.get("Suite Name").equalsIgnoreCase("Y")){
-			System.out.println("Hello skippin");
-			//throw new SkipException("Skipping suit");
+		
+		String sheetName = MWConstants.SUITE_SHEET_NAME;
+		
+		String suiteName = ctx.getSuite().getName();
+		int rows = xls.getRowCount(sheetName);
+		
+		for(int r=2; r<=rows;r++){
+			
+			if(xls.getCellData(sheetName, 0, r).equalsIgnoreCase(suiteName)){
+				
+				if(xls.getCellData(sheetName, 1, r).equalsIgnoreCase("N")){
+				//	logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
+					throw new SkipException("run mode of the suite is NO");
+				}
+			}
 		}
 		
 	}
 
-	 public Hashtable<String, String> suiteRunmode(){
-				String sheetName = MWConstants.SUITE_SHEET_NAME; 
-		 int rows = xls.getRowCount(sheetName);
-		 
-		 // Object[][] data = new Object[rows-1][0];
-		Hashtable<String, String> table = null;
-		int rNum=0;  
-		for(int r=2;r<rows;r++){
-			  table = new Hashtable<String, String>();
-			  for(int c=0;c<2;c++){
-				
-				  String key = xls.getCellData(sheetName, "Suite Name", r);
-				  String value = xls.getCellData(sheetName, "Runmode", r);
-				  
-				  table.put(key,value);
-				
-			  }
-			//  data[rNum][0] =table;
-			  rNum++;
-		  }
-		return table;
+	 
+	@AfterSuite
+	public void closeSuite(){
+	
+	
 	}
-	
-	
-	
 	
 	
 }

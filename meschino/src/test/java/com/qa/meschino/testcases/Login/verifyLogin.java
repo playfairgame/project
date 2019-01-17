@@ -74,7 +74,7 @@ public class verifyLogin extends BaseTest{
 			reportFailure(data.get("Description"));
 		}else
 		{
-			System.out.println("passed for 2nd");
+			
 			logger.log(LogStatus.PASS, data.get("Description"));
 			
 		}
@@ -88,13 +88,13 @@ public class verifyLogin extends BaseTest{
 	
 	@AfterMethod
 	public void endTest(){
-		
 		if(extent!=null){
 			extent.endTest(logger);
 			extent.flush();
 			driver.quit();
 			
 		}
+		
 		
 	}
 	
