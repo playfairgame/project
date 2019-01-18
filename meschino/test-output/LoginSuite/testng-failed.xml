@@ -8,9 +8,9 @@
     <classes>
       <class name="com.qa.meschino.testcases.Login.verifyLogin">
         <methods>
+          <include name="LoginTest" invocation-numbers="0"/>
           <include name="run"/>
           <include name="endTest"/>
-          <include name="LoginTest" invocation-numbers="0 1"/>
           <include name="startup"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.Login.verifyLogin -->

@@ -20,7 +20,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+//import com.aventstack.extentreports.ExtentReports;
+//import com.aventstack.extentreports.ExtentTest;
+//import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.qa.meschino.constants.MWConstants;
+import com.qa.meschino.extentReportListener.Listeners;
 import com.qa.meschino.utils.ExtentManager;
 import com.qa.meschino.utils.Xls_Reader;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -33,11 +37,13 @@ public class BaseTest {
 
 	public WebDriver driver;
 	
+	 
 	public ExtentReports extent = ExtentManager.getInstance();
+	
 	public ExtentTest logger;
 	public Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
-	
-	
+	//public ExtentHtmlReporter r;
+	public String mName;
 	// intialize browsers
 	
 	public void init(String browser){
@@ -65,7 +71,7 @@ public class BaseTest {
 	
 	public void reportFailure(String message){
 		
-		logger.log(LogStatus.FAIL, message);
+		//logger.log(LogStatus.FAIL, message);
 		takeScreenshot();
 		Assert.fail(message);
 		
@@ -129,11 +135,29 @@ public class BaseTest {
 	}
 
 	
-	@AfterSuite
-	public void closeSuite(){
-	
-	
+	@AfterMethod
+	public void endTest(ITestResult result ){
+		if(extent!=null){
+			
+			if(result.getStatus()==ITestResult.FAILURE){
+				mName = Listeners.getMethodName(result);
+				logger.log(LogStatus.FAIL, mName+ " Test case failed " +result.getThrowable());
+			}else if (result.getStatus()== ITestResult.SKIP){
+				mName = Listeners.getMethodName(result);
+				logger.log(LogStatus.SKIP, mName+ " Test case Skipped "+ result.getThrowable());
+			}else{
+				mName = Listeners.getMethodName(result);
+			logger.log(LogStatus.PASS, mName+ " Test case Passed ");
+			}
+			
+			extent.endTest(logger);
+			extent.flush();
+			if(driver!=null){
+			driver.quit();
+			}
+		}
+		
+		
 	}
-	
 	
 }

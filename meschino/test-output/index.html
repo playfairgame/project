@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-LoginSuite">
-              <span class="suite-name border-passed">LoginSuite</span>
+              <span class="suite-name border-skipped">LoginSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-LoginSuite" class="hide-methods skipped suite-LoginSuite"> (hide)</a> <!-- hide-methods skipped suite-LoginSuite -->
+                      <a href="#" panel-name="suite-LoginSuite" class="show-methods skipped suite-LoginSuite"> (show)</a> <!-- show-methods skipped suite-LoginSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-LoginSuite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)">LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-LoginSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,11 +113,6 @@
                       <a href="#" panel-name="suite-LoginSuite" class="show-methods passed suite-LoginSuite"> (show)</a> <!-- show-methods passed suite-LoginSuite -->
                     </span>
                     <div class="method-list-content passed suite-LoginSuite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-LoginSuite" title="com.qa.meschino.testcases.Login.verifyLogin" hash-for-method="LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</a> <!-- method navigator-link -->
@@ -200,20 +209,59 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-LoginSuite" class="panel LoginSuite">
+          <div class="suite-LoginSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.meschino.testcases.Login.verifyLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)">
+                  </a> <!-- LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC01})</span>
+                  <div class="stack-trace"><b>"org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:45)
+... Removed 25 stack frames<br/> org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+"</b><br>com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:45)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-LoginSuite-class-skipped -->
           <div class="suite-LoginSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.qa.meschino.testcases.Login.verifyLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)">
-                  </a> <!-- LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...) -->
-                  <span class="method-name">LoginTest</span>
-                  <span class="parameters">({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC01})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)">
@@ -253,9 +301,6 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;LoginSuite&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.qa.meschino.extentReportListener.Listeners&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test name=&quot;Login&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.meschino.testcases.Login.verifyLogin&quot;/&gt;
@@ -274,9 +319,6 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;AsthmaTrackerSuite&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.qa.meschino.extentReportListener.Listeners&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.meschino.testcases.AsthmaTracker.test1&quot;/&gt;
@@ -378,16 +420,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginTest')
 data.setCell(0, 2, 'com.qa.meschino.testcases.Login.verifyLogin')
-data.setCell(0, 3, 34474);
+data.setCell(0, 3, 50971);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LoginTest')
 data.setCell(1, 2, 'com.qa.meschino.testcases.Login.verifyLogin')
-data.setCell(1, 3, 29411);
+data.setCell(1, 3, 20);
 window.suiteTableData['LoginSuite']= { tableData: data, tableDiv: 'times-div-LoginSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 50 seconds</span>
               <div id="times-div-LoginSuite">
               </div> <!-- times-div-LoginSuite -->
             </div> <!-- times-div -->
@@ -411,12 +453,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 't1')
 data.setCell(0, 2, 'com.qa.meschino.testcases.AsthmaTracker.test1')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 5);
 window.suiteTableData['AsthmaTrackerSuite']= { tableData: data, tableDiv: 'times-div-AsthmaTrackerSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
+              <span class="suite-total-time">Total running time: 5 ms</span>
               <div id="times-div-AsthmaTrackerSuite">
               </div> <!-- times-div-AsthmaTrackerSuite -->
             </div> <!-- times-div -->
@@ -496,43 +538,43 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@63fd4873)</span>
+                <span class="method-name">run(org.testng.TestRunner@3a4e343)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">490 ms</span>
+                <span class="method-start">766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">569 ms</span>
+                <span class="method-name">LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)</span>
+                <span class="method-start">881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">29986 ms</span>
+                <span class="method-name">endTest([TestResult name=LoginTest status=SKIP method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, inst...)</span>
+                <span class="method-start">903 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6346 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">69449 ms</span>
+                <span class="method-start">57320 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@6bc28a83)</span>
-                <span class="method-start">70671 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@5f2606b)</span>
+                <span class="method-start">59188 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">70681 ms</span>
+                <span class="method-start">59198 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -544,43 +586,43 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@63fd4873)</span>
+                <span class="method-name">run(org.testng.TestRunner@3a4e343)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">490 ms</span>
+                <span class="method-start">766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">569 ms</span>
+                <span class="method-name">LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)</span>
+                <span class="method-start">881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">29986 ms</span>
+                <span class="method-name">endTest([TestResult name=LoginTest status=SKIP method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, inst...)</span>
+                <span class="method-start">903 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6346 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">69449 ms</span>
+                <span class="method-start">57320 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@6bc28a83)</span>
-                <span class="method-start">70671 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@5f2606b)</span>
+                <span class="method-start">59188 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">70681 ms</span>
+                <span class="method-start">59198 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -592,43 +634,43 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.Login.verifyLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@63fd4873)</span>
+                <span class="method-name">run(org.testng.TestRunner@3a4e343)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">490 ms</span>
+                <span class="method-start">766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, s...)</span>
-                <span class="method-start">569 ms</span>
+                <span class="method-name">LoginTest({Password=Test@12, Runmode=N, Expected=Success, UserName=neil@peter.com, Description=Verify that, sy...)</span>
+                <span class="method-start">881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">29986 ms</span>
+                <span class="method-name">endTest([TestResult name=LoginTest status=SKIP method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, inst...)</span>
+                <span class="method-start">903 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startup</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6346 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Password=Test@123, Runmode=Y, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that...)</span>
-                <span class="method-start">34974 ms</span>
+                <span class="method-start">6347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endTest([TestResult name=LoginTest status=SUCCESS method=verifyLogin.LoginTest(java.util.Hashtable)[pri:0, i...)</span>
-                <span class="method-start">69449 ms</span>
+                <span class="method-start">57320 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.meschino.testcases.AsthmaTracker.test1</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">run(org.testng.TestRunner@6bc28a83)</span>
-                <span class="method-start">70671 ms</span>
+                <span class="method-name">run(org.testng.TestRunner@5f2606b)</span>
+                <span class="method-start">59188 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">t1</span>
-                <span class="method-start">70681 ms</span>
+                <span class="method-start">59198 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -23,7 +23,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class verifyLogin extends BasePage{
+public class verifyLogin extends BaseTest{
 	
 	String testCaseName="LoginTest";
 	
@@ -41,7 +41,7 @@ public class verifyLogin extends BasePage{
 		
 		if(data.get("Runmode").equals("N")){
 			
-			logger.log(LogStatus.SKIP, "Test Case Skipped");
+			//logger.log(LogStatus.SKIP, "Test Case Skipped");
 			throw new SkipException("Skipping Test case  as runmode is No");
 			
 		}
@@ -72,14 +72,14 @@ public class verifyLogin extends BasePage{
 		if(!actualResult.equals(data.get("Expected"))){
 			
 			
-			logger.log(LogStatus.FAIL, "Test case failed");
+			//logger.log(LogStatus.FAIL, "Test case failed");
 			reportFailure(data.get("Description"));
 		}
 		
 		
 		{
 			
-			logger.log(LogStatus.PASS, "Test case Passed");
+			//logger.log(LogStatus.PASS, "Test case Passed");
 			
 		}
 		

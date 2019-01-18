@@ -11,20 +11,26 @@ import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
 import com.qa.meschino.basepages.BasePage;
+import com.qa.meschino.testcases.basetest.BaseTest;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class Listeners extends BasePage implements ITestResult, ITestListener, IExecutionListener {  
+public class Listeners extends BaseTest implements ITestResult, ITestListener, IExecutionListener {  
 
 //extends TestListenerAdapter{
 
-	
+	public static String getMethodName(ITestResult result){
+		
+		return result.getMethod().getConstructorOrMethod().getName();
+		
+		
+	}
 	
 
 	public void onExecutionFinish() {
 		// TODO Auto-generated method stub
 		
-		sendemail();
+		//sendemail();
 		
 	}
 
@@ -41,6 +47,8 @@ public class Listeners extends BasePage implements ITestResult, ITestListener, I
 	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
 		
+		//logger = extent.startTest(arg0.getSuite().getName());
+		//logger.log(LogStatus.INFO, "Starting suite");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {

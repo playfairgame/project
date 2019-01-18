@@ -145,7 +145,7 @@ public class BasePage {
 	//*****************************************Base Test Class*************************************************************
 	
 	
-	
+	/*
 	
 	
 	public ExtentReports extent = ExtentManager.getInstance();
@@ -213,6 +213,7 @@ public class BasePage {
 		
 		
 		}
+		
 	
 	@AfterMethod
 	public void endTest(ITestResult result ){
@@ -228,5 +229,5 @@ public class BasePage {
 		
 		
 	}
-	
+	*/
 }
