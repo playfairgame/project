@@ -13,7 +13,7 @@ import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.pages.LandingPage;
 import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class test1 extends BaseTest{
  
@@ -21,7 +21,7 @@ public class test1 extends BaseTest{
 
 @BeforeMethod
 public void startup(){
-	logger = extent.startTest("Starting test case t1");
+	logger = extent.createTest("Starting test case t1");
 	
 	
 	
@@ -48,7 +48,7 @@ lp.lo("aneel");
 		
 		
 		if(extent!=null){
-		extent.endTest(logger);
+	//	extent.endTest(logger);
 	    extent.flush();	
 		}
 	}

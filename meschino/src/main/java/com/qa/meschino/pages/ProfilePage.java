@@ -2,8 +2,11 @@ package com.qa.meschino.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class ProfilePage {
 	
@@ -24,7 +27,7 @@ public class ProfilePage {
 	}
 	
 	public void chageProfilePic(){
-		logger.log(LogStatus.INFO, "changinf profile pic on profile page");
+		logger.log(Status.INFO, "changinf profile pic on profile page");
 		System.out.println("Profile pic changed");
 	}
 	

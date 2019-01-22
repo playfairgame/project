@@ -6,10 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
 import com.qa.meschino.constants.MWConstants;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class LoginPage extends BasePage{
 	
@@ -42,14 +44,14 @@ public class LoginPage extends BasePage{
 	}
 	public Object doLogin(String uName, String password){
 		
-		logger.log(LogStatus.INFO, "Entering Login Credentails");
+		logger.log(Status.INFO, "Entering Login Credentails");
 		findAndWait(userName, 10).sendKeys(uName);
 	//	userName.sendKeys(uName);
 		
 		findAndWait(passWord,10).sendKeys(password);
 	//	passWord.sendKeys(password);
 		
-		logger.log(LogStatus.INFO, "Entered Login Credentails");
+		logger.log(Status.INFO, "Entered Login Credentails");
 		findAndWait(loginButton,10).click();
 	//	loginButton.click();
 		

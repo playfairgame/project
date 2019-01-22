@@ -1,5 +1,6 @@
 package com.qa.meschino.testcases.Login;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Hashtable;
 
@@ -13,15 +14,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
 import com.qa.meschino.pages.LandingPage;
 import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 import com.qa.meschino.utils.DataUtils;
 import com.qa.meschino.utils.ExtentManager;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class verifyLogin extends BaseTest{
 	
@@ -30,13 +32,14 @@ public class verifyLogin extends BaseTest{
 
 	@BeforeMethod
 	public void startup(){
-		logger = extent.startTest("VerifyLogin");
-			
+	
+		logger = extent.createTest("VerifyLogin");
+		
 	}
 
 	@Test(dataProvider="getData")
 	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
-		logger.log(LogStatus.INFO, data.get("Description"));
+		logger.log(Status.INFO, data.get("Description"));
 		
 		
 		if(data.get("Runmode").equals("N")){
@@ -73,7 +76,12 @@ public class verifyLogin extends BaseTest{
 			
 			
 			//logger.log(LogStatus.FAIL, "Test case failed");
-			reportFailure(data.get("Description"));
+			try {
+				reportFailure(data.get("Description"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		

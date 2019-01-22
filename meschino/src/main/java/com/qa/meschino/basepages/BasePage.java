@@ -3,7 +3,6 @@ package com.qa.meschino.basepages;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -11,25 +10,19 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-import org.testng.SkipException;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.pages.ProfilePage;
 import com.qa.meschino.utils.ExtentManager;
 import com.qa.meschino.utils.Xls_Reader;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class BasePage {
 
@@ -82,15 +75,15 @@ public class BasePage {
 	
 	public boolean isElementPresent(String locator){
 		
-		logger.log(LogStatus.INFO, "Trying to find the element "+locator);
+		logger.log(Status.INFO, "Trying to find the element "+locator);
 		int s = driver.findElements(By.xpath(locator)).size();
 		if(s>0)
 		{
-			logger.log(LogStatus.INFO, "Element found ");
+			logger.log(Status.INFO, "Element found ");
 			return true;
 		}
 		else
-		{	logger.log(LogStatus.INFO, "Element not found ");
+		{	logger.log(Status.INFO, "Element not found ");
 		return false;
 	}
 	}
@@ -123,8 +116,13 @@ public class BasePage {
 			e.printStackTrace();
 		}
 				
-		logger.log(LogStatus.INFO,logger.addScreenCapture(filePath));
-		
+		//logger.log(LogStatus.INFO,logger.addScreenCapture(filePath));
+		try {
+			logger.addScreenCaptureFromPath(filePath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public WebElement findAndWait(WebElement e, int sec){
@@ -136,7 +134,7 @@ public class BasePage {
 			return e;
 				}
 		catch(Throwable t){
-			logger.log(LogStatus.ERROR, t);
+			logger.log(Status.ERROR, t);
 		}
 		return e;
 	}
