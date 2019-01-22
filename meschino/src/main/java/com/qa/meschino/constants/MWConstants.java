@@ -25,7 +25,15 @@ public class MWConstants {
 	//**************LOCATORS***************************
 	
 	// LoginPage
+	   /// verify login
 	public static final String HEADER_LOCATOR ="//h2[contains(text(),'My Wellness Wallet')]";
+	
+	public static final String WELCOME_POPUP ="//div[@class='modal-content']/button[@class='close']";
+	
+	// EMAIL EXTENT REPORT - USERNAME AND PASSWORD
+	public static final String emailID = "aneelbb@mail.com";
+	public static final String password = "Hello789@";
+	
 	
 	
 	

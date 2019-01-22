@@ -30,12 +30,6 @@ public class verifyLogin extends BaseTest{
 	String testCaseName="LoginTest";
 	
 
-	@BeforeMethod
-	public void startup(){
-	
-		logger = extent.createTest("VerifyLogin");
-		
-	}
 
 	@Test(dataProvider="getData")
 	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
@@ -85,11 +79,7 @@ public class verifyLogin extends BaseTest{
 		}
 		
 		
-		{
-			
-			//logger.log(LogStatus.PASS, "Test case Passed");
-			
-		}
+		
 		
 		
 	}
@@ -97,22 +87,6 @@ public class verifyLogin extends BaseTest{
 	public Object[][] getData(){
 		return DataUtils.getData(xls, testCaseName);
 	}
-/*	
-	@AfterMethod
-	public void endTest(ITestResult result ){
-		if(extent!=null){
-			if(result.getStatus()==ITestResult.FAILURE)
-				
-				logger.log(LogStatus.FAIL, result.getThrowable());
-			extent.endTest(logger);
-			extent.flush();
-			driver.quit();
-			
-		}
-		
-		
-	}
-	
-	*/
+
 
 }

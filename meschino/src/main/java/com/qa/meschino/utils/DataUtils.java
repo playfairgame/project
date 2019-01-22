@@ -2,11 +2,16 @@ package com.qa.meschino.utils;
 
 import java.util.Hashtable;
 
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.MultiPartEmail;
+
 import com.qa.meschino.constants.MWConstants;
 
 public class DataUtils {
 
-	
+	// READING XLS FILES
 	public static Object[][] getData(Xls_Reader xls, String testCaseName){
 		 String sheetName = MWConstants.DATASHEET_NAME;
 		  int rNumber =1;
@@ -63,4 +68,35 @@ public class DataUtils {
 		return data;
 		
 	}
+	
+	
+	//// EMAIL EXTENT REPORT
+	
+	// EMAIL EXTENT REPORT
+		public static void email(String userName, String password) throws EmailException{
+			  EmailAttachment attachment = new EmailAttachment();
+			  attachment.setPath("./TestReport/extent.html");
+			  attachment.setDisposition(EmailAttachment.ATTACHMENT);
+			  attachment.setDescription("Test Execution report");
+			  attachment.setName("Test Execution report");
+
+			  // Create the email message
+			  MultiPartEmail email = new MultiPartEmail();
+			  email.setHostName("smtp.mail.com");
+			  email.setSmtpPort(587);
+			  email.setAuthenticator(new DefaultAuthenticator(userName, password));
+			  email.setSSLOnConnect(true);
+			  email.addTo("aneelbhullar@yahoo.com", "Aneel");
+			  email.setFrom("aneelbb@mail.com", "Me");
+			  email.setSubject("Test Execution report");
+			  email.setMsg("Extent report for test exceution");
+
+			  // add the attachment
+			  email.attach(attachment);
+
+			  // send the email
+			  email.send();
+		}
+	
+	
 }

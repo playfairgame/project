@@ -2,6 +2,7 @@ package com.qa.meschino.testcases.basetest;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
@@ -18,6 +19,7 @@ import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -67,7 +69,7 @@ public class BaseTest {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		logger.log(Status.INFO, "Launching Url");
+		logger.log(Status.INFO, "Browsing Url");
 		driver.get(MWConstants.PROD_URL);
 		
 	}
@@ -147,17 +149,12 @@ public class BaseTest {
 		}
 		
 	}
-	/*
-	@AfterMethod
-	public void end(){
-		if(extent!=null){
-			extent.flush();
-			if(driver!=null){
-				driver.quit();
-				}
-		}
+	
+	@BeforeMethod
+	public void startup(Method method){
+	
+				logger = extent.createTest(method.getName());
 	}
-	*/
 
 	
 	@AfterMethod
@@ -180,6 +177,7 @@ public class BaseTest {
 			if(driver!=null){
 			driver.quit();
 			}
+			
 		}
 		
 		

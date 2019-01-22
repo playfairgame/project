@@ -34,6 +34,9 @@ public class LoginPage extends BasePage{
 	@FindBy(id="btnLogin")
 	WebElement loginButton;
 	
+	@FindBy(xpath="//div[@class='modal-content']/button[@class='close']")
+	WebElement popUp;
+	
 	
 	//**************Functions*********************
 	
@@ -42,7 +45,7 @@ public class LoginPage extends BasePage{
 		
 		
 	}
-	public Object doLogin(String uName, String password){
+	public Object doLogin(String uName, String password) throws InterruptedException{
 		
 		logger.log(Status.INFO, "Entering Login Credentails");
 		findAndWait(userName, 10).sendKeys(uName);
@@ -54,7 +57,12 @@ public class LoginPage extends BasePage{
 		logger.log(Status.INFO, "Entered Login Credentails");
 		findAndWait(loginButton,10).click();
 	//	loginButton.click();
-		
+		Thread.sleep(2000);
+		if (isElementPresent(MWConstants.WELCOME_POPUP)){
+		    findAndWait(popUp, 10).click();
+			//driver.findElement(By.xpath(MWConstants.WELCOME_POPUP)).click();
+			logger.log(Status.INFO, "Pop Up window closed");
+		}
 		Boolean result;
 		if(isElementPresent(MWConstants.HEADER_LOCATOR))
 		{

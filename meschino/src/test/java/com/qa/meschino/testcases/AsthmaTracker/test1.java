@@ -2,6 +2,10 @@ package com.qa.meschino.testcases.AsthmaTracker;
 
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.support.PageFactory;
@@ -17,39 +21,28 @@ import com.qa.meschino.testcases.basetest.BaseTest;
 
 public class test1 extends BaseTest{
  
-	
 
-@BeforeMethod
-public void startup(){
-	logger = extent.createTest("Starting test case t1");
+@Test
+public void cal() throws ParseException{
 	
+	String dateToSelect= "12/10/2010";
+	
+	Date d= new Date();
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+	   Date d1 = sdf.parse(dateToSelect);
+	
+	
+	String month = new SimpleDateFormat("MMMM").format(d1);
+	String year = new SimpleDateFormat("yyyy").format(d1);
+	
+	
+	String day = new SimpleDateFormat("dd").format(d);
+	
+	System.out.println(month+"  "+year+ " "+day);
 	
 	
 }
-	@Test
-	public void t1(){
-		
-		init("Chrome");
-		
-		
-		LoginPage lp = new LoginPage(driver, logger);
-PageFactory.initElements(driver, lp);
 
-lp.lo("aneel");
-			
-		
-		
-		
-	}
 	
-	
-	@AfterMethod
-	public void quit(){
-		
-		
-		if(extent!=null){
-	//	extent.endTest(logger);
-	    extent.flush();	
-		}
-	}
 }

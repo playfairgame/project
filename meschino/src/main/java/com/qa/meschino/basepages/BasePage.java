@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -134,11 +135,21 @@ public class BasePage {
 			return e;
 				}
 		catch(Throwable t){
-			logger.log(Status.ERROR, t);
+			logger.log(Status.ERROR, "Error is reported "+t);
+			
+			//logger.log(Status.ERROR, t);
 		}
-		return e;
+		return null;
 	}
 	
+	// Report Failure
+public void reportFailure(String message) throws IOException{
+		
+		//logger.log(LogStatus.FAIL, message);
+		takeScreenshot();
+		Assert.fail(message);
+		
+	}
 	
 	//*****************************************Base Test Class*************************************************************
 	

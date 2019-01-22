@@ -2,8 +2,11 @@ package com.qa.meschino.extentReportListener;
 
 import java.util.Set;
 
+import org.apache.commons.mail.EmailException;
 import org.testng.IClass;
 import org.testng.IExecutionListener;
+import org.testng.IInvokedMethod;
+import org.testng.IInvokedMethodListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestNGMethod;
@@ -12,7 +15,9 @@ import org.testng.TestListenerAdapter;
 
 import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
+import com.qa.meschino.constants.MWConstants;
 import com.qa.meschino.testcases.basetest.BaseTest;
+import com.qa.meschino.utils.DataUtils;
 //import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 
@@ -30,18 +35,25 @@ public class Listeners extends BaseTest implements ITestResult, ITestListener, I
 
 	public void onExecutionFinish() {
 		// TODO Auto-generated method stub
-		
-		//sendemail();
-		
+		/*
+		try {
+			DataUtils.email(MWConstants.emailID, MWConstants.password);
+		} catch (EmailException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
 	}
 
 	public void onExecutionStart() {
 		// TODO Auto-generated method stub
-		
+	//	logger = extent.createTest("ABC");
 	}
 
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
+		if(extent!=null)
+			extent.flush();
 		
 	}
 
@@ -60,7 +72,7 @@ public class Listeners extends BaseTest implements ITestResult, ITestListener, I
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-		//logger = extent.createTest(result.getMethod().getConstructorOrMethod().getName());
+		
 		//logger.log(Status.INFO, result.getMethod().getConstructorOrMethod().getName()+" Test case started");
 	
 		}
@@ -132,68 +144,87 @@ public class Listeners extends BaseTest implements ITestResult, ITestListener, I
 		return null;
 	}
 
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object[] getParameters() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public long getStartMillis() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	public int getStatus() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
+
+	public void setStatus(int status) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public Object[] getParameters() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public void setParameters(Object[] parameters) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	public IClass getTestClass() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public ITestContext getTestContext() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public String getTestName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public Throwable getThrowable() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+
+	public void setThrowable(Throwable throwable) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public long getStartMillis() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public void setEndMillis(long millis) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	public boolean isSuccess() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public void setEndMillis(long arg0) {
+
+	public String getTestName() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
-	public void setParameters(Object[] arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void setStatus(int arg0) {
+	public ITestContext getTestContext() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+/////////////////////////////////////////////////////////////////
 
-	public void setThrowable(Throwable arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+
+	
+	
+
 }
