@@ -55,13 +55,13 @@ public class BaseTest {
 		
 		if(browser.equalsIgnoreCase("Mozilla"))
 		{
-			System.setProperty("webdriver.geckodriver.driver", MWConstants.CHROME_DRIVER_EXE);
+			System.setProperty("webdriver.geckodriver.driver", MWConstants.FIREFOX_DRIVER_EXE);
 			logger.log(Status.INFO, "Launching Browser");
 			 driver = new FirefoxDriver();
 			
 		}else if (browser.equalsIgnoreCase("Chrome")){
 			
-			System.setProperty("webdriver.chrome.driver", MWConstants.FIREFOX_DRIVER_EXE);
+			System.setProperty("webdriver.chrome.driver",MWConstants.CHROME_DRIVER_EXE );
 			 driver = new ChromeDriver();
 		}
 		
@@ -175,7 +175,7 @@ public class BaseTest {
 			//extent.endTest(logger);
 			extent.flush();
 			if(driver!=null){
-			driver.quit();
+		//	driver.quit();
 			}
 			
 		}

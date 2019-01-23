@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5748" started-at="2019-01-22T20:53:46Z" finished-at="2019-01-22T20:53:52Z">
+  <suite name="Default suite" duration-ms="69801" started-at="2019-01-23T21:07:53Z" finished-at="2019-01-23T21:09:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5748" started-at="2019-01-22T20:53:46Z" finished-at="2019-01-22T20:53:52Z">
+    <test name="Default test" duration-ms="69801" started-at="2019-01-23T21:07:53Z" finished-at="2019-01-23T21:09:03Z">
       <class name="com.qa.meschino.testcases.AsthmaTracker.test1">
-        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="run" is-config="true" duration-ms="308" started-at="2019-01-22T15:53:46Z" finished-at="2019-01-22T15:53:46Z">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="run" is-config="true" duration-ms="300" started-at="2019-01-23T16:07:53Z" finished-at="2019-01-23T16:07:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1e16c0aa]]>
+                <![CDATA[org.testng.TestRunner@5c1f6d57]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="startup" is-config="true" duration-ms="36" started-at="2019-01-22T15:53:46Z" finished-at="2019-01-22T15:53:46Z">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="startup" is-config="true" duration-ms="35" started-at="2019-01-23T16:07:53Z" finished-at="2019-01-23T16:07:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.meschino.testcases.AsthmaTracker.test1.cal() throws java.text.ParseException]]>
+                <![CDATA[public void com.qa.meschino.testcases.AsthmaTracker.test1.cal() throws java.text.ParseException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="cal()[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="cal" duration-ms="35" started-at="2019-01-22T15:53:46Z" finished-at="2019-01-22T15:53:46Z">
+        <test-method status="PASS" signature="cal()[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="cal" duration-ms="64737" started-at="2019-01-23T16:07:53Z" finished-at="2019-01-23T16:08:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cal -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="endTest" is-config="true" duration-ms="5519" started-at="2019-01-22T15:53:46Z" finished-at="2019-01-22T15:53:52Z">
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.AsthmaTracker.test1@6200f9cb]" name="endTest" is-config="true" duration-ms="4869" started-at="2019-01-23T16:08:58Z" finished-at="2019-01-23T16:09:03Z">
           <params>
             <param index="0">
               <value>

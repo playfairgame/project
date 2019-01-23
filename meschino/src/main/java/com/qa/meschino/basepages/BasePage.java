@@ -2,7 +2,10 @@ package com.qa.meschino.basepages;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -18,6 +21,7 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.qa.meschino.constants.MWConstants;
+
 import com.qa.meschino.pages.ProfilePage;
 import com.qa.meschino.utils.ExtentManager;
 import com.qa.meschino.utils.Xls_Reader;
@@ -33,6 +37,7 @@ public class BasePage {
 	
 	public ProfilePage profile;
 	
+	
 	//***********Default Constructor********************
 	
 	public BasePage(){
@@ -43,6 +48,8 @@ public class BasePage {
 	public BasePage(WebDriver driver,ExtentTest logger){
 		this.driver=driver;
 		this.logger=logger;
+		
+		
 		
 		profile = new ProfilePage(driver, logger);
 		PageFactory.initElements(driver, profile);
@@ -61,6 +68,7 @@ public class BasePage {
 		return profile;
 	}
 	
+
 	
 	
 	public String verifyTitle(String expectedTitle){
@@ -135,11 +143,11 @@ public class BasePage {
 			return e;
 				}
 		catch(Throwable t){
-			logger.log(Status.ERROR, "Error is reported "+t);
+			logger.log(Status.ERROR, "Error is reported "+t.getMessage());
 			
 			//logger.log(Status.ERROR, t);
 		}
-		return null;
+		return e;
 	}
 	
 	// Report Failure
@@ -151,92 +159,57 @@ public void reportFailure(String message) throws IOException{
 		
 	}
 	
-	//*****************************************Base Test Class*************************************************************
+	// **********************CALENDAR DATE PICKER*************************************
+
+public  void pickDate(String dateToSelect) throws ParseException{
 	
+	String calMonthYearVisible = driver.findElement(By.xpath(MWConstants.CALENDAR_MONTH_YEAR)).getText();
 	
-	/*
+	System.out.println(calMonthYearVisible);
 	
-	
-	public ExtentReports extent = ExtentManager.getInstance();
-//	public ExtentTest logger;
-	public Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
-	
-	
-	// intialize browsers
-	
-	public void init(String browser){
 		
-		if(browser.equalsIgnoreCase("Mozilla"))
-		{
-			System.setProperty("webdriver.geckodriver.driver", MWConstants.CHROME_DRIVER_EXE);
-			logger.log(LogStatus.INFO, "Launching Browser");
-			 driver = new FirefoxDriver();
+	Date d= new Date();
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+	Date d1 = sdf.parse(dateToSelect);
+	
+	
+	String month = new SimpleDateFormat("MMMM").format(d1);
+	String year = new SimpleDateFormat("yyyy").format(d1);
+	String day = new SimpleDateFormat("dd").format(d);
+	
+	String dayToSelect = new SimpleDateFormat("dd").format(d1);
+	String calMonthYearToSelect = month+" "+year;
+	//System.out.println(month+"  "+year+ " "+day);
+	
+	
+	while(!calMonthYearVisible.equalsIgnoreCase(calMonthYearToSelect)){
+		
+		if(d1.before(d)){
+			driver.findElement(By.xpath(MWConstants.CALENDAR_LEFT_ARROW)).click();
 			
-		}else if (browser.equalsIgnoreCase("Chrome")){
+		}else{
 			
-			System.setProperty("webdriver.chrome.driver", MWConstants.FIREFOX_DRIVER_EXE);
-			 driver = new ChromeDriver();
+			driver.findElement(By.xpath(MWConstants.CALENDAR_RIGHT_ARROW)).click();
+			
 		}
 		
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
-		logger.log(LogStatus.INFO, "Launching Url");
-		driver.get(MWConstants.PROD_URL);
-		
+		calMonthYearVisible = driver.findElement(By.xpath(MWConstants.CALENDAR_MONTH_YEAR)).getText();
 	}
-	
-	public void reportFailure(String message){
-		
-		logger.log(LogStatus.FAIL, message);
-		takeScreenshot();
-		Assert.fail(message);
-		
-	}
-	
-	public void sendemail(){
-		
-		System.out.println("sending email");
-	}
-	
-	@BeforeSuite
-	public void run(ITestContext ctx){
 		
 		
-		String sheetName = MWConstants.SUITE_SHEET_NAME;
+		WebElement cal = driver.findElement(By.xpath(MWConstants.CALENDAR_SELECT_DAY));
 		
-		String suiteName = ctx.getSuite().getName();
-		int rows = xls.getRowCount(sheetName);
+		List<WebElement> days = cal.findElements(By.className("day"));
 		
-		for(int r=2; r<=rows;r++){
-			
-			if(xls.getCellData(sheetName, 0, r).equalsIgnoreCase(suiteName)){
-				
-				if(xls.getCellData(sheetName, 1, r).equalsIgnoreCase("N")){
-					//logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
-					throw new SkipException("run mode of the suite is NO");
-				}
+		for(int i=0;i<days.size();i++){
+            
+			if(days.get(i).getText().equals(dayToSelect)){
+			days.get(i).click();
+			break;
 			}
 		}
-		
-		
-		}
-		
 	
-	@AfterMethod
-	public void endTest(ITestResult result ){
-		if(extent!=null){
-			if(result.getStatus()==ITestResult.FAILURE)
-				
-				logger.log(LogStatus.FAIL, result.getThrowable());
-			extent.endTest(logger);
-			extent.flush();
-			driver.quit();
-			
-		}
-		
-		
-	}
-	*/
+	
+}
 }

@@ -1,10 +1,10 @@
 package com.qa.meschino.constants;
 
 public class MWConstants {
-
+	
 	// Driver Paths
-	public static final String CHROME_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\geckodriver.exe";
-	public static final String FIREFOX_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\chromedriver.exe";
+	public static final String CHROME_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\chromedriver.exe";
+	public static final String FIREFOX_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\geckodriver.exe";
 	
 
 	// URLs
@@ -36,7 +36,11 @@ public class MWConstants {
 	
 	
 	
-	
+	// CALAENDAR DATE PICKER ELEMENTS
+	public static final String CALENDAR_MONTH_YEAR ="//table[@class=' table-condensed']/thead/tr[1]/th[2]";
+	public static final String CALENDAR_LEFT_ARROW = "//table[@class=' table-condensed']/thead/tr[1]/th[1]";
+	public static final String CALENDAR_RIGHT_ARROW = "//table[@class=' table-condensed']/thead/tr[1]/th[3]";
+	public static final String CALENDAR_SELECT_DAY = "//table[@class=' table-condensed']/tbody";
 	
 	
 	
