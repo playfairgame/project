@@ -42,6 +42,8 @@ public class MWConstants {
 	public static final String CALENDAR_RIGHT_ARROW = "//table[@class=' table-condensed']/thead/tr[1]/th[3]";
 	public static final String CALENDAR_SELECT_DAY = "//table[@class=' table-condensed']/tbody";
 	
+	//DATE PICKER ELEMENTS
+	
 	
 	
 }

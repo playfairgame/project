@@ -175,7 +175,7 @@ public class BaseTest {
 			//extent.endTest(logger);
 			extent.flush();
 			if(driver!=null){
-		//	driver.quit();
+			driver.quit();
 			}
 			
 		}

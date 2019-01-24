@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 22 15:22:33 EST 2019</td>
+<td>Started on:</td><td>Thu Jan 24 16:03:41 EST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>78 seconds (78231 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (292 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,53 +67,29 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC01}</td>
-<td></td>
-<td>49</td>
-<td>com.qa.meschino.testcases.Login.verifyLogin@399c4be1</td></tr>
-<tr>
-<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Hello789@, Runmode=Y, Expected=Success, UserName=aneel@meschinowellness.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC03}</td>
-<td></td>
-<td>20</td>
-<td>com.qa.meschino.testcases.Login.verifyLogin@399c4be1</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Test@123, Runmode=N, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, TCID=TC02}</td>
-<td><div><pre>org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:42)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace796553753", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace796553753'><pre>org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.Login.verifyLogin.LoginTest(verifyLogin.java:42)
+<td title='com.qa.meschino.testcases.Login.verifyLogin.run()'><b>run</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: org.testng.TestRunner@13b13b5d</td>
+<td><div><pre>org.testng.SkipException: run mode of the suite is NO
+	at com.qa.meschino.testcases.basetest.BaseTest.run(BaseTest.java:146)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace236840983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace236840983'><pre>org.testng.SkipException: run mode of the suite is NO
+	at com.qa.meschino.testcases.basetest.BaseTest.run(BaseTest.java:146)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -126,7 +102,60 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.qa.meschino.testcases.Login.verifyLogin@399c4be1</td></tr>
+<td>null</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.startup()'><b>startup</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.startup()'><b>startup</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.startup()'><b>startup</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.endTest()'><b>endTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.endTest()'><b>endTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.endTest()'><b>endTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Test@123, Runmode=Y, Expected=Success, UserName=neil@peter.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC01}</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Test@123, Runmode=N, Expected=Unsuccessfull, UserName=aneel@x.com, Description=Verify that, system does not allow to login with Invalid Credentials, TCID=TC02}</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
+<tr>
+<td title='com.qa.meschino.testcases.Login.verifyLogin.LoginTest()'><b>LoginTest</b><br>Test class: com.qa.meschino.testcases.Login.verifyLogin<br>Parameters: {Password=Hello789@, Runmode=Y, Expected=Success, UserName=aneel@meschinowellness.com, Description=Verify that, system allows to login with valid Credentials, TCID=TC03}</td>
+<td></td>
+<td>0</td>
+<td>com.qa.meschino.testcases.Login.verifyLogin@707194ba</td></tr>
 </table><p>
 </body>
 </html>

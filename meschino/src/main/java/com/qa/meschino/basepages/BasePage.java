@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -192,7 +193,9 @@ public  void pickDate(String dateToSelect) throws ParseException{
 			
 			driver.findElement(By.xpath(MWConstants.CALENDAR_RIGHT_ARROW)).click();
 			
-		}
+		} // While loop ends
+		
+		
 		
 		calMonthYearVisible = driver.findElement(By.xpath(MWConstants.CALENDAR_MONTH_YEAR)).getText();
 	}
@@ -212,4 +215,35 @@ public  void pickDate(String dateToSelect) throws ParseException{
 	
 	
 }
+
+//********************CALENDAR TIME PICKER**************************************
+public void pickTime(String time){
+	
+	System.out.println(" tryin to set time");
+	JavascriptExecutor jse = (JavascriptExecutor) driver;
+    jse.executeScript("document.getElementById('Time').value = '"+time+"';");
+}
+
+
+
+
+//*************************CURRENT DATE AND TIME PICKER*****************************************
+
+
+public  String getCurrentDate(){
+	Date cdate= new Date();
+	String currentDate = new SimpleDateFormat("MM/dd/yyyy").format(cdate);
+	return currentDate;
+}
+
+
+public String getCurrentTime(){
+	Date cdate= new Date();
+	String currentTime = new SimpleDateFormat("hh:mm a").format(cdate);
+	return currentTime;
+}
+
+
+
+
 }

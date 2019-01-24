@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AsthmaTrackerSuite">
+<suite name="BloodGlucoseSuite">
   <test name="Test">
     <classes>
      
-      <class name="com.qa.meschino.testcases.AsthmaTracker.test1"/>
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog"/>
       
     </classes>
   </test> <!-- Test -->
