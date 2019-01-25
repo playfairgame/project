@@ -46,7 +46,7 @@ public class BaseTest {
 	public ExtentReports extent = ExtentManager.getInstance();
 	
 	public ExtentTest logger;
-	public Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
+	public static Xls_Reader xls = new Xls_Reader(MWConstants.DATASHEET_PATH);
 	//public ExtentHtmlReporter r;
 	public String mName;
 	// intialize browsers
@@ -175,7 +175,7 @@ public class BaseTest {
 			//extent.endTest(logger);
 			extent.flush();
 			if(driver!=null){
-			driver.quit();
+			//driver.quit();
 			}
 			
 		}

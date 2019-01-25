@@ -219,7 +219,7 @@ public  void pickDate(String dateToSelect) throws ParseException{
 //********************CALENDAR TIME PICKER**************************************
 public void pickTime(String time){
 	
-	System.out.println(" tryin to set time");
+	logger.log(Status.INFO, "Picking Time");
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
     jse.executeScript("document.getElementById('Time').value = '"+time+"';");
 }

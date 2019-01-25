@@ -5,6 +5,7 @@
     <classes>
      
       <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog"/>
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile"/>
       
     </classes>
   </test> <!-- Test -->

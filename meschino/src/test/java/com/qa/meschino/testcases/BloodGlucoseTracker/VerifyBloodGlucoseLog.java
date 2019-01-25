@@ -39,7 +39,7 @@ public class VerifyBloodGlucoseLog extends BaseTest{
 
 	//  @Test(dataProvider = "data-provider", dataProviderClass = DataProviderClass.class)
 	
-		@Test(dataProvider="getData")
+		@Test(dataProviderClass=DataProviderFile.class,  dataProvider="BloodGlucoseTest")
 		public void BloodGlucoseTest(Hashtable<String, String> data) throws ParseException, InterruptedException{
 	
 			logger.log(Status.INFO, data.get("Description"));
@@ -133,13 +133,13 @@ public class VerifyBloodGlucoseLog extends BaseTest{
 	
 }
 		
-	
+	/*
 @DataProvider
 public Object[][] getData(){
 	return DataUtils.getData(xls, testCaseName);
 }
 
 
-
+*/
 	
 }

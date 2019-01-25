@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
+import com.qa.meschino.dataprovider.DataProviderFile;
 import com.qa.meschino.pages.LandingPage;
 import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
@@ -31,7 +32,7 @@ public class verifyLogin extends BaseTest{
 	
 
 
-	@Test(dataProvider="getData")
+	@Test(dataProviderClass=DataProviderFile.class ,dataProvider="getDataLogin")
 	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
 		logger.log(Status.INFO, data.get("Description"));
 		
@@ -83,10 +84,7 @@ public class verifyLogin extends BaseTest{
 		
 		
 	}
-	@DataProvider
-	public Object[][] getData(){
-		return DataUtils.getData(xls, testCaseName);
-	}
+	
 
 
 }

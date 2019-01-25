@@ -41,7 +41,7 @@ public class DataUtils {
 		// System.out.println(colCount);
 				
 		//Object data[][] = new Object[rowCount][colCount];
-		 Object data[][] = new Object[rowCount][1]; // we will create a hashtable, there will be only 1 col	
+		 Object[][] data = new Object[rowCount][1]; // we will create a hashtable, there will be only 1 col	
 		int r=0;
 		Hashtable<String, String> table =null;
 		for(int rowNum=testDataStartRowNum;rowNum<testDataStartRowNum+rowCount;rowNum++){

@@ -53,7 +53,7 @@ public class TrackersAndResourcesPage  extends BasePage{
 	@FindBy(xpath="//button[@class='btn btn-primary pull-right']")
 	WebElement saveButton;
 	
-	@FindBy(xpath="//button[@class='close-btn']")
+	@FindBy(xpath="//h4[@class='modal-title']/button")
 	WebElement closeButton;
 	
 	
@@ -85,7 +85,7 @@ public class TrackersAndResourcesPage  extends BasePage{
 	
 	public void closeBGTracker(){
 		
-		findAndWait(closeButton, 20).click();
+		findAndWait(closeButton, 30).click();
 	}
 	
 	
