@@ -2,42 +2,42 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38986" started-at="2019-01-25T21:08:00Z" finished-at="2019-01-25T21:08:39Z">
+  <suite name="Default suite" duration-ms="67610" started-at="2019-01-26T20:33:47Z" finished-at="2019-01-26T20:34:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38986" started-at="2019-01-25T21:08:00Z" finished-at="2019-01-25T21:08:39Z">
+    <test name="Default test" duration-ms="67610" started-at="2019-01-26T20:33:47Z" finished-at="2019-01-26T20:34:54Z">
       <class name="com.qa.meschino.testcases.BloodGlucoseTracker.testing">
-        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@69453e37]" name="run" is-config="true" duration-ms="472" started-at="2019-01-25T16:07:59Z" finished-at="2019-01-25T16:08:00Z">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@3c3d9b6b]" name="run" is-config="true" duration-ms="15" started-at="2019-01-26T15:33:47Z" finished-at="2019-01-26T15:33:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6c6357f9]]>
+                <![CDATA[org.testng.TestRunner@30272916]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@69453e37]" name="startup" is-config="true" duration-ms="45" started-at="2019-01-25T16:08:00Z" finished-at="2019-01-25T16:08:00Z">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@3c3d9b6b]" name="startup" is-config="true" duration-ms="3" started-at="2019-01-26T15:33:47Z" finished-at="2019-01-26T15:33:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.testing.t2() throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.testing.t2() throws java.lang.InterruptedException,java.text.ParseException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="t2()[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@69453e37]" name="t2" duration-ms="33907" started-at="2019-01-25T16:08:00Z" finished-at="2019-01-25T16:08:34Z">
+        <test-method status="PASS" signature="t2()[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@3c3d9b6b]" name="t2" duration-ms="67247" started-at="2019-01-26T15:33:47Z" finished-at="2019-01-26T15:34:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- t2 -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@69453e37]" name="endTest" is-config="true" duration-ms="4829" started-at="2019-01-25T16:08:34Z" finished-at="2019-01-25T16:08:39Z">
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@3c3d9b6b]" name="endTest" is-config="true" duration-ms="349" started-at="2019-01-26T15:34:54Z" finished-at="2019-01-26T15:34:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=t2 status=SUCCESS method=testing.t2()[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@69453e37] output={null}]]]>
+                <![CDATA[[TestResult name=t2 status=SUCCESS method=testing.t2()[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.testing@3c3d9b6b] output={null}]]]>
               </value>
             </param>
           </params>
