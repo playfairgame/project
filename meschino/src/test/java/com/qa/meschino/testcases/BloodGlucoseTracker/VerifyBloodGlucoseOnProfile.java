@@ -83,11 +83,11 @@ public class VerifyBloodGlucoseOnProfile extends BaseTest{
 		    
 		     t.getProfile().goToProfile();
 		     t.getProfile().goToHealthTab();
-		   Hashtable<String, String> table= t.getProfile().getProfileData("Health", "Weight");
+		   Hashtable<String, String> table= t.getProfile().getProfileData("Health", "Blood Glucose");
 		     
-		     if(!ccdate.equalsIgnoreCase(table.get("Blood Glucose date"))&&cctime.equalsIgnoreCase(table.get("Blood Glucose time"))){
+		     if(!ccdate.equalsIgnoreCase(table.get("Blood Glucose date"))&&cctime.equalsIgnoreCase(table.get("Blood Glucose time"))&&data.get("BGLevel").equalsIgnoreCase(table.get("Blood Glucose value"))&& data.get("Source").equalsIgnoreCase(table.get("Blood Glucose source"))){
 		    	 
-		    	 reportFailure("Failed to update Blood Glucose Date and Time on Profile page");
+		    	 reportFailure("Failed to update Blood Glucose Profile page");
 		     }
 		   
 		    
