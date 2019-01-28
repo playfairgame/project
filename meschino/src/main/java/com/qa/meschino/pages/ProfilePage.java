@@ -61,6 +61,7 @@ public class ProfilePage extends BasePage{
 	public void goToHealthTab(){
 		
 		findAndWait(healthtab, 30).click();
+		
 	}
 	
 	
