@@ -1,5 +1,6 @@
 package com.qa.meschino.testcases.BloodGlucoseTracker;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.Hashtable;
 
@@ -19,7 +20,7 @@ public class VerifyBloodGlucoseOnProfile extends BaseTest{
 
 	
 	@Test(dataProviderClass= DataProviderFile.class, dataProvider="getDataBGProfile")
-	public void BloodGlucoseOnProfile(Hashtable<String, String> data) throws InterruptedException, ParseException{
+	public void BloodGlucoseOnProfile(Hashtable<String, String> data) throws InterruptedException, ParseException, IOException{
 		
 		String cctime="";
 		String ccdate="";
@@ -82,8 +83,15 @@ public class VerifyBloodGlucoseOnProfile extends BaseTest{
 		    
 		     t.getProfile().goToProfile();
 		     t.getProfile().goToHealthTab();
+		   Hashtable<String, String> table= t.getProfile().getProfileData("Health", "Weight");
 		     
+		     if(!ccdate.equalsIgnoreCase(table.get("Blood Glucose date"))&&cctime.equalsIgnoreCase(table.get("Blood Glucose time"))){
+		    	 
+		    	 reportFailure("Failed to update Blood Glucose Date and Time on Profile page");
+		     }
 		   
 		    
 	}
+
+	
 }

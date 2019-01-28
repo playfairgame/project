@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Hashtable;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -243,7 +244,104 @@ public String getCurrentTime(){
 	return currentTime;
 }
 
+//***************************GET PROFILE DATA******************************************
 
+public Hashtable<String, String> getProfileData(String tabName, String fieldName) throws ParseException, IOException{
+	String tab="";
+	String updatedTime="";
+	String updatedDate="";
+	String metric;
+	String name="";
+	if(tabName.equalsIgnoreCase("Health")){
+		driver.findElement(By.xpath("//a[@class='tab_3']")).click();
+		tab= "tab_3";
+	}else if (tabName.equalsIgnoreCase("Lifestyle")){
+		driver.findElement(By.xpath("//a[@class='tab_2']")).click();
+		tab= "tab_2";
+	}else if(tabName.equalsIgnoreCase("Personal"))
+	{
+		driver.findElement(By.xpath("//a[@class='tab_1']")).click();
+		tab= "tab_1";
+	}
+	
+	
+//	driver.findElement(By.xpath("//div[@class='tabbable']/ul/li[2]/a")).click();
+	
+	
+	WebElement t= driver.findElement(By.xpath("//div[@id='divMeasurements_"+tab+"']/table/tbody"));
+	
+ List<WebElement> li = t.findElements(By.tagName("tr"));
+ Hashtable<String, String> table = new Hashtable<String, String>();  
+ 
+ int rowNumber=0;
+ for(int rows=1;rows<=li.size();rows++){
+	 rowNumber= rows;
+	 if(driver.findElements(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rows+"]//td[1]//div[5]")).size()>0){
+		  	name = driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rows+"]//td[1]//div[5]")).getText();
+		 if(name.equalsIgnoreCase(fieldName)){
+			 break; 
+		 }else{
+			 rowNumber=0;
+		 }
+			 
+		 
+	 }
+	 
+ }// end for
+ 
+// System.out.println("Row number is "+ rowNumber);
+	 
+	 if(rowNumber>0){
+		 
+		
+		 String value = driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rowNumber+"]//td[2]//div[1]")).getText();
+		 
+		 if(driver.findElements(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rowNumber+"]//td[3]//select[1]")).size()>0)
+			{	
+				metric = driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rowNumber+"]//td[3]//select//option")).getText();
+			}
+		 
+		 else
+		    {
+			metric ="Null";
+			//metric=driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rows+"]//td[3]")).getText();
+			
+	        }
+		 		String source = driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rowNumber+"]//td[4]")).getText();
+		 		String time= driver.findElement(By.xpath("//div[@id='"+tab+"']//tbody//tr["+rowNumber+"]//td[5]")).getText();
+		 		if(!time.equalsIgnoreCase("")){
+					SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss a");
+					    Date d = sdf.parse(time);
+					    updatedTime = new SimpleDateFormat("HH:mm a").format(d);
+					    updatedDate = new SimpleDateFormat("MM/dd/yyyy").format(d);
+					}
+					else
+					{
+						updatedTime ="0";
+						updatedDate="0";
+					}
+		 		String valuekey = name+" value";
+				String metrickey = name+ " metric";
+				String sourcekey = name+ " source" ;
+				String datekey = name+" date";
+				String timekey = name+" time";
+						
+						table.put(valuekey, value);
+						table.put(metrickey, metric);
+						table.put(sourcekey, source);
+						table.put(datekey, updatedDate);
+						table.put(timekey, updatedTime);
+		 		
+		 		
+		 
+	 }else
+	 {
+		 reportFailure(fieldName+" does not exist");
+		 return null;
+	 }
+	
+ return table;
+}// function ends
 
 
 }

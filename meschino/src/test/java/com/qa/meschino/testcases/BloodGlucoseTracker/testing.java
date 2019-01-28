@@ -22,7 +22,7 @@ import com.qa.meschino.testcases.basetest.BaseTest;
 
 public class testing extends BaseTest {
 	
-	private static final int Hashtable = 0;
+	//private static final int Hashtable = 0;
 	WebDriver  driver;
 	
     @Test 
