@@ -19,7 +19,7 @@ import com.qa.meschino.testcases.basetest.BaseTest;
 public class VerifyBloodGlucoseOnProfile extends BaseTest{
 
 	
-	@Test(dataProviderClass= DataProviderFile.class, dataProvider="getDataBGProfile")
+	@Test(dataProviderClass= DataProviderFile.class, dataProvider="BloodGlucoseOnProfile")
 	public void BloodGlucoseOnProfile(Hashtable<String, String> data) throws InterruptedException, ParseException, IOException{
 		
 		String cctime="";

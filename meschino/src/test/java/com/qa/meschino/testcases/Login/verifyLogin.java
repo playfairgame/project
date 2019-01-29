@@ -28,11 +28,11 @@ import com.qa.meschino.utils.ExtentManager;
 
 public class verifyLogin extends BaseTest{
 	
-	String testCaseName="LoginTest";
+	
 	
 
 
-	@Test(dataProviderClass=DataProviderFile.class ,dataProvider="getDataLogin")
+	@Test(dataProviderClass=DataProviderFile.class ,dataProvider="LoginTest")
 	public void LoginTest(Hashtable<String, String> data) throws InterruptedException{
 		logger.log(Status.INFO, data.get("Description"));
 		

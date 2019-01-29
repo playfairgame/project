@@ -35,7 +35,7 @@ import com.qa.meschino.utils.DataUtils;
 
 public class VerifyBloodGlucoseLog extends BaseTest{
  
-	String testCaseName ="BloodGlucoseTest" ;
+	
 
 	//  @Test(dataProvider = "data-provider", dataProviderClass = DataProviderClass.class)
 	

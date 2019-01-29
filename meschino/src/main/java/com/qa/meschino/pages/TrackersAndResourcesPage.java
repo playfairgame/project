@@ -39,6 +39,21 @@ public class TrackersAndResourcesPage  extends BasePage{
 		findAndWait(okbutton, 20).click();
 	}
 	
+	// Recent Tracking
+	
+		@FindBy(xpath="//div[@class='recent-track']/table/tbody/tr[1]/td[1]")
+		WebElement record;
+		
+	
+		
+		public String getlog(){
+			System.out.println("i am in funtcion");
+			String a = findAndWait(record, 20).getText().trim();
+			
+		return	a;
+			 
+		}
+		
 	
 	// Blood Glucose Tracker Elements
 	@FindBy(xpath="//a[contains(text(),'Blood Glucose Tracker')]")
@@ -56,7 +71,8 @@ public class TrackersAndResourcesPage  extends BasePage{
 	@FindBy(xpath="//h4[@class='modal-title']/button")
 	WebElement closeButton;
 	
-	
+	@FindBy(xpath="//a[@class='pull-right link']")
+	WebElement reset;
 	
 	
 	//Blood Glucose Tracker Functions
@@ -88,8 +104,10 @@ public class TrackersAndResourcesPage  extends BasePage{
 		findAndWait(closeButton, 30).click();
 	}
 	
-	
-	
+	public void clickOnReset(){
+		
+		findAndWait(reset, 20).click();
+	}
 	
 	
 }

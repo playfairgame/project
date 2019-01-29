@@ -6,10 +6,16 @@
   </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
         <methods>
           <include name="startup"/>
           <include name="run"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+        <methods>
+          <include name="startup"/>
           <include name="endTest"/>
           <include name="BloodGlucoseOnProfile" invocation-numbers="0"/>
         </methods>
@@ -18,7 +24,7 @@
         <methods>
           <include name="startup"/>
           <include name="endTest"/>
-          <include name="BloodGlucoseTest" invocation-numbers="0 1 2 3 4"/>
+          <include name="BloodGlucoseTest" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
     </classes>

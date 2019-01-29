@@ -23,7 +23,7 @@ public class DataProviderFile extends BaseTest{
 	}
 	
 	
-	
+	//Login
 	
 	@DataProvider(name="LoginTest")
 	public Object[][] getDataLogin(){
@@ -39,6 +39,11 @@ public class DataProviderFile extends BaseTest{
 	@DataProvider(name="BloodGlucoseOnProfile")
 	public static Object[][] getDataBGProfile(){
 		return DataUtils.getData(xls, "BloodGlucoseOnProfile");
+	}
+	
+	@DataProvider(name="BloodGlucoseDeleteLogs")
+	public static Object[][] getDataBGDelete(){
+		return DataUtils.getData(xls, "BloodGlucoseDeleteLogs");
 	}
 	
 	

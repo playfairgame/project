@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.Test6">
         <methods>
-          <include name="startup"/>
+          <include name="tq"/>
           <include name="run"/>
-          <include name="endTest"/>
-          <include name="BloodGlucoseOnProfile" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.Test6 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

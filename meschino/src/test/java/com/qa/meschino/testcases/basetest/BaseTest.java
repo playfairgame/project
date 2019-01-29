@@ -143,7 +143,7 @@ public class BaseTest {
 				
 				if(xls.getCellData(sheetName, 1, r).equalsIgnoreCase("N")){
 					//logger.log(LogStatus.SKIP, "Skipping the Suite as "+suiteName+" has runmode NO");
-					throw new SkipException("run mode of the suite is NO");
+					throw new SkipException("Runmode of the suite is NO");
 				}
 			}
 		}
