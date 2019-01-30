@@ -78,7 +78,7 @@ public class VerifyBloodGlucoseDelete extends BaseTest{
 		t.clickOK();
 		Thread.sleep(3000);
 		actualMessage= t.getlog();
-		System.out.println(actualMessage);
+		
 		if(!actualMessage.equalsIgnoreCase(data.get("Expected"))){
 			
 			reportFailure(actualMessage+ " is not equal to "+data.get("Expected"));

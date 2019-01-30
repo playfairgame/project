@@ -12,10 +12,9 @@ public class Test6 extends BaseTest{
 @Test
 public void tq(){
 	
-	String a = "No record found. ";
-	
-	
-	System.out.println(a.trim());
+	String a = "391.0";
+					
+	System.out.println(a.substring(0, a.indexOf(".")));
 	
 	
 }

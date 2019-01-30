@@ -167,7 +167,7 @@ public  void pickDate(String dateToSelect) throws ParseException{
 	
 	String calMonthYearVisible = driver.findElement(By.xpath(MWConstants.CALENDAR_MONTH_YEAR)).getText();
 	
-	System.out.println(calMonthYearVisible);
+	//System.out.println(calMonthYearVisible);
 	
 		
 	Date d= new Date();

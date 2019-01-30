@@ -46,6 +46,11 @@ public class DataProviderFile extends BaseTest{
 		return DataUtils.getData(xls, "BloodGlucoseDeleteLogs");
 	}
 	
+
+	@DataProvider(name="MyHRALogs")
+	public static Object[][] getDataMyHRA(){
+		return DataUtils.getData(xls, "MyHRALog");
+	}
 	
 	
 	

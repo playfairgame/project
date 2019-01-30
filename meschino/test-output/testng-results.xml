@@ -1,491 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="1" total="7" passed="1">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginSuite" duration-ms="182" started-at="2019-01-29T21:05:53Z" finished-at="2019-01-29T21:05:53Z">
+  <suite name="Default suite" duration-ms="63348" started-at="2019-01-30T21:25:20Z" finished-at="2019-01-30T21:26:24Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="182" started-at="2019-01-29T21:05:53Z" finished-at="2019-01-29T21:05:53Z">
-      <class name="com.qa.meschino.testcases.Login.verifyLogin">
-        <test-method status="SKIP" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.Login.verifyLogin@2de23121]" name="run" is-config="true" duration-ms="0" started-at="2019-01-29T16:05:53Z" finished-at="2019-01-29T16:05:53Z">
+    <test name="Default test" duration-ms="63348" started-at="2019-01-30T21:25:20Z" finished-at="2019-01-30T21:26:24Z">
+      <class name="com.qa.meschino.testcases.MyHRA.te12">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.MyHRA.te12@4988d8b8]" name="run" is-config="true" duration-ms="267" started-at="2019-01-30T16:25:20Z" finished-at="2019-01-30T16:25:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@236e3f4e]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Runmode of the suite is NO]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Runmode of the suite is NO
-	at com.qa.meschino.testcases.basetest.BaseTest.run(BaseTest.java:146)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method status="FAIL" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.Login.verifyLogin@2de23121]" name="LoginTest" duration-ms="0" started-at="2019-01-29T16:05:53Z" data-provider="LoginTest" finished-at="2019-01-29T16:05:53Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-DataProvider should be static: public java.lang.Object[][] com.qa.meschino.dataprovider.DataProviderFile.getDataLogin()]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-DataProvider should be static: public java.lang.Object[][] com.qa.meschino.dataprovider.DataProviderFile.getDataLogin()
-	at org.testng.internal.Parameters.findDataProvider(Parameters.java:328)
-	at org.testng.internal.Parameters.findDataProvider(Parameters.java:262)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:414)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginTest -->
-      </class> <!-- com.qa.meschino.testcases.Login.verifyLogin -->
-    </test> <!-- Login -->
-  </suite> <!-- LoginSuite -->
-  <suite name="TestNg datadriver Suite" duration-ms="0" started-at="2019-01-29T21:07:09Z" finished-at="2019-01-29T21:07:09Z">
-    <groups>
-    </groups>
-  </suite> <!-- TestNg datadriver Suite -->
-  <suite name="BloodGlucoseSuite" duration-ms="67704" started-at="2019-01-29T21:05:54Z" finished-at="2019-01-29T21:07:01Z">
-    <groups>
-    </groups>
-    <test name="Test" duration-ms="67704" started-at="2019-01-29T21:05:54Z" finished-at="2019-01-29T21:07:01Z">
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="startup" is-config="true" duration-ms="41" started-at="2019-01-29T16:05:54Z" finished-at="2019-01-29T16:05:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="BloodGlucoseTest" duration-ms="110" started-at="2019-01-29T16:05:54Z" data-provider="BloodGlucoseTest" finished-at="2019-01-29T16:05:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Description=Verify that, system does not allow to log BG without valid date, Expected=Date is required., TCID=TC04, Runmode=N, BGLevel=20.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=0}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test case  as runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BloodGlucoseTest -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="endTest" is-config="true" duration-ms="6010" started-at="2019-01-29T16:05:54Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="startup" is-config="true" duration-ms="1" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="BloodGlucoseTest" duration-ms="1" started-at="2019-01-29T16:06:00Z" data-provider="BloodGlucoseTest" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Description=Verify that, system does not allow to log BG without BG value, Expected=Level must be greater than zero., TCID=TC05, Runmode=N, BGLevel=0.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test case  as runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BloodGlucoseTest -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="endTest" is-config="true" duration-ms="148" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="startup" is-config="true" duration-ms="0" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="BloodGlucoseTest" duration-ms="1" started-at="2019-01-29T16:06:00Z" data-provider="BloodGlucoseTest" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Description=Verify that, system does not allow to log BG with value more than 99, Expected=Level must be less than or equal to 99., TCID=TC06, Runmode=N, BGLevel=100.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test case  as runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BloodGlucoseTest -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="endTest" is-config="true" duration-ms="87" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="BloodGlucoseTest" duration-ms="1" started-at="2019-01-29T16:06:00Z" data-provider="BloodGlucoseTest" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Description=Verify that, system successfully logs BG with Current Date and Time, Expected=Successfully Saved, TCID=TC07, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test case  as runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BloodGlucoseTest -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="startup" is-config="true" duration-ms="0" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737]" name="endTest" is-config="true" duration-ms="87" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@49e5f737] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@445b295b]" name="startup" is-config="true" duration-ms="0" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(java.util.Hashtable) throws java.lang.InterruptedException,java.text.ParseException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="SKIP" signature="BloodGlucoseOnProfile(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@445b295b]" name="BloodGlucoseOnProfile" duration-ms="2" started-at="2019-01-29T16:06:00Z" data-provider="BloodGlucoseOnProfile" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Description=Verify that, system updates BG values on Profile page, Source=Blood Glucose Tracker, TCID=TC10, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test case  as runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
-	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(VerifyBloodGlucoseOnProfile.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BloodGlucoseOnProfile -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@445b295b]" name="endTest" is-config="true" duration-ms="89" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BloodGlucoseOnProfile status=SKIP method=VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@445b295b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
-        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@1757cd72]" name="run" is-config="true" duration-ms="19" started-at="2019-01-29T16:05:54Z" finished-at="2019-01-29T16:05:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@74518890]]>
+                <![CDATA[org.testng.TestRunner@7072bc39]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@1757cd72]" name="startup" is-config="true" duration-ms="0" started-at="2019-01-29T16:06:00Z" finished-at="2019-01-29T16:06:00Z">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MyHRA.te12@4988d8b8]" name="startup" is-config="true" duration-ms="28" started-at="2019-01-30T16:25:20Z" finished-at="2019-01-30T16:25:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(java.util.Hashtable) throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
+                <![CDATA[public void com.qa.meschino.testcases.MyHRA.te12.MyHRALog(java.util.Hashtable) throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="BloodGlucoseDeleteLogs(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@1757cd72]" name="BloodGlucoseDeleteLogs" duration-ms="60583" started-at="2019-01-29T16:06:00Z" data-provider="BloodGlucoseDeleteLogs" finished-at="2019-01-29T16:07:01Z">
+        <test-method status="PASS" signature="MyHRALog(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MyHRA.te12@4988d8b8]" name="MyHRALog" duration-ms="58611" started-at="2019-01-30T16:25:20Z" data-provider="MyHRALogs" finished-at="2019-01-30T16:26:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Description=Verify that, system updates BG values on Profile page, Expected=No record found., TCID=TC09, Runmode=Y, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
+                <![CDATA[{154.How many hours do you usually sleep on an average night?==10, TCID=TC11, 17.On average, how many servings of garden vegetables do you consume on a daily basis? (e.g., carrots, tomatoes, broccoli, cauliflower, peppers, romaine lettuce, spinach, collard greens, kale, etc.)=0 servings/day, 29.How many minutes a week do you perform endurance/aerobic activity that makes your heart beat faster than normal, causes you to sweat a little or breathe faster?=0-20 minutes/week, Runmode=N, 50.Do you bruise easily?=Yes, 42.As an ex-smoker, how many years did you smoke?=< 1 year, 24.Do you take a multiple vitamin and mineral supplement daily?=No, 3.On average, how often do you eat any of the following foods? ·   Ground beef, Steak, Hamburger, any other type of Beef ·   High fat Luncheon meats (e.g., salami, bologna, hot dogs) ·   Bacon, Spare ribs, Sausage or any other pork products ·   Chicken wings=1 to 2 times per week, 26.You frequently have pain in your chest or have had chest pain recently?=No, 69.Beta-blockers? (often prescribed for high blood pressure and arrhythmia)=Yes, 55.Do you feel run down and/or are you experiencing a weakened state of immunity? (e.g., frequent colds, sore throat, or known to have an immune-compromised state)=Yes, 171.You are taking thyroid replacement therapy (thyroid hormone)?=Yes, 227.Are you presently taking a sleep-aid medication (e.g., Sonata, Ambien, etc.)?=Yes, 215.Are you taking any medications for Alzheimer’s or dementia?=Yes, 124. Hayfever or seasonal allergies due to pollen?=Yes, 58.Antacids?=Yes, 63.Amphetamines?=Yes, 132.Scleroderma?=Yes, 232.Do you have a severe shellfish allergy?=Yes, 71.Corticosteroids?=Yes, 218.Are you presently experiencing a flare-up of gout (gouty arthritis)?=Yes, 80.What is your HDL-Cholesterol level?=< 1.42 mmol/L (< 55 mg/dL), 225.Are you presently taking a narcotic drug (e.g., Percodan, Percocet, Oxycontin, Oxycodone, Morphine, etc.)?=Yes, 87.Have you been diagnosed with Atrial Fibrillation?=Yes, 160.Do you suffer from chronic or recurrent knee or hip pain?=Yes, 228.Are you known to be allergic to morphine or opiod-containing drugs?=Yes, 60.Do you regularly take any prescription medications?=Yes, 16.How often do you consume sugary carbohydrate snacks & drinks? ·   Regular soft drinks ·   Licorice, jujubes, hard candies, gummy bears ·   Sweet, refined breakfast cereals, rice crispy squares=7 or more times per week, 98.Heartburn, gastritis or GERD (gastroesophageal reflux disease)?=Yes, 139.Chronic Kidney Disease (Chronic Renal Failure)?=Yes, 83.Have you had a previous stroke?=Yes, 115.Insulin-dependent diabetes?=Yes, 7.How often do you use butter for cooking or on baked potatoes or vegetables?=Do not use butter for cooking or on potatoes/vegetables, 44.As an ex-smoker, how many cigarettes did you smoke per day, on average?=< 5, 229.Are you taking radioactive iodine to treat thyroid cancer, Grave’s disease or other thyroid disorder?=Yes, 162.Are you interested in nutrition and supplementation information directed at enhancing sex drive and/or sexual performance capabilities?=Yes, 86.What is your current Blood Pressure reading?=<120 Systolic AND <80 Diastolic, 67.Cholesterol-lowering Statin Drugs?=Yes, 198.Have any of your first-degree relatives developed Parkinson’s disease?=Yes, 123.Chronic hepatitis, cirrhosis or history of liver infection?=Yes, 188.When you feel like your condition is under control, do you sometimes stop taking your medicine?=Yes, 34.Do you have soft nails or do they chip, crack or peel easily, and/or are brittle or contain ridges (not smooth)?=Yes, 13.How often do you consume any of the following? ·   2% milk ·   Margarine ·   Yogurt that is 2% MF ·   Low-fat sour cream=7 or more times per week, 90.Diagnosed with any other cancer?=Yes, 20.How many alcoholic drinks do you have in typical day? Note: One drink equals: ·      341 mL/12 oz (1 bottle) of beer or regular strength beer (5% alcohol) ·      142 mL/5 oz wine (12% alcohol) ·      43 mL/1-½ oz spirits (40% alcohol) ·      3 oz sherry or port=3 or more, 27.You often feel faint or have spells of severe dizziness that are not caused by an inner ear condition?=No, 135.Raynaud’s syndrome (disease)?=Yes, 19.On average, how many servings of fruit do you have per day? Note: 1 serving = 1 whole fruit (e.g., apple, orange, peach), ½ cup chopped fruit (e.g., fruit salad), 8 oz. fruit juice=5 or more servings/day, 210.Are you taking the drug digitalis or digoxin?=Yes, 38.What is your current smoking status?=Never smoked, 61.Barbiturates?=Yes, 108.Toenail or fingernail fungus?=Yes, 62.Antidepressants?=Yes, 30.Resistance Exercise, such as weight lifting/resistance training?=0 times per week, 181.Bipolar?=Yes, 167.You have taken anticonvulsant medication for 5 years or longer at some point in your life?=Yes, 22.Regarding the question above, how many times per month, on average, would you consume 4 or more drinks in one day?=0.0, 25.Your doctor has informed you that you have heart trouble or a heart condition of some kind?=No, 49.Do your gums bleed easily?=Yes, 226.Are you presently taking an anti-anxiety drug (i.e., benzodiazepine, such as Valium, Ativan, etc.)?=Yes, 147.Ever been diagnosed with a kidney stone?=Yes, 209.Do you have only one functioning kidney (due to one kidney being removed or one kidney known to be non-functional?=Yes, 4.How often do you consume any of the following foods? ·   Cheeses with greater than 20% Milk Fat (MF), e.g., cheddar, mozzarella, Monterey Jack, brick, cream cheese, parmesan ·   Homogenized milk ·   Yogurt that is more than 1% MF ·   Regular Ice cream=1 to 2 times per week, 220.Do you suffer from hyperparathyroidism, sarcoidosis, active tuberculosis, silicosis or lymphoma?=Yes, 54.Are you on a weight loss or calorie restricted diet?=Yes, UserName=neil@peter.com, 85.Do you have high blood pressure?=Yes, 39.How long have you smoked, in years?=< 1 year, 165.You have been diagnosed with hyperparathyroidism?=Yes, 88.Prostate cancer?=Yes, 92.Are you interested in knowing about scientifically-based nutrition, lifestyle and supplementation practices that can lower your risk of cancer, in general?=Yes, 73.Diuretics?=Yes, 125.Chronic bronchitis, bronchial asthma or chronic sinusitis?=Yes, 93.Stomach or intestinal ulcers?=Yes, Expected=, 157.Do you have epilepsy?=Yes, 18.On average, how many servings per day do you consume of any starchy carbohydrate foods, such as pasta, rice, beans, peas, corn, oatmeal, etc.?=5 or more servings/day, 64.Anti-convulsant phenytoin drugs?=Yes, 46.Do you often experience cracks at the corners of your lips?=Yes, 41.Which of the following describes your feelings about smoking?=I don’t want to quit in the near future, 201.Do you suffer from a hemolytic anemia due to glucose-6 phosphate dehydrogenase deficiency?=Yes, 187.Did you take your medicine yesterday?=Yes, 185.Have you ever cut back or stopped taking your medication without telling your doctor?=Yes, 89.Colon or rectal cancer?=Yes, 199.Have any of your first-degree relatives suffered a heart attack before age 60?=Yes, 2.Please select your waist circumference in inches from the drop-down menu.=42.0, 117.Osteoporosis or osteopenia?=Yes, 75.L-dopa for Parkinson’s disease?=Yes, 78.What is your Total Cholesterol level?=<3.9 mmol/L (<150 mg/dL), 102.Do you tend to have dry skin?=Yes, 145.Migraine headaches?=Yes, 21.Is there any day of the week, for instance on the weekend, where you have 4 or more drinks in one day?=Yes, 82.Have you had a previous heart attack?=Yes, 72.Indomethacin?=Yes, 150.Tested positive for HIV infection?=Yes, 134.Do you presently have tendonitis, bursitis or muscle inflammation pain?=Yes, 208.Are you an insulin-dependent diabetic?=Yes, 142.Ever been diagnosed with post-concussion syndrome?=Yes, 118.Osteoarthritis or degenerative arthritis?=Yes, 120.Multiple Sclerosis?=Yes, 189.Taking medication everyday is a real inconvenience for some people. Do you ever feel hassled about sticking to your treatment plan?=Yes, 126.Presently have cataracts?=Yes, 196.Have any of your first-degree relatives developed prostate cancer?=Yes, 110.Warts?=Yes, 79.What is your LDL-Cholesterol level?=< or = 1.8 mmol/L (< or = 69 mg/dL), 8.Do you use regular sour cream or high saturated fat salad dressings (e.g., French, Thousand Islands, etc.) more than once per week?=Yes, 40.How many cigarettes do you smoke per day, on average?=< 5, 57.Laxatives?=Yes, 56.Does your hair fall out easily, and/or is it dry and brittle and/or does it lack optimal luster and sheen?=Yes, 33.Do you often experience a scaly, flaky, seborrheic condition at the outer nose margins above the lips?=Yes, 161.Do you suffer from prostate gland enlargement (decreased urine stream, frequent night-time urination)?=Yes, 45.Has your skin been damaged by sunlight and/or do you use a tanning bed more than once per month?=Yes, 159.Do you have Chronic Obstructive Pulmonary Disease (COPD)?=Yes, 129.Currently have fibromyalgia?=Yes, 206.Are you taking an immuno-suppressive drug (i.e., Azathioprine, Cyclosporine, Methotrexate)?=Yes, 52.Do you feel chronically tired?=Yes, 11.Do you choose poultry or fish in place of red meat, pork or fried foods in most situations?=No, 151.Lingering symptoms of Lyme disease that were not managed effectively with antibiotics soon after the initial infection?=Yes, 68.ACE-inhibitors? (usually prescribed for high blood pressure or diabetics)=Yes, 217.Do you suffer from hemophilia?=Yes, 136.Restless Leg Syndrome?=Yes, 164.You have undergone treatment with oral glucocorticosteroid (prednisone, cortisone, etc.) drug for more than 3 months at some time in your life?=Yes, 163.At some point in your life you suffered from anorexia nervosa, bulimia or an eating disorder?=Yes, 15.How often do you consume any high-fat snack foods? (e.g., potato chips, nachos, any type of fried chips, cheesies, regular chocolate bars, other chocolate treats, etc.)=7 or more times per week, 43.As an ex-smoker, how long ago did you smoke?=< 1 year ago, 204.Do you have hemochromatosis?=Yes, 197.Have any of your first-degree relatives developed dementia or Alzheimer’s disease?=Yes, 190.How often do you have difficulty remembering to take all your medications?=Once in a while, 137.Tardive dyskinesia?=Yes, 156.Do you have glaucoma?=Yes, 193.Which of the following best describes your ethnic background?=Hispanic, 172.In the last month, have you found you had little interest or pleasure in doing things?=Yes, 103.Do you have little bumpy lesions on the back of your elbows or along your forearms, skin, or on your back?=Yes, 205.Have you ever received a liver, kidney, heart or lung transplant?=Yes, 195.Have any of your first-degree relatives developed colon cancer?=Yes, 182.How often do you miss taking your medications(s)?=Miss sometimes, 176.Are you responsible for the care of another person (such as an aging parent, sick family member or a disabled child/adult)?=Yes, 105.Eczema?=Yes, 174.How would you rate your current stress level?=No stress in my life, 5.How often do you use cream in your coffee or tea?=Do not use cream in coffee/tea, 133.Sarcoidosis?=Yes, 121.Parkinson’s disease?=Yes, 175.If you run into problems with your health or other parts of your life, do you have a few friends or family members from whom you can ask for help?=Yes, 203.Do you have Wilson’s disease?=Yes, 91.Leukoplakia (precancerous condition of the mouth)?=Yes, 14.How often do you consume any of the following foods? ·     Pastries such as cakes, donuts, croissants, turnovers, cookies (3 or more) ·     Non low-fat muffins ·     Rich desserts ·     Premium ice cream=7 or more times per week, 119.Rheumatoid arthritis, ankylosing spondylitis, lupus, Reiter’s syndrome or any other rheumatic condition causing joint inflammation?=Yes, 211.Do you have an active ulcer?=Yes, 94.Irritable bowel syndrome?=Yes, 128.Chronic fatigue syndrome, Epstein-Barr or chronic mononucleosis?=Yes, 23.How often, on average, do you consume any food or drinks containing high amounts of artificial sweeteners and/or food additives, colours, artifical flavours? Examples of these food/drink items: diet and regular soft drinks, potato chips, nachos, cheesies, corn chips, licorice, jujubes, gummy bears, gelatins, ice cream, fruit ices, sherbet, rice crispy squares, granola bars, or other similar types of snacks.=3 or more times per day, 101.Pancreatitis?=Yes, 214.Are you taking drugs to correct a heart arrhythmia problem?=Yes, 166.In general, you have poor muscular development and strength?=Yes, 146.Ever been diagnosed with liver damage from using a prescription drug, over-the-counter drug or street drug, or from exposure to a liver toxin?=Yes, 99.Diverticulitis or Diverticulosis (Diverticular Disease)=Yes, 36.Have you noticed many small red spots on your skin?=Yes, 100.Celiac disease?=Yes, 81.Do you have a history of heart disease?=Yes, 122.Gout?=Yes, 111.Seborrhea or Seborrheic Dermatitis?=Yes, 213.Do you have pacemaker?=Yes, 112.Are you interested in knowing about ingestible and topical nutrients proven to slow and/or reverse wrinkles and skin aging?=Yes, 221.Are you taking a drug called Methotrexate?=Yes, 192.Do you get a flu shot every year?=Yes, 113.Non-insulin dependent diabetic or have been diagnosed as a pre-diabetic?=Yes, 230.Are you a diabetic or do you have known blood sugar regulation problems?=Yes, 95.Crohn’s Disease?=Yes, 177.How would you rate your current relationship with your partner?=Lots of tension/stress and very difficult, 109.Do you have dark circles under your eyes, have irregular pigmentation, and/or have a dull or poor complexion?=Yes, 184.People sometimes miss taking their medications for reasons other than forgetting. Thinking over the past two weeks, were there any days when you did not take your medicine?=No, 116.Underactive thyroid (low thyroid function) and/or have desire to boost thyroid function through nutritional supplementation?=Yes, 74.Specific drug for Gout?=Yes, 207.Have you ever been diagnosed with Chrohn’s Disease or Ulcerative Colitis?=Yes, 194.To what degree does your current health status compromise your quality of life and/or your ability to participate in desired recreational activities?=My health status does not compromise these things., 149.Insomnia or interrupted sleep, which is not caused by pain?=Yes, 32.Do you eat fewer than 5 fruit and vegetable servings per day, on average?=Yes, 216.Are you allergic to aspirin?=Yes, 202.Do you suffer from kidney failure or are you currently receiving dialysis treatment?=Yes, 114.What is your blood glucose level?=< 85 mg/dl OR < 4.7 mmol/L, 77.Have you been diagnosed with high cholesterol?=Yes, 219.Do you have advanced liver disease?=Yes, 9.What is your weekly whole egg consumption on average?=12 or more eggs per week, 152.Frequent canker sores, cold sores, chronic shingles or other herpes infections?=Yes, 144.Insomnia and/or interrupted sleep due to night time pain?=Yes, 170.You have had a previous fracture in adult years from minimal trauma or had a previous fracture of a vertebra, wrist, hip or pelvis?=Yes, 143.Peripheral Neuropathy from Diabetes, Chemotherapy or a Nerve Injury?=Yes, 48.Have you experienced a reduced ability to taste food?=Yes, 180.Anxiety?=Yes, 10.How often do you eat fried foods? (deep-fried or pan-fried)=7 or more times per week, 153.Been diagnosed with Mild Cognitive Dysfunction?=Yes, 148.Intermittent Claudication or Peripheral Vascular Disease?=Yes, 222.Are you presently taking any chemotherapy drugs or undergoing radiation therapy for the treatment of cancer?=Yes, 28.You have been informed that you have high blood pressure?=Yes, 127.Macular degeneration of the eye?=Yes, 51.Are you a slow healer from bruises and cuts?=Yes, 231.Are you taking vitamin K-blocking anti-coagulants (e.g., Coumadin, Warfarin, Jantoven, Marevan, Lawarin, Waran, Warfant)?=Yes, 1.Please select your weight in pounds from the drop-down menu.=391.0, 131.Frequent constipation?=Yes, 140.Ever been diagnosed with a fatty liver problem from being overweight, excess alcohol consumption or from diabetes?=Yes, 158.Do you suffer from recurrent back pain that limits your work and leisure activities for more than 2 days at a time?=Yes, 59.Pain-killers / Anti-inflammatories? (ASA- Acetylsalicylic acid, etc.)=Yes, 84.Do you have high triglyceride levels?=Yes, 130.Varicose veins or chronic venous insufficiency?=Yes, 65.Antibiotics?=Yes, Password=Test@123, 6.How often do you use butter on bread products such as toast, bagels?=Do not use butter on bread products, 183.Do you sometimes forget to take your pills?=No, Description=Verify that, system logs HRA, 173.In the last month have you been feeling down, depressed or hopeless?=Yes, 138.Ever been diagnosed with Central Serous Retinopathy?=Yes, 47.Do you often experience a sore or burning tongue?=Yes, 224.Are you taking the drug accutane (usually for acne)?=Yes, 31.Flexibility and stretching exercise such as yoga, Pilates, formal stretching program?=0 times per week, 169.You take the drug methotrexate (usually for rheumatoid arthritis or cancer)?=Yes, 155.Do you have trouble either falling or staying asleep?=Yes, 141.Personal history of Retinal Tears?=Yes, 104.Acne?=Yes, 96.Ulcerative Colitis?=Yes, 106.Rosacea?=Yes, 179.Depression?=Yes, 212.Are you presently taking any anti-inflammatory drugs, other than acetaminophen or blood thinners (anti-coagulants)?=Yes, 186.When you travel or leave home, do you sometimes forget to bring along your medication?=Yes, 70.Digitalis?=Yes, 66.Cholesterol-lowering Bile Acid Sequestrant drugs?=Yes, 37.Do you drink more than two cups of coffee or caffeinated tea (of any kind) per day, on average?=Yes, 223.Are you currently taking any drugs for depression or to treat a psychological disorder of any kind (e.g., bipolar disease, schizophrenia, obsessive-compulsive disorder, etc.)?=Yes, 97.Bloating or frequent indigestion after meals?=Yes, 168.You have rheumatoid arthritis or ankylosing spondylitis?=Yes, 178.How would you rate your current friendships and relationships?=I have very few relationships and prefer to spend my time alone, 191.Which of the following best describes your current approach to nutrition and lifestyle practices related to wellness?=I have no plans to improve my nutrition and/or health behaviours presently, 35.Are there white spots on your fingernails?=Yes, 53.Do you have irregular or erratic eating patterns?=Yes, 107.Is your skin frequently exposed to direct sunlight and/or do you use a tanning bed more than once a month?=Yes, 12.Are you a vegetarian or near vegetarian?=No, 76.Theophylline?=Yes, 200.Have you ever had an allergic reaction to a vitamin supplement in the past?=Yes}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BloodGlucoseDeleteLogs -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@1757cd72]" name="endTest" is-config="true" duration-ms="397" started-at="2019-01-29T16:07:01Z" finished-at="2019-01-29T16:07:01Z">
+        </test-method> <!-- MyHRALog -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MyHRA.te12@4988d8b8]" name="endTest" is-config="true" duration-ms="4488" started-at="2019-01-30T16:26:19Z" finished-at="2019-01-30T16:26:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BloodGlucoseDeleteLogs status=SUCCESS method=VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@1757cd72] output={null}]]]>
+                <![CDATA[[TestResult name=MyHRALog status=SUCCESS method=te12.MyHRALog(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MyHRA.te12@4988d8b8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
-    </test> <!-- Test -->
-  </suite> <!-- BloodGlucoseSuite -->
+      </class> <!-- com.qa.meschino.testcases.MyHRA.te12 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

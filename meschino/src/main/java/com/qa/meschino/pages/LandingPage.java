@@ -23,6 +23,9 @@ public class LandingPage extends BasePage{
  @FindBy(id="toolsAndResources")
 	WebElement toolstrackers;
 	
+ @FindBy(xpath="//a[@id='myHra']")
+ WebElement myhra;
+ 
 	
 	
 	public TrackersAndResourcesPage goToToolsTrackers(){
@@ -34,4 +37,19 @@ public class LandingPage extends BasePage{
 		return trackers;
 	}
 
+	
+	
+	public MyHRAPage goToMyHRA(){
+		
+		findAndWait(myhra, 30).click();
+		
+		MyHRAPage hra = new MyHRAPage(driver, logger);
+		PageFactory.initElements(driver, hra);
+		return hra;
+		
+	}
+	
+	
+	
+	
 }

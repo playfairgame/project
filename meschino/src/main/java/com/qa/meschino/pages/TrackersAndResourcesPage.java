@@ -47,7 +47,7 @@ public class TrackersAndResourcesPage  extends BasePage{
 	
 		
 		public String getlog(){
-			System.out.println("i am in funtcion");
+			
 			String a = findAndWait(record, 20).getText().trim();
 			
 		return	a;
@@ -90,22 +90,22 @@ public class TrackersAndResourcesPage  extends BasePage{
 	
 	
 	public void logBGLevel(String bgValue){
-		
+		logger.log(Status.INFO, "Entering Blood Glucose Level");
 		findAndWait(bglevel, 10).sendKeys(bgValue);
 	}
 	
 	public void clickOnSave(){
-		
+		logger.log(Status.INFO, "Clicking on Save Button");
 		findAndWait(saveButton, 10).click();
 	}
 	
 	public void closeBGTracker(){
-		
+		logger.log(Status.INFO, "Closing Blood Glucose Tracker");
 		findAndWait(closeButton, 30).click();
 	}
 	
 	public void clickOnReset(){
-		
+		logger.log(Status.INFO, "clicking on Reset");
 		findAndWait(reset, 20).click();
 	}
 	
