@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
 
 public class MyHRAPage extends BasePage{
@@ -443,7 +444,7 @@ public class MyHRAPage extends BasePage{
 	@FindBy(xpath="//a[@href='#next']")
 	WebElement nextbutton;
 	
-	@FindBy(xpath="//a[id='btnRestart']")
+	@FindBy(xpath="//a[@id='btnRestart']")
 	WebElement restart;
 	
 	public void selectweight(String weight){
@@ -468,21 +469,28 @@ public class MyHRAPage extends BasePage{
 	}
 	
 	public void clickNext(){
-		findAndWait(nextbutton, 20).click();
+		findAndWait(nextbutton, 40).click();
 	}
 	
 	
 	public void clickOnRestart(){
-		findAndWait(restart, 20).click();
+		
+		findAndWait(restart, 30).click();
 	}
 	public boolean isRestart(){
 		
-		int a = driver.findElements(By.xpath("//a[id='btnRestart']")).size();
-		if(a>0){
-			return true;
+		if(driver.findElement(By.xpath("//a[@id='btnRestart']")).isDisplayed())
+		{
+			
+		return true;
+		
 		}
 		else
+		{
+			
 			return false;
+		}
+	
 	}
 	
 	
@@ -496,9 +504,11 @@ public class MyHRAPage extends BasePage{
 				
 				try {
 					Thread.sleep(2000);
-				} catch (InterruptedException e1) {
+				} catch (Throwable t) {
 					// TODO Auto-generated catch block
-					e1.printStackTrace();
+					
+					logger.log(Status.ERROR, t.getMessage());
+					
 				}
 				li.get(i).findElement(By.id("rbAnswerNum")).click();
 				break;

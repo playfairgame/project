@@ -116,7 +116,7 @@ public class BaseTest {
 		
 			
 			try {
-				
+				System.out.println("screen shot file path"+ filePath);
 				logger.fail("Failed " ).addScreenCaptureFromPath(filePath);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -158,11 +158,12 @@ public class BaseTest {
 
 	
 	@AfterMethod
-	public void endTest(ITestResult result ){
+	public void endTest(ITestResult result ) throws IOException{
 		if(extent!=null){
 			
 			if(result.getStatus()==ITestResult.FAILURE){
 				mName = Listeners.getMethodName(result);
+				reportFailure(mName + " failed ");
 				logger.log(Status.FAIL, mName+ " Test case failed " +result.getThrowable());
 			}else if (result.getStatus()== ITestResult.SKIP){
 				mName = Listeners.getMethodName(result);
