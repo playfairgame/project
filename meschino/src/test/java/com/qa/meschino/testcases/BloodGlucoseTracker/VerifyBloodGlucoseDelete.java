@@ -27,7 +27,7 @@ public class VerifyBloodGlucoseDelete extends BaseTest{
 		if(data.get("Runmode").equalsIgnoreCase("N")){
 			
 						
-			throw new SkipException("Skipping the Test case are runmode is NO");
+			throw new SkipException("Skipping the Test case as runmode is NO");
 		}
 		
 		logger.log(Status.INFO, data.get("Description"));

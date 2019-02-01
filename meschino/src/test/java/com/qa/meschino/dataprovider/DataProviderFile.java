@@ -47,15 +47,23 @@ public class DataProviderFile extends BaseTest{
 	}
 	
 
-	@DataProvider(name="MyHRALogs")
+	@DataProvider(name="MyHRALogsMale")
 	public static Object[][] getDataMyHRA(){
-		return DataUtils.getData(xls, "MyHRALog");
+		return DataUtils.getData(xls, "MyHRALog_Male");
 	}
 	
 	
 	
-	
+	@DataProvider(name="MyHRALogsMaleRisk_Alcohol")
+	public static Object[][] getDataMyHRAMale(){
+		return DataUtils.getData(xls, "HraMaleAlcoholRiskStatus");
+	}
 
+	
+	@DataProvider(name="MyHRALogsMaleRisk_BloodGlucose")
+	public static Object[][] getDataMyHRAMaleBG(){
+		return DataUtils.getData(xls, "HraMaleBloodGlucoseRiskStatus");
+	}
 }
 
 

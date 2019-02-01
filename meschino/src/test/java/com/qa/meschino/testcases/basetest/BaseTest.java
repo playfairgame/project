@@ -116,7 +116,7 @@ public class BaseTest {
 		
 			
 			try {
-				System.out.println("screen shot file path"+ filePath);
+				
 				logger.fail("Failed " ).addScreenCaptureFromPath(filePath);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -163,7 +163,8 @@ public class BaseTest {
 			
 			if(result.getStatus()==ITestResult.FAILURE){
 				mName = Listeners.getMethodName(result);
-				reportFailure(mName + " failed ");
+		      //  reportFailure(mName + " failed ");
+			takeScreenshot();
 				logger.log(Status.FAIL, mName+ " Test case failed " +result.getThrowable());
 			}else if (result.getStatus()== ITestResult.SKIP){
 				mName = Listeners.getMethodName(result);
@@ -176,7 +177,7 @@ public class BaseTest {
 			//extent.endTest(logger);
 			extent.flush();
 			if(driver!=null){
-			//driver.quit();
+			driver.quit();
 			}
 			
 		}

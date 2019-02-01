@@ -30,6 +30,10 @@ public class MWConstants {
 	
 	public static final String WELCOME_POPUP ="//div[@class='modal-content']/button[@class='close']";
 	
+	//Verify HRA done
+	public static final String REPORT_COMPLETED= "//div[@class='report-date']/span";
+	
+	
 	// EMAIL EXTENT REPORT - USERNAME AND PASSWORD
 	public static final String emailID = "aneelbb@mail.com";
 	public static final String password = "Hello789@";

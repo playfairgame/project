@@ -7,11 +7,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.qa.meschino.basepages.BasePage;
+import com.qa.meschino.constants.MWConstants;
 
 public class MyHRAPage extends BasePage{
 	
@@ -447,6 +449,15 @@ public class MyHRAPage extends BasePage{
 	@FindBy(xpath="//a[@id='btnRestart']")
 	WebElement restart;
 	
+	@FindBy(xpath="//a[contains(text(),'Finish')]")
+	WebElement finish;
+	
+	@FindBy(xpath="//input[@id='finishAccept']")
+	WebElement acceptcheckbox;
+	
+	@FindBy(id="confirmConsent")
+	WebElement confirmconsent;
+	
 	public void selectweight(String weight){
 		String value = weight.substring(0,weight.indexOf("."));
 		//findAndWait(weight_dropdown, 20).click();
@@ -503,7 +514,7 @@ public class MyHRAPage extends BasePage{
 			if(li.get(i).getText().equalsIgnoreCase(AnsOption)){
 				
 				try {
-					Thread.sleep(2000);
+					Thread.sleep(500);
 				} catch (Throwable t) {
 					// TODO Auto-generated catch block
 					
@@ -515,8 +526,31 @@ public class MyHRAPage extends BasePage{
 			}
 		}
         
+		
+	}
+	public void clickOnFinish(){
+		
+		findAndWait(finish, 20).click();
+	}
+	public void checkConsent(){
+		findAndWait(acceptcheckbox, 20).click();
+	}
+
+	public MyWellnessReportPage clickConfirm(){
+		findAndWait(confirmconsent, 20).click();
+		MyWellnessReportPage wrp= new MyWellnessReportPage(driver, logger);
+		PageFactory.initElements(driver, wrp);
+		return wrp;
 	}
 	
-	
-
+	public String confirmReport(){
+		 if(isElementPresent(MWConstants.REPORT_COMPLETED))
+		 {
+		    String text = driver.findElement(By.xpath(MWConstants.REPORT_COMPLETED)).getText();
+		    
+		    return text;
+		 }
+		 return null;
+		
+	}
 }

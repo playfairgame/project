@@ -1,24 +1,39 @@
-package com.qa.meschino.testcases.MyHRA;
+package com.qa.meschino.testcases.MyHRA_Male;
 
+import java.io.IOException;
 import java.util.Hashtable;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.qa.meschino.dataprovider.DataProviderFile;
+import com.qa.meschino.pages.CreateMyWellnessPlanPage;
 import com.qa.meschino.pages.LandingPage;
 import com.qa.meschino.pages.LoginPage;
 import com.qa.meschino.pages.MyHRAPage;
+import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class te12 extends BaseTest{
+
+
+public class VerifyHRAMaleAlcoholRiskStatus extends BaseTest{
+
 	
+	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogsMaleRisk_Alcohol")
+	public void HraMaleAlcoholRiskStatus(Hashtable<String, String> data) throws IOException, InterruptedException{
 	
-	
-	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogs")
-	public void MyHRALog(Hashtable<String, String> data) throws InterruptedException{
 		
 		
+	if(data.get("Runmode").equalsIgnoreCase("N")){
+			
+			
+			throw new SkipException("Skipping the Test case as runmode is NO");
+		}
+		
+		logger.log(Status.INFO, data.get("Description"));
 		init("Chrome");
 		
 		LoginPage l = new LoginPage(driver, logger);
@@ -41,7 +56,7 @@ public class te12 extends BaseTest{
 		h.selectwaist(data.get(h.Q2));
 		Thread.sleep(2000);
 		h.clickNext();
-		System.out.println("data from excel "+ data.get(h.Q3));
+		
 		h.selectAnswerOption("Q1", data.get(h.Q3));
 		h.selectAnswerOption("Q2", data.get(h.Q4));
 		h.selectAnswerOption("Q3", data.get(h.Q5));
@@ -299,8 +314,62 @@ public class te12 extends BaseTest{
 		 
 		 
 		 h.selectAnswerOption("Q242", data.get(h.Q200));
+		 h.selectAnswerOption("Q244", data.get(h.Q201));
+		 h.selectAnswerOption("Q245", data.get(h.Q202));
+		 h.selectAnswerOption("Q246", data.get(h.Q203));
+		 h.selectAnswerOption("Q247", data.get(h.Q204));
+		 h.selectAnswerOption("Q248", data.get(h.Q205));
+		 h.selectAnswerOption("Q250", data.get(h.Q206));
+		 h.selectAnswerOption("Q251", data.get(h.Q207));
+		 
+		 h.selectAnswerOption("Q252", data.get(h.Q208));
+		 h.selectAnswerOption("Q253", data.get(h.Q209));
+		 h.selectAnswerOption("Q254", data.get(h.Q210));
+		 h.selectAnswerOption("Q255", data.get(h.Q211));
+		 h.selectAnswerOption("Q256", data.get(h.Q212));
+		 h.selectAnswerOption("Q257", data.get(h.Q213));
+		 h.selectAnswerOption("Q258", data.get(h.Q214));
+		 h.selectAnswerOption("Q259", data.get(h.Q215));
+		 h.selectAnswerOption("Q260", data.get(h.Q216));
+		 h.selectAnswerOption("Q261", data.get(h.Q217));
+		 h.selectAnswerOption("Q262", data.get(h.Q218));
+		 
+		 h.selectAnswerOption("Q263", data.get(h.Q219));
+		 h.selectAnswerOption("Q264", data.get(h.Q220));
+		 h.selectAnswerOption("Q265", data.get(h.Q221));
+		 h.selectAnswerOption("Q266", data.get(h.Q232));
+		 h.selectAnswerOption("Q267", data.get(h.Q223));
+		 h.selectAnswerOption("Q268", data.get(h.Q224));
+		 h.selectAnswerOption("Q269", data.get(h.Q225));
+		 h.selectAnswerOption("Q270", data.get(h.Q226));
+		 h.selectAnswerOption("Q271", data.get(h.Q227));
+		 h.selectAnswerOption("Q272", data.get(h.Q228));
+		 h.selectAnswerOption("Q273", data.get(h.Q229));
+		 h.selectAnswerOption("Q274", data.get(h.Q230));
+		 h.selectAnswerOption("Q275", data.get(h.Q231));
+		 h.selectAnswerOption("Q276", data.get(h.Q232));
+		 
+		 h.clickOnFinish();
+		 Thread.sleep(2000);
+		 h.checkConsent();
+		 Thread.sleep(2000);
+		MyWellnessReportPage r= h.clickConfirm();
+		Thread.sleep(2000);
+		CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
+		wp.clickOnAlcoholConsumpton();
+		String actual =	wp.getRiskStatus();
+		
+		if(!actual.equalsIgnoreCase(data.get("Expected"))){
+			
+			reportFailure("Risk status should be "+data.get("Expected")+" instead of "+actual);
+		}
 		 
 		 
+		
+		
+		
+		
 	}
-
+	
+	
 }

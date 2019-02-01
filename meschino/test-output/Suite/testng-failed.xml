@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="run"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale">
+        <methods>
+          <include name="startup"/>
+          <include name="MyHRALog_Male" invocation-numbers="0"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

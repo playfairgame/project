@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hra_MaleSuite]">
+  <listeners>
+    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
+  </listeners>
+  <test name="MyHRA(failed)">
+    <classes>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale">
+        <methods>
+          <include name="startup"/>
+          <include name="MyHRALog_Male" invocation-numbers="0"/>
+          <include name="run"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus">
+        <methods>
+          <include name="HraMaleAlcoholRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="startup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus -->
+    </classes>
+  </test> <!-- MyHRA(failed) -->
+</suite> <!-- Failed suite [Hra_MaleSuite] -->

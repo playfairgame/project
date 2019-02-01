@@ -27,6 +27,17 @@ public class LandingPage extends BasePage{
  WebElement myhra;
  
 	
+ @FindBy(xpath="//a[@id='riskreport']")
+	WebElement wellnessplanlink;
+	
+	public CreateMyWellnessPlanPage goToCreateMyWellnessPlan(){
+		
+		findAndWait(wellnessplanlink, 20).click();
+		CreateMyWellnessPlanPage wp = new CreateMyWellnessPlanPage(driver, logger);
+		PageFactory.initElements(driver, wp);
+		return wp;
+	}
+	
 	
 	public TrackersAndResourcesPage goToToolsTrackers(){
 		

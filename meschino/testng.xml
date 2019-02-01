@@ -15,7 +15,7 @@
       
       <suite-file path ="LoginSuite.xml"/>
       <suite-file path ="BloodGlucoseSuite.xml"/>
- <!--   <suite-file path ="Hra_MaleSuit.xml"/> -->   
+ <suite-file path ="Hra_MaleSuite.xml"/>   
   </suit-files>
 
 
