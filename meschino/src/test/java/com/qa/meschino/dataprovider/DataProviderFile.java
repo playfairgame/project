@@ -64,6 +64,23 @@ public class DataProviderFile extends BaseTest{
 	public static Object[][] getDataMyHRAMaleBG(){
 		return DataUtils.getData(xls, "HraMaleBloodGlucoseRiskStatus");
 	}
+	
+	
+	@DataProvider(name="MyHRALogsMaleRisk_BloodGlucoseUnknown")
+	public static Object[][] getDataMyHRAMaleBGUnKnown(){
+		return DataUtils.getData(xls, "HraMaleBloodGlucoseUnknownRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRALogsMaleRisk_BloodPressure")
+	public static Object[][] getDataMyHRAMaleBP(){
+		return DataUtils.getData(xls, "HraMaleBloodPressureRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRALogsMaleRisk_BloodPressureUnknown")
+	public static Object[][] getDataMyHRAMaleBPUnknown(){
+		return DataUtils.getData(xls, "HraMaleBloodPressureUnknownRiskStatus");
+	}
+	
 }
 
 

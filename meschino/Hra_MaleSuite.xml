@@ -6,6 +6,9 @@
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus"/>
          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
