@@ -56,7 +56,7 @@ public class DataProviderFile extends BaseTest{
 	
 	@DataProvider(name="MyHRALogsMaleRisk_Alcohol")
 	public static Object[][] getDataMyHRAMale(){
-		return DataUtils.getData(xls, "HraMaleAlcoholRiskStatus");
+		return DataUtils.getData(xls, "HraAlcoholRiskStatus");
 	}
 
 	
@@ -80,6 +80,33 @@ public class DataProviderFile extends BaseTest{
 	public static Object[][] getDataMyHRAMaleBPUnknown(){
 		return DataUtils.getData(xls, "HraMaleBloodPressureUnknownRiskStatus");
 	}
+	
+	@DataProvider(name="MyHRARisk_Cholesterol")
+	public static Object[][] getDataMyHRACholesterol(){
+		return DataUtils.getData(xls, "HraCholesterolRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_CholesterolUnknown")
+	public static Object[][] getDataMyHRACholesterolUnknown(){
+		return DataUtils.getData(xls, "HraCholesterolUnknownRiskStatus");
+	}
+	
+	
+	@DataProvider(name="MyHRARisk_EnduranceExercise")
+	public static Object[][] getDataMyHRAEnduranceExercise(){
+		return DataUtils.getData(xls, "HraEnduranceExerciseRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_ResistanceExercise")
+	public static Object[][] getDataMyHRAResistanceExercise(){
+		return DataUtils.getData(xls, "HraResistanceExerciseRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_Smoking")
+	public static Object[][] getDataMyHRASmoke(){
+		return DataUtils.getData(xls, "HraSmokingRiskStatus");
+	}
+	
 	
 }
 

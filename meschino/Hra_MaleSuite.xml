@@ -4,11 +4,16 @@
   <test name="MyHRA">
     <classes>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale"/>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAAlcoholRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolUnknownRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAEnduranceExerciseRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAResistanceExerciseRiskStatus"/>
+     <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus"/>
          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

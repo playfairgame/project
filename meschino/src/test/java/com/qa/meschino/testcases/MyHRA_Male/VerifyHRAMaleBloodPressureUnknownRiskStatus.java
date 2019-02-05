@@ -354,7 +354,7 @@ MyWellnessReportPage r= h.clickConfirm();
 Thread.sleep(2000);
 CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
 wp.clickOnBloodPressureKnown();
-String actual =	wp.getRiskStatus();
+String actual =	wp.getRiskStatus("Blood Pressure Reading");
 
 if(!actual.equalsIgnoreCase(data.get("Expected"))){
 	

@@ -6,40 +6,28 @@
   </listeners>
   <test name="MyHRA(failed)">
     <classes>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraMaleBloodPressureRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="run"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolUnknownRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HRACholesterolUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolUnknownRiskStatus -->
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus">
         <methods>
           <include name="startup"/>
           <include name="HraMaleBloodGlucoseRiskStatus" invocation-numbers="0 1 2"/>
           <include name="endTest"/>
-          <include name="run"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus">
-        <methods>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus">
-        <methods>
-          <include name="startup"/>
-          <include name="HraMaleBloodGlucoseUnknownRiskStatus" invocation-numbers="0 1"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus">
-        <methods>
-          <include name="HraMaleAlcoholRiskStatus" invocation-numbers="0 1 2"/>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleAlcoholRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus">
-        <methods>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus -->
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale">
         <methods>
           <include name="startup"/>
@@ -47,6 +35,55 @@
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAEnduranceExerciseRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HRAEnduranceExerciseRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAEnduranceExerciseRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraCholesterolRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAResistanceExerciseRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraResistanceExerciseRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAResistanceExerciseRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraSmokingRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAAlcoholRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraAlcoholRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAAlcoholRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraMaleBloodGlucoseUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraMaleBloodPressureUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus -->
     </classes>
   </test> <!-- MyHRA(failed) -->
 </suite> <!-- Failed suite [Hra_MaleSuite] -->

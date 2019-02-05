@@ -61,8 +61,8 @@ public class CreateMyWellnessPlanPage extends BasePage{
 	@FindBy(xpath="//input[@class='knob knob-arobic']")
 	WebElement riskstatus;
 	
-	public String getRiskStatus(){
-		String Actualcolor =   driver.findElement(By.xpath("//input[@class='knob knob-arobic']")).getAttribute("data-fgcolor");
+	public String getRiskStatus(String riskName){
+		String Actualcolor =   driver.findElement(By.xpath("//input[@backgroundimage='"+riskName+".png']")).getAttribute("data-fgcolor");
 	                         
 	//	String Actualcolor = findAndWait(riskstatus, 20).getAttribute("data-fgcolor");
 		

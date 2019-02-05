@@ -16,13 +16,11 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRAMaleBloodGlucoseUnknownRiskStatus extends BaseTest{
+public class VerifyHRAEnduranceExerciseRiskStatus extends BaseTest{
 
 	
-	
-	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogsMaleRisk_BloodGlucoseUnknown")
-	public void HraMaleBloodGlucoseUnknownRiskStatus(Hashtable<String, String> data) throws InterruptedException, IOException{
-		
+	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRARisk_EnduranceExercise")
+	public void HRAEnduranceExerciseRiskStatus(Hashtable<String, String> data) throws InterruptedException, IOException{
 		
 if(data.get("Runmode").equalsIgnoreCase("N")){
 			
@@ -353,14 +351,14 @@ h.selectAnswerOption("Q36", data.get(h.Q37));
 MyWellnessReportPage r= h.clickConfirm();
 Thread.sleep(2000);
 CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
-wp.clickOnBloodGlucoseUnknown();
-String actual =	wp.getRiskStatus("Blood Glucose");
+wp.clickOnPhysicalActivity();
+String actual =	wp.getRiskStatus("Endurance Exercise");
 
 if(!actual.equalsIgnoreCase(data.get("Expected"))){
 	
 	reportFailure("Risk status should be "+data.get("Expected")+" instead of "+actual);
 }
- 
+
 		
 		
 		

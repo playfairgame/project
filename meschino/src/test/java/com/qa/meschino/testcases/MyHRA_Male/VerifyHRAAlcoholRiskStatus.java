@@ -19,11 +19,11 @@ import com.qa.meschino.testcases.basetest.BaseTest;
 
 
 
-public class VerifyHRAMaleAlcoholRiskStatus extends BaseTest{
+public class VerifyHRAAlcoholRiskStatus extends BaseTest{
 
 	
 	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogsMaleRisk_Alcohol")
-	public void HraMaleAlcoholRiskStatus(Hashtable<String, String> data) throws IOException, InterruptedException{
+	public void HraAlcoholRiskStatus(Hashtable<String, String> data) throws IOException, InterruptedException{
 	
 		
 		
@@ -357,7 +357,7 @@ public class VerifyHRAMaleAlcoholRiskStatus extends BaseTest{
 		Thread.sleep(2000);
 		CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
 		wp.clickOnAlcoholConsumpton();
-		String actual =	wp.getRiskStatus();
+		String actual =	wp.getRiskStatus("Alcohol Consumption");
 		
 		if(!actual.equalsIgnoreCase(data.get("Expected"))){
 			

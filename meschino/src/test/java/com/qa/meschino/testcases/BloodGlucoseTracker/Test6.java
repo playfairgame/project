@@ -27,7 +27,7 @@ public void tq() throws InterruptedException{
 	
 	CreateMyWellnessPlanPage wp = lp.goToCreateMyWellnessPlan();
 	wp.clickOnAlcoholConsumpton();
-	String a =wp.getRiskStatus();
+	String a =wp.getRiskStatus("Blood Glucose");
     
 	System.out.println(a);
 
