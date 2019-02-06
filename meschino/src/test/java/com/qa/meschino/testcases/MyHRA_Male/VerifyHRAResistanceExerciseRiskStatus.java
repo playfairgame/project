@@ -97,22 +97,24 @@ h.selectAnswerOption("Q34", data.get(h.Q35));
 h.selectAnswerOption("Q35", data.get(h.Q36));
 h.selectAnswerOption("Q36", data.get(h.Q37));
 
- if(!data.get(h.Q38).equalsIgnoreCase("Never Smoked")){
-	
-	 if(!data.get(h.Q38).equalsIgnoreCase("Ex-smoker")){
-		 h.selectAnswerOption("Q37", data.get(h.Q38));
-		 h.selectAnswerOption("Q38", data.get(h.Q39));
-		 h.selectAnswerOption("Q39", data.get(h.Q40));
-		 h.selectAnswerOption("Q40", data.get(h.Q41));
-	 }
+if(data.get(h.Q38).equalsIgnoreCase("Currently smoking")){
+	h.selectAnswerOption("Q37", data.get(h.Q38));
+	 Thread.sleep(2000);
+	 h.selectAnswerOption("Q38", data.get(h.Q39));
+	 h.selectAnswerOption("Q39", data.get(h.Q40));
+	 h.selectAnswerOption("Q40", data.get(h.Q41));
+}else if(data.get(h.Q38).equalsIgnoreCase("Ex-smoker")){
 	 h.selectAnswerOption("Q37", data.get(h.Q38));
+	 Thread.sleep(2000);
 	 h.selectAnswerOption("Q41", data.get(h.Q42));
 	 h.selectAnswerOption("Q42", data.get(h.Q43));
 	 h.selectAnswerOption("Q43", data.get(h.Q44));
-	 
- }
+	
+}else if(data.get(h.Q38).equalsIgnoreCase("Never smoked")){
+	h.selectAnswerOption("Q37", data.get(h.Q38));
+}
  
- h.selectAnswerOption("Q37", data.get(h.Q38));
+
  h.selectAnswerOption("Q44", data.get(h.Q45));
  h.selectAnswerOption("Q45", data.get(h.Q46));
  h.selectAnswerOption("Q46", data.get(h.Q47));

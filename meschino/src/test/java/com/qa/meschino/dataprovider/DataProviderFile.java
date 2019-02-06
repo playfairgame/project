@@ -107,6 +107,16 @@ public class DataProviderFile extends BaseTest{
 		return DataUtils.getData(xls, "HraSmokingRiskStatus");
 	}
 	
+	@DataProvider(name="MyHRARisk_Stress")
+	public static Object[][] getDataMyHRAStress(){
+		return DataUtils.getData(xls, "HraStressRiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_WaistCircumference")
+	public static Object[][] getDataMyHRAWaistCircumference(){
+		return DataUtils.getData(xls, "HraWaistCirumferenceRiskStatus");
+	}
+	
 	
 }
 

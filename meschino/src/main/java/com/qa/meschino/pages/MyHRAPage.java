@@ -459,23 +459,24 @@ public class MyHRAPage extends BasePage{
 	WebElement confirmconsent;
 	
 	public void selectweight(String weight){
-		String value = weight.substring(0,weight.indexOf("."));
+	//	System.out.println("weight"+ weight);
+	//	String value = weight.substring(0,weight.indexOf("."));
 		//findAndWait(weight_dropdown, 20).click();
-		
+	//	System.out.println(value);
 		Select s = new Select(findAndWait(weight_dropdown, 20));
 		
-		s.selectByVisibleText(value);
+		s.selectByVisibleText(weight);
 		
 	}
 	
 	
 	public void selectwaist(String waist){
-		String value = waist.substring(0,waist.indexOf("."));
+	//	String value = waist.substring(0,waist.indexOf("."));
 		//findAndWait(weight_dropdown, 20).click();
-		
+		//System.out.println(value);
 		Select s = new Select(findAndWait(waist_dropdown, 20));
 		
-		s.selectByVisibleText(value);
+		s.selectByVisibleText(waist);
 		
 	}
 	

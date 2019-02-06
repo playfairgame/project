@@ -135,7 +135,9 @@ public class CreateMyWellnessPlanPage extends BasePage{
 		findAndWait(p3, 20).click();
 	}
 	
-	
+	public void clickOnOverWeight(){
+		findAndWait(overweight, 20).click();
+	}
 	
 
 }
