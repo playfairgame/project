@@ -16,7 +16,7 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRAMaleBloodPressureRiskStatus extends BaseTest{
+public class VerifyHRABloodPressureRiskStatus extends BaseTest{
 
 	
 	

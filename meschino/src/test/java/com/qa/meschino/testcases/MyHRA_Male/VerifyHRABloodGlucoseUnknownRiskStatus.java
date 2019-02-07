@@ -16,7 +16,7 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRAMaleBloodGlucoseUnknownRiskStatus extends BaseTest{
+public class VerifyHRABloodGlucoseUnknownRiskStatus extends BaseTest{
 
 	
 	

@@ -5,10 +5,10 @@
     <classes>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMale"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAAlcoholRiskStatus"/>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseRiskStatus"/>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus"/>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus"/>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRABloodGlucoseRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRABloodGlucoseUnknownRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRABloodPressureRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRABloodPressureUnknownRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolUnknownRiskStatus"/>
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAEnduranceExerciseRiskStatus"/>
@@ -16,6 +16,9 @@
      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus"/>
      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAStressRiskStatus"/>
      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAWaistCirumferenceRiskStatus"/>
+     <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRADiabetesType2RiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAP3GeneticTestingRiskStatus"/>
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRABMIOverweightRiskStatus"/>
          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

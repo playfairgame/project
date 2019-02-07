@@ -8,6 +8,7 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
+import com.qa.meschino.basepages.BasePage;
 import com.qa.meschino.dataprovider.DataProviderFile;
 import com.qa.meschino.pages.CreateMyWellnessPlanPage;
 import com.qa.meschino.pages.LandingPage;
@@ -16,15 +17,16 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRASmokingRiskStatus extends BaseTest {
+public class VerifyHRABloodGlucoseRiskStatus extends BaseTest{
+
 	
 	
+	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogsMaleRisk_BloodGlucose")
+	public void HraMaleBloodGlucoseRiskStatus(Hashtable<String, String> data) throws IOException, InterruptedException{
 	
-	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRARisk_Smoking")
-	public void HraSmokingRiskStatus(Hashtable<String, String> data) throws InterruptedException, IOException{
 		
 		
-if(data.get("Runmode").equalsIgnoreCase("N")){
+	if(data.get("Runmode").equalsIgnoreCase("N")){
 			
 			
 			throw new SkipException("Skipping the Test case as runmode is NO");
@@ -98,9 +100,6 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		h.selectAnswerOption("Q34", data.get(h.Q35));
 		h.selectAnswerOption("Q35", data.get(h.Q36));
 		h.selectAnswerOption("Q36", data.get(h.Q37));
-		
-	
-		
 		if(data.get(h.Q38).equalsIgnoreCase("Currently smoking")){
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 			 Thread.sleep(2000);
@@ -117,7 +116,6 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		}else if(data.get(h.Q38).equalsIgnoreCase("Never smoked")){
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 		}
-		 
 		 
 		 h.selectAnswerOption("Q44", data.get(h.Q45));
 		 h.selectAnswerOption("Q45", data.get(h.Q46));
@@ -357,14 +355,19 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		MyWellnessReportPage r= h.clickConfirm();
 		Thread.sleep(2000);
 		CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
-		wp.clickOnSmoking();
-		String actual =	wp.getRiskStatus("Smoking");
+		wp.clickOnBloodGlucose();
+		String actual =	wp.getRiskStatus("Blood Glucose");
 		
 		if(!actual.equalsIgnoreCase(data.get("Expected"))){
 			
 			reportFailure("Risk status should be "+data.get("Expected")+" instead of "+actual);
 		}
 		 
+		 
+		
+		
+		
+		
 	}
-
+	
 }

@@ -16,6 +16,7 @@
       <suite-file path ="LoginSuite.xml"/>
       <suite-file path ="BloodGlucoseSuite.xml"/>
  <suite-file path ="Hra_MaleSuite.xml"/>   
+ <suite-file path ="MeschinoResearchReviewsSuite.xml"/>   
   </suit-files>
 
 

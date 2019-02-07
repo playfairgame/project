@@ -16,13 +16,11 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRASmokingRiskStatus extends BaseTest {
+public class VerifyHRADiabetesType2RiskStatus extends BaseTest{
+
 	
-	
-	
-	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRARisk_Smoking")
-	public void HraSmokingRiskStatus(Hashtable<String, String> data) throws InterruptedException, IOException{
-		
+	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRARisk_DiabetesType2")
+	public void HraDiabetesType2RiskStatus(Hashtable<String,String> data) throws InterruptedException, IOException{
 		
 if(data.get("Runmode").equalsIgnoreCase("N")){
 			
@@ -99,8 +97,6 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		h.selectAnswerOption("Q35", data.get(h.Q36));
 		h.selectAnswerOption("Q36", data.get(h.Q37));
 		
-	
-		
 		if(data.get(h.Q38).equalsIgnoreCase("Currently smoking")){
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 			 Thread.sleep(2000);
@@ -118,7 +114,7 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 		}
 		 
-		 
+		
 		 h.selectAnswerOption("Q44", data.get(h.Q45));
 		 h.selectAnswerOption("Q45", data.get(h.Q46));
 		 h.selectAnswerOption("Q46", data.get(h.Q47));
@@ -207,7 +203,7 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		 h.selectAnswerOption("Q118", data.get(h.Q111));
 		 h.selectAnswerOption("Q119", data.get(h.Q112));
 		 h.clickNext();
-		 
+		 Thread.sleep(2000);
 		 h.selectAnswerOption("Q120", data.get(h.Q113));
 		 h.selectAnswerOption("Q122", data.get(h.Q114)); 
 		 h.selectAnswerOption("Q123", data.get(h.Q115));
@@ -357,14 +353,16 @@ if(data.get("Runmode").equalsIgnoreCase("N")){
 		MyWellnessReportPage r= h.clickConfirm();
 		Thread.sleep(2000);
 		CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
-		wp.clickOnSmoking();
-		String actual =	wp.getRiskStatus("Smoking");
+		wp.clickOnDiabetes();
+		String actual =	wp.getRiskStatus("Diabetes Type 2");
 		
 		if(!actual.equalsIgnoreCase(data.get("Expected"))){
 			
 			reportFailure("Risk status should be "+data.get("Expected")+" instead of "+actual);
 		}
 		 
+		 
+		
+		
 	}
-
 }

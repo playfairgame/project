@@ -8,7 +8,6 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.qa.meschino.basepages.BasePage;
 import com.qa.meschino.dataprovider.DataProviderFile;
 import com.qa.meschino.pages.CreateMyWellnessPlanPage;
 import com.qa.meschino.pages.LandingPage;
@@ -17,16 +16,13 @@ import com.qa.meschino.pages.MyHRAPage;
 import com.qa.meschino.pages.MyWellnessReportPage;
 import com.qa.meschino.testcases.basetest.BaseTest;
 
-public class VerifyHRAMaleBloodGlucoseRiskStatus extends BaseTest{
+public class VerifyHRAP3GeneticTestingRiskStatus extends BaseTest{
 
 	
-	
-	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRALogsMaleRisk_BloodGlucose")
-	public void HraMaleBloodGlucoseRiskStatus(Hashtable<String, String> data) throws IOException, InterruptedException{
-	
+	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MyHRARisk_P3" )
+	public void HraP3RiskStatus(Hashtable<String,String> data) throws IOException, InterruptedException{
 		
-		
-	if(data.get("Runmode").equalsIgnoreCase("N")){
+if(data.get("Runmode").equalsIgnoreCase("N")){
 			
 			
 			throw new SkipException("Skipping the Test case as runmode is NO");
@@ -100,6 +96,7 @@ public class VerifyHRAMaleBloodGlucoseRiskStatus extends BaseTest{
 		h.selectAnswerOption("Q34", data.get(h.Q35));
 		h.selectAnswerOption("Q35", data.get(h.Q36));
 		h.selectAnswerOption("Q36", data.get(h.Q37));
+		
 		if(data.get(h.Q38).equalsIgnoreCase("Currently smoking")){
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 			 Thread.sleep(2000);
@@ -117,6 +114,7 @@ public class VerifyHRAMaleBloodGlucoseRiskStatus extends BaseTest{
 			h.selectAnswerOption("Q37", data.get(h.Q38));
 		}
 		 
+		
 		 h.selectAnswerOption("Q44", data.get(h.Q45));
 		 h.selectAnswerOption("Q45", data.get(h.Q46));
 		 h.selectAnswerOption("Q46", data.get(h.Q47));
@@ -355,8 +353,8 @@ public class VerifyHRAMaleBloodGlucoseRiskStatus extends BaseTest{
 		MyWellnessReportPage r= h.clickConfirm();
 		Thread.sleep(2000);
 		CreateMyWellnessPlanPage wp =r.goToCreateMyWellnessPlan();
-		wp.clickOnBloodGlucose();
-		String actual =	wp.getRiskStatus("Blood Glucose");
+		wp.clickOnP3();
+		String actual =	wp.getRiskStatus("P3");
 		
 		if(!actual.equalsIgnoreCase(data.get("Expected"))){
 			
@@ -365,9 +363,5 @@ public class VerifyHRAMaleBloodGlucoseRiskStatus extends BaseTest{
 		 
 		 
 		
-		
-		
-		
 	}
-	
 }

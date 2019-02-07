@@ -14,6 +14,13 @@
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAStressRiskStatus">
+        <methods>
+          <include name="HRASmokingRiskStatus" invocation-numbers="0 1 2"/>
+          <include name="startup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAStressRiskStatus -->
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolUnknownRiskStatus">
         <methods>
           <include name="startup"/>
@@ -42,6 +49,27 @@
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAEnduranceExerciseRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRADiabetesType2RiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraDiabetesType2RiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRADiabetesType2RiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraMaleBloodGlucoseUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus">
+        <methods>
+          <include name="startup"/>
+          <include name="HraMaleBloodPressureUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus -->
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRACholesterolRiskStatus">
         <methods>
           <include name="startup"/>
@@ -59,7 +87,7 @@
       <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus">
         <methods>
           <include name="startup"/>
-          <include name="HraSmokingRiskStatus" invocation-numbers="0 1"/>
+          <include name="HraSmokingRiskStatus" invocation-numbers="0 1 2 3"/>
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRASmokingRiskStatus -->
@@ -70,20 +98,19 @@
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAAlcoholRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus">
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAP3GeneticTestingRiskStatus">
         <methods>
           <include name="startup"/>
-          <include name="HraMaleBloodGlucoseUnknownRiskStatus" invocation-numbers="0 1"/>
           <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodGlucoseUnknownRiskStatus -->
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus">
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAP3GeneticTestingRiskStatus -->
+      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAWaistCirumferenceRiskStatus">
         <methods>
           <include name="startup"/>
-          <include name="HraMaleBloodPressureUnknownRiskStatus" invocation-numbers="0 1"/>
+          <include name="HraWaistCirumferenceRiskStatus" invocation-numbers="0 1 2"/>
           <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAMaleBloodPressureUnknownRiskStatus -->
+      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAWaistCirumferenceRiskStatus -->
     </classes>
   </test> <!-- MyHRA(failed) -->
 </suite> <!-- Failed suite [Hra_MaleSuite] -->

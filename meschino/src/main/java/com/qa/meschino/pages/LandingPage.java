@@ -26,9 +26,22 @@ public class LandingPage extends BasePage{
  @FindBy(xpath="//a[@id='myHra']")
  WebElement myhra;
  
+ @FindBy(xpath="//a[@id='researchandReviews']")
+ WebElement researchreview;
+ 
 	
  @FindBy(xpath="//a[@id='riskreport']")
 	WebElement wellnessplanlink;
+ 
+ 
+ public MeschinoResearchReviewPage goToMeschinoResearchReview(){
+	 System.out.println("click on mrr");
+	 findAndWait(researchreview, 30).click();
+	 MeschinoResearchReviewPage r = new MeschinoResearchReviewPage(driver, logger);
+	 PageFactory.initElements(driver, r);
+	 
+	 return r;
+ }
 	
 	public CreateMyWellnessPlanPage goToCreateMyWellnessPlan(){
 		

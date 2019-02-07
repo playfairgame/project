@@ -117,6 +117,26 @@ public class DataProviderFile extends BaseTest{
 		return DataUtils.getData(xls, "HraWaistCirumferenceRiskStatus");
 	}
 	
+	@DataProvider(name="MyHRARisk_DiabetesType2")
+	public static Object[][] getDataMyHRADiabetesType2(){
+		return DataUtils.getData(xls, "HraDiabetesType2RiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_P3")
+	public static Object[][] getDataMyHRAP3(){
+		return DataUtils.getData(xls, "HraP3RiskStatus");
+	}
+	
+	@DataProvider(name="MyHRARisk_BMI")
+	public static Object[][] getDataMyHRABMI(){
+		return DataUtils.getData(xls, "HraBMIOverweightRiskStatus");
+	}
+	
+	
+	@DataProvider(name="MeschinoResearchReviews_videos")
+	public static Object[][] getDataMRR_video(){
+		return DataUtils.getData(xls, "videos");
+	}
 	
 }
 
