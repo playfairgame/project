@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57638" started-at="2019-02-07T20:30:06Z" finished-at="2019-02-07T20:31:04Z">
+  <suite name="Default suite" duration-ms="50443" started-at="2019-02-08T01:16:58Z" finished-at="2019-02-08T01:17:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57638" started-at="2019-02-07T20:30:06Z" finished-at="2019-02-07T20:31:04Z">
+    <test name="Default test" duration-ms="50443" started-at="2019-02-08T01:16:58Z" finished-at="2019-02-08T01:17:48Z">
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
-        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace]" name="run" is-config="true" duration-ms="326" started-at="2019-02-07T15:30:06Z" finished-at="2019-02-07T15:30:06Z">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@394df057]" name="run" is-config="true" duration-ms="14" started-at="2019-02-07T20:16:58Z" finished-at="2019-02-07T20:16:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@53499d85]]>
+                <![CDATA[org.testng.TestRunner@758f4f03]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace]" name="startup" is-config="true" duration-ms="38" started-at="2019-02-07T15:30:06Z" finished-at="2019-02-07T15:30:06Z">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@394df057]" name="startup" is-config="true" duration-ms="4" started-at="2019-02-07T20:16:58Z" finished-at="2019-02-07T20:16:58Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="videos(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace]" name="videos" duration-ms="52810" started-at="2019-02-07T15:30:06Z" data-provider="MeschinoResearchReviews_videos" finished-at="2019-02-07T15:30:59Z">
+        <test-method status="PASS" signature="videos(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@394df057]" name="videos" duration-ms="50072" started-at="2019-02-07T20:16:58Z" data-provider="MeschinoResearchReviews_videos" finished-at="2019-02-07T20:17:48Z">
           <params>
             <param index="0">
               <value>
@@ -40,11 +40,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- videos -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace]" name="endTest" is-config="true" duration-ms="4487" started-at="2019-02-07T15:30:59Z" finished-at="2019-02-07T15:31:03Z">
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@394df057]" name="endTest" is-config="true" duration-ms="340" started-at="2019-02-07T20:17:48Z" finished-at="2019-02-07T20:17:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=videos status=SUCCESS method=VerifyVideos.videos(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace] output={null}]]]>
+                <![CDATA[[TestResult name=videos status=SUCCESS method=VerifyVideos.videos(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@394df057] output={null}]]]>
               </value>
             </param>
           </params>

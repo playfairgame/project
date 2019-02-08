@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.MyHRA_Male.VerifyHRAWaistCirumferenceRiskStatus">
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
         <methods>
           <include name="startup"/>
-          <include name="HraWaistCirumferenceRiskStatus" invocation-numbers="0 2"/>
+          <include name="videos" invocation-numbers="0"/>
           <include name="run"/>
           <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MyHRA_Male.VerifyHRAWaistCirumferenceRiskStatus -->
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
