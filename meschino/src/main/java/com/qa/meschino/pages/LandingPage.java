@@ -35,7 +35,7 @@ public class LandingPage extends BasePage{
  
  
  public MeschinoResearchReviewPage goToMeschinoResearchReview(){
-	 System.out.println("click on mrr");
+	 //System.out.println("click on mrr");
 	 findAndWait(researchreview, 30).click();
 	 MeschinoResearchReviewPage r = new MeschinoResearchReviewPage(driver, logger);
 	 PageFactory.initElements(driver, r);

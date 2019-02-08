@@ -9,7 +9,7 @@ public class MWConstants {
 
 	// URLs
 	public static final String PROD_URL = "https://www.meschinowellness.com";
-	
+	public static final String STAGE_URL = "http://stage-meschinowellness.azurewebsites.net";
 	
 	// REPORT PATH
 	public static final String REPORTS_PATH =System.getProperty("user.dir")+"//Reports//";

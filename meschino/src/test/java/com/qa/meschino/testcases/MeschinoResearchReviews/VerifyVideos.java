@@ -1,5 +1,6 @@
 package com.qa.meschino.testcases.MeschinoResearchReviews;
 
+import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -21,8 +22,8 @@ public class VerifyVideos extends BaseTest{
 	
 	//
 	@Test(dataProviderClass=DataProviderFile.class, dataProvider="MeschinoResearchReviews_videos")
-	public void videos(Hashtable<String,String> data) throws InterruptedException{
-		System.out.println("i am here");
+	public void videos(Hashtable<String,String> data) throws InterruptedException, IOException{
+		
 
 		if(data.get("Runmode").equalsIgnoreCase("N")){
 			
@@ -47,17 +48,20 @@ public class VerifyVideos extends BaseTest{
 	
 	r.clickOnVideos();
 	Thread.sleep(3000);
-	System.out.println(driver.findElements(By.xpath("//div[@class='tab-content']/div[2]/div[3]/div[1]")).size());
 	
-	WebElement a = driver.findElement(By.xpath("//div[@class='tab-content']/div[2]/div[3]/div[1]"));
-	List<WebElement> x = a.findElements(By.tagName("a"));
-	System.out.println(x.size());
-	for(int i=0;i<x.size();i++){
-		
-     System.out.println(x.get(i).getText().trim());
-		
+	int count = r.checkVideos();
+	
+	if(count>0){
+		reportFailure("Some links does not work");
 	}
+	
 	
 	}
 
+	
+	
+	
+	
+	
 }
+

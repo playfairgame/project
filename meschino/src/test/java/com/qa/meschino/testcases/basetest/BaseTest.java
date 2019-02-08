@@ -70,8 +70,9 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		logger.log(Status.INFO, "Browsing Url");
-		driver.get(MWConstants.PROD_URL);
+		//driver.get(MWConstants.PROD_URL);
 		
+		driver.get(MWConstants.PROD_URL);
 	}
 	
 	public void reportFailure(String message) throws IOException{
