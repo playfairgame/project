@@ -52,7 +52,7 @@ public class VerifyVideos extends BaseTest{
 	int count = r.checkVideos();
 	
 	if(count>0){
-		reportFailure("Some links does not work");
+		reportFailure(count+" links does not work");
 	}
 	
 	

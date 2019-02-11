@@ -138,6 +138,16 @@ public class DataProviderFile extends BaseTest{
 		return DataUtils.getData(xls, "videos");
 	}
 	
+	@DataProvider(name="MeschinoResearchReviews_Articles")
+	public static Object[][] getDataMRR_article(){
+		return DataUtils.getData(xls, "articles");
+	}
+	
+	@DataProvider(name="MeschinoResearchReviews_Downloads")
+	public static Object[][] getDataMRR_download(){
+		return DataUtils.getData(xls, "downloads");
+	}
+	
 }
 
 

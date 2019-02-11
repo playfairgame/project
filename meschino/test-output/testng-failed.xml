@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [BloodGlucoseSuite]">
+  <listeners>
+    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
+  </listeners>
+  <test name="Test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
         <methods>
-          <include name="startup"/>
-          <include name="videos" invocation-numbers="0"/>
+          <include name="BloodGlucoseDeleteLogs"/>
           <include name="run"/>
-          <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+        <methods>
+          <include name="BloodGlucoseOnProfile"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
+        <methods>
+          <include name="BloodGlucoseTest"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [BloodGlucoseSuite] -->

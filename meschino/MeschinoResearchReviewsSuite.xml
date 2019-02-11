@@ -6,7 +6,8 @@
     <classes>
       
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos"/>
-                  
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles"/> 
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads"/>       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
