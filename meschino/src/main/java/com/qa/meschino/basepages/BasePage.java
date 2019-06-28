@@ -9,6 +9,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.http.client.fluent.Request;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -242,6 +243,30 @@ public String getCurrentTime(){
 	Date cdate= new Date();
 	String currentTime = new SimpleDateFormat("hh:mm a").format(cdate);
 	return currentTime;
+}
+
+
+
+
+//*****************************GET RESPONSE CODE*****************************************************
+
+public int getResponseCode(String url){
+	
+	int resp_code=0;
+	try{
+		
+		resp_code = Request.Get(url).execute().returnResponse().getStatusLine().getStatusCode();
+		
+	}catch(Throwable t){
+		String msg = t.getMessage();
+		logger.log(Status.ERROR,msg);
+	}
+	return resp_code;
+//	if(resp_code==200)
+//	return true;
+//	else
+//		return false;
+//	
 }
 
 //***************************GET PROFILE DATA******************************************

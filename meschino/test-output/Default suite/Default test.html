@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 08 15:31:58 EST 2019</td>
+<td>Started on:</td><td>Tue Jun 25 10:48:21 EDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>1218 seconds (1218678 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5033 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,19 +67,17 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos.videos()'><b>videos</b><br>Test class: com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos<br>Parameters: {Password=Test@123, Runmode=Y, UserName=neil@peter.com, Description=Verify that, all video links are working fine, TCID=TC51}</td>
-<td><div><pre>java.lang.AssertionError: Some links does not work
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:82)
-	at com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos.videos(VerifyVideos.java:55)
+<td title='com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles.articles()'><b>articles</b><br>Test class: com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles<br>Parameters: {Password=Test@123, Runmode=N, UserName=neil@peter.com, Description=Verify that, all video links are working fine, TCID=TC55}</td>
+<td><div><pre>org.testng.SkipException: Skipping the Test case as runmode is NO
+	at com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles.articles(VerifyArticles.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,11 +102,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace650688291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace650688291'><pre>java.lang.AssertionError: Some links does not work
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.qa.meschino.testcases.basetest.BaseTest.reportFailure(BaseTest.java:82)
-	at com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos.videos(VerifyVideos.java:55)
+</pre></div><a href='#' onClick='toggleBox("stack-trace680712932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace680712932'><pre>org.testng.SkipException: Skipping the Test case as runmode is NO
+	at com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles.articles(VerifyArticles.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,8 +130,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1212</td>
-<td>com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@63475ace</td></tr>
+<td>0</td>
+<td>com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles@63475ace</td></tr>
 </table><p>
 </body>
 </html>

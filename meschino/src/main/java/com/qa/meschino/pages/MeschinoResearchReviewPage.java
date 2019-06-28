@@ -2,14 +2,18 @@ package com.qa.meschino.pages;
 
 import java.util.List;
 
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.http.HttpClient;
 import org.openqa.selenium.support.FindBy;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
 import com.qa.meschino.basepages.BasePage;
 
 public class MeschinoResearchReviewPage extends BasePage{
@@ -76,7 +80,34 @@ public class MeschinoResearchReviewPage extends BasePage{
 	}
 	
 	
+	public void findLinksOnArticle(){
+		                                           		
+	WebElement eLink = driver.findElement(By.xpath("//div[@class='article-wrapper']"));
+	List<WebElement> externalLinks = eLink.findElements(By.tagName("a"));
 	
+	int externalActualLinks= externalLinks.size()-3;
+	logger.log(Status.INFO, "Number of External Links in the Article are: " + externalActualLinks);
+	
+	System.out.println("Number of External Links in the Article are: " + externalActualLinks);
+	//int statusCode=0;
+	int status;
+	String href;
+	for(int l=0;l<externalActualLinks;l++){
+	
+		href = externalLinks.get(l).getAttribute("href");
+		 status = getResponseCode(href);
+		if (status != 200){
+			logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
+		}else{
+			logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText());
+		}
+		
+		System.out.println(externalLinks.get(l).getText());
+		
+	}
+	
+		
+	}
 	
 
 public int checkVideos() throws InterruptedException{
@@ -213,10 +244,24 @@ public int checkArticles() throws InterruptedException{
 		     else{
 		    	 
 		    	 logger.log(Status.INFO, "Link Passed --> "+ link);
+// Check number of links in the Article    "HTML", "Usage: <b>BOLD TEXT</b>"
+		    	
+		    	 logger.log(Status.INFO, "Checking the Links on the Article: "+ link);
+		    	 
+		    	 findLinksOnArticle();
+		    	 
+		    	 ///*********************************
 		    	 findAndWait(reviewsidebarlink, 20).click();
 		    	 findAndWait(articles, 20).click();
 		    	 //driver.findElement(By.xpath("//div[@class='page-sidebar navbar-collapse collapse']/ul/li[5]/a")).click();
 			     //driver.findElement(By.xpath("//a[@id='ui-id-4']")).click();
+		    	 
+		    	 
+		    	
+		    	 
+		    	 
+		    	 
+		    	 
 		     }
 		           
 					     

@@ -16,13 +16,13 @@
       </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
         <methods>
+          <include name="downloads" invocation-numbers="0"/>
           <include name="startup"/>
           <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
         <methods>
-          <include name="articles" invocation-numbers="0"/>
           <include name="startup"/>
           <include name="endTest"/>
         </methods>

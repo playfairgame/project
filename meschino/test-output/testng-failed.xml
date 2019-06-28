@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [BloodGlucoseSuite]">
+<suite name="Failed suite [MeschinoResearchReviewsSuite]">
   <listeners>
     <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
   </listeners>
-  <test name="Test(failed)">
+  <test name="VerifyMeschinoResearchReviews(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
         <methods>
-          <include name="BloodGlucoseDeleteLogs"/>
+          <include name="startup"/>
+          <include name="videos" invocation-numbers="0"/>
           <include name="run"/>
+          <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
         <methods>
-          <include name="BloodGlucoseOnProfile"/>
+          <include name="downloads" invocation-numbers="0"/>
+          <include name="startup"/>
+          <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
         <methods>
-          <include name="BloodGlucoseTest"/>
+          <include name="startup"/>
+          <include name="endTest"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [BloodGlucoseSuite] -->
+  </test> <!-- VerifyMeschinoResearchReviews(failed) -->
+</suite> <!-- Failed suite [MeschinoResearchReviewsSuite] -->
