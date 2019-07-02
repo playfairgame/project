@@ -96,10 +96,11 @@ public class MeschinoResearchReviewPage extends BasePage{
 	
 		href = externalLinks.get(l).getAttribute("href");
 		 status = getResponseCode(href);
-		if (status != 200){
+		 // Need to check the response codes
+		if ((status != 200)||(status !=0)){
 			logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
 		}else{
-			logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText());
+			logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);
 		}
 		
 		System.out.println(externalLinks.get(l).getText());
@@ -108,7 +109,35 @@ public class MeschinoResearchReviewPage extends BasePage{
 	
 		
 	}
-	
+	public void findLinksOnVideos(){
+   		
+		WebElement eLink = driver.findElement(By.xpath("//div[@class='article-wrapper']"));
+		List<WebElement> externalLinks = eLink.findElements(By.tagName("a"));
+		
+		int externalActualLinks= externalLinks.size()-3;
+		logger.log(Status.INFO, "Number of External Links in the Video are: " + externalActualLinks);
+		
+		System.out.println("Number of External Links in the Video are: " + externalActualLinks);
+		//int statusCode=0;
+		int status;
+		String href;
+		for(int l=0;l<externalActualLinks;l++){
+		
+			href = externalLinks.get(l).getAttribute("href");
+			 status = getResponseCode(href);
+			 // Need to check the response codes
+			if (status != 200){
+				logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
+			}else{
+				logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);
+			}
+			
+			System.out.println(externalLinks.get(l).getText());
+			
+		}
+		
+			
+		}
 
 public int checkVideos() throws InterruptedException{
 		int counter =0;
@@ -162,6 +191,14 @@ public int checkVideos() throws InterruptedException{
 			     else{
 			    	 
 			    	 logger.log(Status.INFO, "Link Passed --> "+ link);
+			    	 
+			    	// Check number of links in the Video    "HTML", "Usage: <b>BOLD TEXT</b>"
+				    	
+			    	 logger.log(Status.INFO, "Checking the Links on the Video: "+ link);
+			    	 
+			    	 findLinksOnVideos();
+			    	 
+			    	 
 			    	 findAndWait(reviewsidebarlink, 20).click();
 			    	 findAndWait(videos, 20).click();
 			    	 //driver.findElement(By.xpath("//div[@class='page-sidebar navbar-collapse collapse']/ul/li[5]/a")).click();

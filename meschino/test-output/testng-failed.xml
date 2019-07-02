@@ -9,7 +9,6 @@
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
         <methods>
           <include name="startup"/>
-          <include name="videos" invocation-numbers="0"/>
           <include name="run"/>
           <include name="endTest"/>
         </methods>
@@ -23,6 +22,7 @@
       </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
         <methods>
+          <include name="articles" invocation-numbers="0"/>
           <include name="startup"/>
           <include name="endTest"/>
         </methods>
