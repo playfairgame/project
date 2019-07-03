@@ -97,7 +97,7 @@ public class MeschinoResearchReviewPage extends BasePage{
 		href = externalLinks.get(l).getAttribute("href");
 		 status = getResponseCode(href);
 		 // Need to check the response codes
-		if ((status != 200)||(status !=0)){
+		if (status >= 400){
 			logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
 		}else{
 			logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);
@@ -126,7 +126,7 @@ public class MeschinoResearchReviewPage extends BasePage{
 			href = externalLinks.get(l).getAttribute("href");
 			 status = getResponseCode(href);
 			 // Need to check the response codes
-			if (status != 200){
+			if (status >= 400){
 				logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
 			}else{
 				logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);

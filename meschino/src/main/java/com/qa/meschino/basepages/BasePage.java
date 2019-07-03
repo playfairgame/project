@@ -2,6 +2,9 @@ package com.qa.meschino.basepages;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -252,6 +255,37 @@ public String getCurrentTime(){
 
 public int getResponseCode(String url){
 	
+	System.setProperty("jsse.enableSNIExtension", "false");
+	HttpURLConnection huc = null;
+	int respCode = 0;
+	
+	try {
+        huc = (HttpURLConnection)(new URL(url).openConnection());
+        
+        huc.setRequestMethod("HEAD");
+        
+        huc.connect();
+        
+        respCode = huc.getResponseCode();
+        
+        System.out.println("The Response Code is === "+ respCode);
+        
+        return respCode;
+            
+    } catch (Throwable t) {
+        // TODO Auto-generated catch block
+    
+    	String msg= t.getMessage();
+    	logger.log(Status.ERROR, msg);
+    	
+        
+    } 
+	return respCode;
+	
+	
+	
+	
+	/*
 	int resp_code=0;
 	try{
 		
@@ -267,6 +301,9 @@ public int getResponseCode(String url){
 //	else
 //		return false;
 //	
+ * 
+ * 
+ */
 }
 
 //***************************GET PROFILE DATA******************************************

@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
+      <class name="com.qa.meschino.pages.test">
         <methods>
-          <include name="articles" invocation-numbers="0"/>
-          <include name="startup"/>
-          <include name="run"/>
-          <include name="endTest"/>
+          <include name="t"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles -->
+      </class> <!-- com.qa.meschino.pages.test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

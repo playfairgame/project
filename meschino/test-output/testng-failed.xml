@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MeschinoResearchReviewsSuite]">
-  <listeners>
-    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
-  </listeners>
-  <test name="VerifyMeschinoResearchReviews(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
+      <class name="com.qa.meschino.pages.test">
         <methods>
-          <include name="startup"/>
-          <include name="run"/>
-          <include name="endTest"/>
+          <include name="t"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
-        <methods>
-          <include name="downloads" invocation-numbers="0"/>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
-        <methods>
-          <include name="articles" invocation-numbers="0"/>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles -->
+      </class> <!-- com.qa.meschino.pages.test -->
     </classes>
-  </test> <!-- VerifyMeschinoResearchReviews(failed) -->
-</suite> <!-- Failed suite [MeschinoResearchReviewsSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
