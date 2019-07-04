@@ -34,6 +34,19 @@ public class LandingPage extends BasePage{
 	WebElement wellnessplanlink;
  
  
+ @FindBy (xpath="//ul[@class='page-sidebar-menu']/li[4]")
+	WebElement  learnAndEarn;
+	
+
+
+	  public LearnAndEarnPage goToLearnAndEarnPage(){
+		findAndWait(learnAndEarn, 30).click();
+		LearnAndEarnPage lep = new LearnAndEarnPage(driver, logger);
+		PageFactory.initElements(driver, lep);
+		
+		return lep;
+	}
+ 
  public MeschinoResearchReviewPage goToMeschinoResearchReview(){
 	 //System.out.println("click on mrr");
 	 findAndWait(researchreview, 30).click();

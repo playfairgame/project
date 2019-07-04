@@ -148,6 +148,12 @@ public class DataProviderFile extends BaseTest{
 		return DataUtils.getData(xls, "downloads");
 	}
 	
+	@DataProvider(name="LearnAndEarn")
+	public static Object[][] getDataLearnAndEarn(){
+		return DataUtils.getData(xls, "learnandearn");
+	}
+	
+	
 }
 
 
