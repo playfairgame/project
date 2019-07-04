@@ -1,17 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="3" failed="0" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="342" started-at="2019-07-03T18:03:43Z" finished-at="2019-07-03T18:03:43Z">
+  <suite name="MeschinoResearchReviewsSuite" duration-ms="288" started-at="2019-07-04T16:13:58Z" finished-at="2019-07-04T16:13:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="342" started-at="2019-07-03T18:03:43Z" finished-at="2019-07-03T18:03:43Z">
-      <class name="com.qa.meschino.pages.test">
-        <test-method status="PASS" signature="t()[pri:0, instance:com.qa.meschino.pages.test@4678c730]" name="t" duration-ms="164" started-at="2019-07-03T14:03:43Z" finished-at="2019-07-03T14:03:43Z">
+    <test name="VerifyMeschinoResearchReviews" duration-ms="288" started-at="2019-07-04T16:13:58Z" finished-at="2019-07-04T16:13:59Z">
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
+        <test-method status="SKIP" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads@6a2f6f80]" name="startup" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- t -->
-      </class> <!-- com.qa.meschino.pages.test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="downloads(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads@6a2f6f80]" name="downloads" duration-ms="2" started-at="2019-07-04T12:13:59Z" data-provider="MeschinoResearchReviews_Downloads" finished-at="2019-07-04T12:13:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Password=Test@123, Runmode=N, UserName=neil@peter.com, Description=Verify that, all video download are working fine, TCID=TC56}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloads -->
+        <test-method status="SKIP" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads@6a2f6f80]" name="endTest" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
+        <test-method status="SKIP" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles@1190200a]" name="startup" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="articles(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles@1190200a]" name="articles" duration-ms="1" started-at="2019-07-04T12:13:59Z" data-provider="MeschinoResearchReviews_Articles" finished-at="2019-07-04T12:13:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Password=Test@123, Runmode=N, UserName=neil@peter.com, Description=Verify that, all article links are working fine, TCID=TC55}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- articles -->
+        <test-method status="SKIP" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles@1190200a]" name="endTest" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles -->
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
+        <test-method status="SKIP" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@3c3d9b6b]" name="run" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:58Z" finished-at="2019-07-04T12:13:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@55f616cf]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Runmode of the suite is NO]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Runmode of the suite is NO
+	at com.qa.meschino.testcases.basetest.BaseTest.run(BaseTest.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:277)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="SKIP" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@3c3d9b6b]" name="startup" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="videos(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@3c3d9b6b]" name="videos" duration-ms="4" started-at="2019-07-04T12:13:59Z" data-provider="MeschinoResearchReviews_videos" finished-at="2019-07-04T12:13:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Password=Test@123, Runmode=N, UserName=neil@peter.com, Description=Verify that, all video links are working fine, TCID=TC54}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- videos -->
+        <test-method status="SKIP" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos@3c3d9b6b]" name="endTest" is-config="true" duration-ms="0" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
+    </test> <!-- VerifyMeschinoResearchReviews -->
+  </suite> <!-- MeschinoResearchReviewsSuite -->
+  <suite name="TestNg datadriver Suite" duration-ms="0" started-at="2019-07-04T16:15:14Z" finished-at="2019-07-04T16:15:14Z">
+    <groups>
+    </groups>
+  </suite> <!-- TestNg datadriver Suite -->
+  <suite name="LearnAndEarnSuite" duration-ms="70815" started-at="2019-07-04T16:13:59Z" finished-at="2019-07-04T16:15:10Z">
+    <groups>
+    </groups>
+    <test name="VerifyLearnAndEarnLinks" duration-ms="70815" started-at="2019-07-04T16:13:59Z" finished-at="2019-07-04T16:15:10Z">
+      <class name="com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@4c309d4d]" name="run" is-config="true" duration-ms="2" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@59fc684e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@4c309d4d]" name="startup" is-config="true" duration-ms="40" started-at="2019-07-04T12:13:59Z" finished-at="2019-07-04T12:13:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks.LearnAndEarn(java.util.Hashtable) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="LearnAndEarn(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@4c309d4d]" name="LearnAndEarn" duration-ms="65888" started-at="2019-07-04T12:13:59Z" data-provider="LearnAndEarn" finished-at="2019-07-04T12:15:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Password=Test@123, Runmode=Y, UserName=neil@peter.com, Description=Verify that, all learn and earn links are working fine, TCID=TC57}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LearnAndEarn -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@4c309d4d]" name="endTest" is-config="true" duration-ms="4866" started-at="2019-07-04T12:15:05Z" finished-at="2019-07-04T12:15:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LearnAndEarn status=SUCCESS method=VerifyLearnAndEarnLinks.LearnAndEarn(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@4c309d4d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks -->
+    </test> <!-- VerifyLearnAndEarnLinks -->
+  </suite> <!-- LearnAndEarnSuite -->
 </testng-results>

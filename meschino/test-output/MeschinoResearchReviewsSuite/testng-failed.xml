@@ -8,25 +8,20 @@
     <classes>
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos">
         <methods>
-          <include name="startup"/>
-          <include name="videos" invocation-numbers="0"/>
+          <include name="videos"/>
           <include name="run"/>
-          <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyVideos -->
-      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
-        <methods>
-          <include name="downloads" invocation-numbers="0"/>
-          <include name="startup"/>
-          <include name="endTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
       <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles">
         <methods>
-          <include name="startup"/>
-          <include name="endTest"/>
+          <include name="articles"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyArticles -->
+      <class name="com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads">
+        <methods>
+          <include name="downloads"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.MeschinoResearchReviews.VerifyDownloads -->
     </classes>
   </test> <!-- VerifyMeschinoResearchReviews(failed) -->
 </suite> <!-- Failed suite [MeschinoResearchReviewsSuite] -->
