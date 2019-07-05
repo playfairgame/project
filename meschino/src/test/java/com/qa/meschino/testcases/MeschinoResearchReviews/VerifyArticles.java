@@ -48,6 +48,7 @@ public void articles(Hashtable<String,String> data) throws InterruptedException,
 	
 	int count = r.checkArticles();
 	
+	
 	if(count>0){
 		reportFailure(count+" links does not work");
 	}

@@ -1,5 +1,6 @@
 package com.qa.meschino.testcases.LearnAndEarn;
 
+import java.io.IOException;
 import java.util.Hashtable;
 
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +18,7 @@ public class VerifyLearnAndEarnLinks extends BaseTest{
 
 	
 	@Test(dataProviderClass=DataProviderFile.class, dataProvider="LearnAndEarn")
-	public void LearnAndEarn(Hashtable<String,String> data) throws InterruptedException{
+	public void LearnAndEarn(Hashtable<String,String> data) throws InterruptedException, IOException{
 		
 			if(data.get("Runmode").equalsIgnoreCase("N")){
 						
@@ -41,6 +42,12 @@ public class VerifyLearnAndEarnLinks extends BaseTest{
 			
 			LearnAndEarnPage lep = lp.goToLearnAndEarnPage();
 			
+			
+			int count = lep.verifyLearnAndEarn();
+			
+			if(count>0){
+				reportFailure(count+" links does not work");
+			}
 			
 			
 	}
