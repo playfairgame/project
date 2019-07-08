@@ -95,6 +95,7 @@ public class MeschinoResearchReviewPage extends BasePage{
 	for(int l=0;l<externalActualLinks;l++){
 	
 		href = externalLinks.get(l).getAttribute("href");
+		if(href !=null){
 		 status = getResponseCode(href);
 		 // Need to check the response codes
 		if (status >= 400){
@@ -104,7 +105,9 @@ public class MeschinoResearchReviewPage extends BasePage{
 		}
 		
 		System.out.println(externalLinks.get(l).getText());
-		
+		}else{
+			logger.log(Status.INFO, "HREF Is NULL");
+		}
 	}
 	
 		
@@ -124,6 +127,7 @@ public class MeschinoResearchReviewPage extends BasePage{
 		for(int l=0;l<externalActualLinks;l++){
 		
 			href = externalLinks.get(l).getAttribute("href");
+			if(href !=null){
 			 status = getResponseCode(href);
 			 // Need to check the response codes
 			if (status >= 400){
@@ -133,7 +137,9 @@ public class MeschinoResearchReviewPage extends BasePage{
 			}
 			
 			System.out.println(externalLinks.get(l).getText());
-			
+			}else{
+				logger.log(Status.INFO, "HREF Is NULL");
+			}
 		}
 		
 			

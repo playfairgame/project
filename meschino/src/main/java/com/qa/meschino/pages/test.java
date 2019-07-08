@@ -2,7 +2,11 @@ package com.qa.meschino.pages;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import javax.swing.JLabel;
+
 import java.net.MalformedURLException;
+import java.awt.Font;
 import java.io.IOException;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,8 +31,9 @@ public class test extends BasePage {
 	//	System.out.println(getResponseCode("https://www.lead.org.au/fs/Fact_sheet-Nutrients_that_reduce_lead_poisoning_June_2010.pdf"));
 	
 		 url=  "file:///H:/Nutrients%20of%20Interest/artimisinin%20and%20CRC.pdf";
-		
-		
+	
+		 
+		 
 		try {
 			System.out.println("i am in");
             huc = (HttpURLConnection)(new URL(url).openConnection());
