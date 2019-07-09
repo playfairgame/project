@@ -55,12 +55,12 @@ public class LearnAndEarnPage extends BasePage{
 			if(href!=null){
 			System.out.println("href is "+ href);
 		if(!href.equalsIgnoreCase("javascript:;")){	   // submit and complete quit
-			System.out.println("link is not submit or complete quiz");
+			//System.out.println("link is not submit or complete quiz");
 			logger.log(Status.INFO, "Checking the link: "+href);
 			
 			status = getResponseCode(href);
 			if (status >= 400){
-				logger.log(Status.ERROR, "External Link Failed: " + leLinks.get(lelink).getText()+" Status Code: "+ status);
+				logger.log(Status.ERROR, "********** EXTERNAL LINK FAILED ******** --->>> " + leLinks.get(lelink).getText()+" Status Code: "+ status);
 			}else{
 				logger.log(Status.INFO, "External Link Passed: " + leLinks.get(lelink).getText()+ status);
 			}
@@ -87,10 +87,10 @@ public class LearnAndEarnPage extends BasePage{
 				
 				// find categories in a row
 				List<WebElement> colsInRow = row.findElements(By.className("col-md-4"));
-				for(int Cols=0;Cols<colsInRow.size();Cols++){
+				for(int Cols=0;Cols<colsInRow.size();Cols++){ 
 					
 					WebElement col = colsInRow.get(Cols);
-					logger.log(Status.INFO, "Checking the CATEGORY:--->  "+ col.getText());
+					logger.log(Status.INFO, "************* CHECKING THE CATEGORY *****************  >>>   "+ col.getText());
 					//System.out.println("Category Name: "+ col.getText());
 					
 					// Click on the Category
@@ -122,7 +122,7 @@ public class LearnAndEarnPage extends BasePage{
 								String leTitle = leCol.findElement(By.tagName("a")).getText();
 								//System.out.println("Learn and Earn Name is: "+leTitle);
 								
-									logger.log(Status.INFO,"Checking LEARN AND EARN TITLE >>>>>  "+leTitle);	
+									logger.log(Status.INFO,"********* CHECKING LEARN AND EARN TITLE ***************  "+leTitle);	
 								
 								
 								// Get L&E Link	

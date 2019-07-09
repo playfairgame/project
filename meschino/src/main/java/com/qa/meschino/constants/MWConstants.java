@@ -5,6 +5,7 @@ public class MWConstants {
 	// Driver Paths
 	public static final String CHROME_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\chromedriver.exe";
 	public static final String FIREFOX_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\geckodriver.exe";
+	public static final String EDGE_DRIVER_EXE= System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\meschino\\driverFiles\\MicrosoftWebDriver.exe";
 	
 
 	// URLs

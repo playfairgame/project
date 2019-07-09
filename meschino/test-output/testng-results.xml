@@ -2,60 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNg datadriver Suite" duration-ms="0" started-at="2019-07-08T16:36:47Z" finished-at="2019-07-08T16:36:47Z">
+  <suite name="Default suite" duration-ms="17165" started-at="2019-07-09T16:24:46Z" finished-at="2019-07-09T16:25:03Z">
     <groups>
     </groups>
-  </suite> <!-- TestNg datadriver Suite -->
-  <suite name="LearnAndEarnSuite" duration-ms="806894" started-at="2019-07-08T16:23:16Z" finished-at="2019-07-08T16:36:43Z">
-    <groups>
-    </groups>
-    <test name="VerifyLearnAndEarnLinks" duration-ms="806894" started-at="2019-07-08T16:23:16Z" finished-at="2019-07-08T16:36:43Z">
-      <class name="com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks">
-        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@17f7cd29]" name="run" is-config="true" duration-ms="239" started-at="2019-07-08T12:23:16Z" finished-at="2019-07-08T12:23:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@2ddc5c07]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="17165" started-at="2019-07-09T16:24:46Z" finished-at="2019-07-09T16:25:03Z">
+      <class name="com.qa.meschino.pages.test">
+        <test-method status="PASS" signature="t()[pri:0, instance:com.qa.meschino.pages.test@29ee9faa]" name="t" duration-ms="16992" started-at="2019-07-09T12:24:46Z" finished-at="2019-07-09T12:25:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- run -->
-        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@17f7cd29]" name="startup" is-config="true" duration-ms="48" started-at="2019-07-08T12:23:16Z" finished-at="2019-07-08T12:23:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks.LearnAndEarn(java.util.Hashtable) throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="LearnAndEarn(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@17f7cd29]" name="LearnAndEarn" duration-ms="800198" started-at="2019-07-08T12:23:16Z" data-provider="LearnAndEarn" finished-at="2019-07-08T12:36:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Password=Test@123, Runmode=Y, UserName=neil@peter.com, Description=Verify that, all learn and earn links are working fine, TCID=TC57}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LearnAndEarn -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@17f7cd29]" name="endTest" is-config="true" duration-ms="6428" started-at="2019-07-08T12:36:36Z" finished-at="2019-07-08T12:36:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=LearnAndEarn status=SUCCESS method=VerifyLearnAndEarnLinks.LearnAndEarn(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks@17f7cd29] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks -->
-    </test> <!-- VerifyLearnAndEarnLinks -->
-  </suite> <!-- LearnAndEarnSuite -->
+        </test-method> <!-- t -->
+      </class> <!-- com.qa.meschino.pages.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

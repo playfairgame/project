@@ -12,6 +12,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -63,6 +64,10 @@ public class BaseTest {
 			
 			System.setProperty("webdriver.chrome.driver",MWConstants.CHROME_DRIVER_EXE );
 			 driver = new ChromeDriver();
+		}else if (browser.equalsIgnoreCase("Edge")){
+			
+			System.setProperty("webdriver.edge.driver",MWConstants.EDGE_DRIVER_EXE );
+			 driver = new EdgeDriver();
 		}
 		
 		driver.manage().window().maximize();
