@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LearnAndEarnSuite]">
-  <listeners>
-    <listener class-name="com.qa.meschino.extentReportListener.Listeners"/>
-  </listeners>
-  <test name="VerifyLearnAndEarnLinks(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks">
+      <class name="com.qa.meschino.pages.test">
         <methods>
-          <include name="LearnAndEarn" invocation-numbers="0"/>
-          <include name="startup"/>
-          <include name="run"/>
-          <include name="endTest"/>
+          <include name="t"/>
         </methods>
-      </class> <!-- com.qa.meschino.testcases.LearnAndEarn.VerifyLearnAndEarnLinks -->
+      </class> <!-- com.qa.meschino.pages.test -->
     </classes>
-  </test> <!-- VerifyLearnAndEarnLinks(failed) -->
-</suite> <!-- Failed suite [LearnAndEarnSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
