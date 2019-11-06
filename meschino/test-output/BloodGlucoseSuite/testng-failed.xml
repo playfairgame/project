@@ -6,22 +6,28 @@
   </listeners>
   <test name="Test(failed)">
     <classes>
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
+        <methods>
+          <include name="startup"/>
+          <include name="run"/>
+          <include name="endTest"/>
+          <include name="BloodGlucoseTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
       <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
         <methods>
-          <include name="BloodGlucoseDeleteLogs"/>
-          <include name="run"/>
+          <include name="startup"/>
+          <include name="BloodGlucoseDeleteLogs" invocation-numbers="0"/>
+          <include name="endTest"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
       <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
         <methods>
-          <include name="BloodGlucoseOnProfile"/>
+          <include name="startup"/>
+          <include name="endTest"/>
+          <include name="BloodGlucoseOnProfile" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
-      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
-        <methods>
-          <include name="BloodGlucoseTest"/>
-        </methods>
-      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [BloodGlucoseSuite] -->
