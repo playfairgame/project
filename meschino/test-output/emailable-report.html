@@ -31,14 +31,87 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">17.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><th colspan="7">TestNg datadriver Suite</th></tr>
+<tr><th colspan="7">BloodGlucoseSuite</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">4</td><td class="numi">1</td><td class="numi_attn">6</td><td class="numi">0</td><td class="numi">56.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">com.qa.meschino.pages.test</td><td><a href="#m1"><b>t</b>  </a></td><td class="numi">1</td><td>1562689486187</td><td class="numi">16992</td></tr>
+<tr><th colspan="4">TestNg datadriver Suite</th></tr>
+<tr><th colspan="4">BloodGlucoseSuite</th></tr>
+<tr><th colspan="4">Test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="4">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog</td><td><a href="#m1"><b>BloodGlucoseTest</b>  </a></td><td class="numi">3</td><td>1573059187500</td><td class="numi">5519</td></tr><tr class="skippedodd"><td><a href="#m2"><b>BloodGlucoseTest</b>  </a></td><td class="numi">3</td><td>1573059187500</td><td class="numi">5519</td></tr><tr class="skippedodd"><td><a href="#m3"><b>BloodGlucoseTest</b>  </a></td><td class="numi">3</td><td>1573059187500</td><td class="numi">5519</td></tr><tr class="skippedodd"><td><a href="#m4"><b>BloodGlucoseTest</b>  </a></td><td class="numi">3</td><td>1573059187500</td><td class="numi">5519</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile</td><td><a href="#m5"><b>BloodGlucoseOnProfile</b>  </a></td><td class="numi">1</td><td>1573059243657</td><td class="numi">4</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete</td><td><a href="#m6"><b>BloodGlucoseDeleteLogs</b>  </a></td><td class="numi">1</td><td>1573059243751</td><td class="numi">2</td></tr>
+<tr><th colspan="4">Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="4">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog</td><td><a href="#m7"><b>BloodGlucoseTest</b>  </a></td><td class="numi">1</td><td>1573059193120</td><td class="numi">50111</td></tr><tr class="passedodd"><td><a href="#m8"><b>BloodGlucoseTest</b>  </a></td><td class="numi">1</td><td>1573059193120</td><td class="numi">50111</td></tr><tr class="passedodd"><td><a href="#m9"><b>BloodGlucoseTest</b>  </a></td><td class="numi">1</td><td>1573059193120</td><td class="numi">50111</td></tr><tr class="passedodd"><td><a href="#m10"><b>BloodGlucoseTest</b>  </a></td><td class="numi">1</td><td>1573059193120</td><td class="numi">50111</td></tr>
 </table>
-<h1>Default test</h1>
-<h2 id="m1">com.qa.meschino.pages.test:t</h2>
+<h1>Test</h1>
+<h2 id="m1">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog:BloodGlucoseTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system does not allow to log BG without BG value, Expected=Level must be greater than zero., TCID=TC05, Runmode=N, BGLevel=0.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Skipping Test case  as runmode is No</p>
+com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+<br/>26 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog:BloodGlucoseTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system does not allow to log BG without valid date, Expected=Date is required., TCID=TC04, Runmode=N, BGLevel=20.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=0}</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Skipping Test case  as runmode is No</p>
+com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+<br/>26 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile:BloodGlucoseOnProfile</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system updates BG values on Profile page, Source=Blood Glucose Tracker, TCID=TC10, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Skipping Test case  as runmode is No</p>
+com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(VerifyBloodGlucoseOnProfile.java:31)
+<br/>26 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog:BloodGlucoseTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system does not allow to log BG with value more than 99, Expected=Level must be less than or equal to 99., TCID=TC06, Runmode=N, BGLevel=100.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Skipping Test case  as runmode is No</p>
+com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+<br/>26 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete:BloodGlucoseDeleteLogs</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system successfully deletes Blood Glucose logs from Tracker, Expected=No record found., TCID=TC09, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Skipping the Test case as runmode is NO</p>
+com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(VerifyBloodGlucoseDelete.java:30)
+<br/>26 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog:BloodGlucoseTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>{Description=Verify that, system successfully logs BG with Current Date and Time, Expected=Successfully Saved, TCID=TC07, Runmode=Y, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}</td>
+</tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

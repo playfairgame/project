@@ -1,17 +1,405 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="5" failed="0" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17165" started-at="2019-07-09T16:24:46Z" finished-at="2019-07-09T16:25:03Z">
+  <suite name="TestNg datadriver Suite" duration-ms="0" started-at="2019-11-06T16:54:08Z" finished-at="2019-11-06T16:54:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17165" started-at="2019-07-09T16:24:46Z" finished-at="2019-07-09T16:25:03Z">
-      <class name="com.qa.meschino.pages.test">
-        <test-method status="PASS" signature="t()[pri:0, instance:com.qa.meschino.pages.test@29ee9faa]" name="t" duration-ms="16992" started-at="2019-07-09T12:24:46Z" finished-at="2019-07-09T12:25:03Z">
+  </suite> <!-- TestNg datadriver Suite -->
+  <suite name="BloodGlucoseSuite" duration-ms="56637" started-at="2019-11-06T16:53:07Z" finished-at="2019-11-06T16:54:03Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="56637" started-at="2019-11-06T16:53:07Z" finished-at="2019-11-06T16:54:03Z">
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog">
+        <test-method status="PASS" signature="run(org.testng.ITestContext)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="run" is-config="true" duration-ms="381" started-at="2019-11-06T11:53:06Z" finished-at="2019-11-06T11:53:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1bb9aa43]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- t -->
-      </class> <!-- com.qa.meschino.pages.test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- run -->
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="startup" is-config="true" duration-ms="61" started-at="2019-11-06T11:53:07Z" finished-at="2019-11-06T11:53:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="BloodGlucoseTest" duration-ms="126" started-at="2019-11-06T11:53:07Z" data-provider="BloodGlucoseTest" finished-at="2019-11-06T11:53:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system does not allow to log BG without valid date, Expected=Date is required., TCID=TC04, Runmode=N, BGLevel=20.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=0}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping Test case  as runmode is No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseTest -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="endTest" is-config="true" duration-ms="5216" started-at="2019-11-06T11:53:07Z" finished-at="2019-11-06T11:53:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="startup" is-config="true" duration-ms="1" started-at="2019-11-06T11:53:12Z" finished-at="2019-11-06T11:53:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="BloodGlucoseTest" duration-ms="5" started-at="2019-11-06T11:53:12Z" data-provider="BloodGlucoseTest" finished-at="2019-11-06T11:53:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system does not allow to log BG without BG value, Expected=Level must be greater than zero., TCID=TC05, Runmode=N, BGLevel=0.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping Test case  as runmode is No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseTest -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="endTest" is-config="true" duration-ms="157" started-at="2019-11-06T11:53:12Z" finished-at="2019-11-06T11:53:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="startup" is-config="true" duration-ms="1" started-at="2019-11-06T11:53:13Z" finished-at="2019-11-06T11:53:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="BloodGlucoseTest" duration-ms="4" started-at="2019-11-06T11:53:13Z" data-provider="BloodGlucoseTest" finished-at="2019-11-06T11:53:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system does not allow to log BG with value more than 99, Expected=Level must be less than or equal to 99., TCID=TC06, Runmode=N, BGLevel=100.00, UserName=neil@peter.com, Time=10:10 PM, Password=Test@123, Date=10/10/2010}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping Test case  as runmode is No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(VerifyBloodGlucoseLog.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseTest -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="endTest" is-config="true" duration-ms="99" started-at="2019-11-06T11:53:13Z" finished-at="2019-11-06T11:53:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseTest status=SKIP method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="startup" is-config="true" duration-ms="0" started-at="2019-11-06T11:53:13Z" finished-at="2019-11-06T11:53:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable) throws java.text.ParseException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="BloodGlucoseTest" duration-ms="50111" started-at="2019-11-06T11:53:13Z" data-provider="BloodGlucoseTest" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system successfully logs BG with Current Date and Time, Expected=Successfully Saved, TCID=TC07, Runmode=Y, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseTest -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29]" name="endTest" is-config="true" duration-ms="403" started-at="2019-11-06T11:54:03Z" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseTest status=SUCCESS method=VerifyBloodGlucoseLog.BloodGlucoseTest(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog@17f7cd29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseLog -->
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@33c911a1]" name="startup" is-config="true" duration-ms="0" started-at="2019-11-06T11:54:03Z" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(java.util.Hashtable) throws java.lang.InterruptedException,java.text.ParseException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="BloodGlucoseOnProfile(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@33c911a1]" name="BloodGlucoseOnProfile" duration-ms="4" started-at="2019-11-06T11:54:03Z" data-provider="BloodGlucoseOnProfile" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system updates BG values on Profile page, Source=Blood Glucose Tracker, TCID=TC10, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping Test case  as runmode is No]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping Test case  as runmode is No
+	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(VerifyBloodGlucoseOnProfile.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseOnProfile -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@33c911a1]" name="endTest" is-config="true" duration-ms="87" started-at="2019-11-06T11:54:03Z" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseOnProfile status=SKIP method=VerifyBloodGlucoseOnProfile.BloodGlucoseOnProfile(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile@33c911a1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseOnProfile -->
+      <class name="com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete">
+        <test-method status="PASS" signature="startup(java.lang.reflect.Method)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@65d09a04]" name="startup" is-config="true" duration-ms="0" started-at="2019-11-06T11:54:03Z" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(java.util.Hashtable) throws java.lang.InterruptedException,java.io.IOException,java.text.ParseException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method status="SKIP" signature="BloodGlucoseDeleteLogs(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@65d09a04]" name="BloodGlucoseDeleteLogs" duration-ms="2" started-at="2019-11-06T11:54:03Z" data-provider="BloodGlucoseDeleteLogs" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Description=Verify that, system successfully deletes Blood Glucose logs from Tracker, Expected=No record found., TCID=TC09, Runmode=N, BGLevel=15.00, UserName=neil@peter.com, Time=Current, Password=Test@123, Date=Current}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the Test case as runmode is NO]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the Test case as runmode is NO
+	at com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(VerifyBloodGlucoseDelete.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1194)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BloodGlucoseDeleteLogs -->
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@65d09a04]" name="endTest" is-config="true" duration-ms="76" started-at="2019-11-06T11:54:03Z" finished-at="2019-11-06T11:54:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BloodGlucoseDeleteLogs status=SKIP method=VerifyBloodGlucoseDelete.BloodGlucoseDeleteLogs(java.util.Hashtable)[pri:0, instance:com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete@65d09a04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.qa.meschino.testcases.BloodGlucoseTracker.VerifyBloodGlucoseDelete -->
+    </test> <!-- Test -->
+  </suite> <!-- BloodGlucoseSuite -->
 </testng-results>

@@ -208,11 +208,15 @@ public  void pickDate(String dateToSelect) throws ParseException{
 		
 		WebElement cal = driver.findElement(By.xpath(MWConstants.CALENDAR_SELECT_DAY));
 		
+		
+		int selectDay = Integer.parseInt(dayToSelect);
 		List<WebElement> days = cal.findElements(By.className("day"));
 		
+		dayToSelect = Integer.toString(selectDay);
 		for(int i=0;i<days.size();i++){
             
 			if(days.get(i).getText().equals(dayToSelect)){
+				
 			days.get(i).click();
 			break;
 			}

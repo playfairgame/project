@@ -14,10 +14,12 @@
    
       
   <!--     <suite-file path ="LoginSuite.xml"/>
-      <suite-file path ="BloodGlucoseSuite.xml"/>
- <suite-file path ="Hra_MaleSuite.xml"/>   
-  <suite-file path ="MeschinoResearchReviewsSuite.xml"/>  -->>
-  <suite-file path ="LearnAndEarnSuite.xml"/>    
+      
+ <suite-file path ="Hra_MaleSuite.xml"/>  
+  <suite-file path ="MeschinoResearchReviewsSuite.xml"/>  
+  <suite-file path ="LearnAndEarnSuite.xml"/>     -->>
+  
+  <suite-file path ="BloodGlucoseSuite.xml"/>
   </suit-files>
 
 

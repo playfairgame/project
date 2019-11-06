@@ -99,14 +99,14 @@ public class MeschinoResearchReviewPage extends BasePage{
 		 status = getResponseCode(href);
 		 // Need to check the response codes
 		if (status >= 400){
-			logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
+			logger.log(Status.ERROR, "*********** EXTERNAL LINK FAILED ****************: " + externalLinks.get(l).getText()+" STATUS CODE: "+ status);
 		}else{
-			logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);
+			logger.log(Status.INFO, "********* EXTERNAL LINK PASSED **********: " + externalLinks.get(l).getText()+ status);
 		}
 		
 		System.out.println(externalLinks.get(l).getText());
 		}else{
-			logger.log(Status.INFO, "HREF Is NULL");
+			logger.log(Status.INFO, "***** HREF Is NULL ******");
 		}
 	}
 	
@@ -131,14 +131,14 @@ public class MeschinoResearchReviewPage extends BasePage{
 			 status = getResponseCode(href);
 			 // Need to check the response codes
 			if (status >= 400){
-				logger.log(Status.ERROR, "External Link Failed: " + externalLinks.get(l).getText()+" Status Code: "+ status);
+				logger.log(Status.ERROR, "********* EXTERNAL LINK FAILED **************: " + externalLinks.get(l).getText()+" STATUS CODE: "+ status);
 			}else{
-				logger.log(Status.INFO, "External Link Passed: " + externalLinks.get(l).getText()+ status);
+				logger.log(Status.INFO, "*********** EXTERNAL LINK PASSED ****************: " + externalLinks.get(l).getText()+ status);
 			}
 			
 			System.out.println(externalLinks.get(l).getText());
 			}else{
-				logger.log(Status.INFO, "HREF Is NULL");
+				logger.log(Status.INFO, "****** HREF Is NULL **********");
 			}
 		}
 		
@@ -174,7 +174,7 @@ public int checkVideos() throws InterruptedException{
 			    	 
 			    	 if (title.equalsIgnoreCase("Page Not Found")){
 			    		 counter= counter+1; 
-				    	 logger.log(Status.ERROR, "Link Failed ----> "+ link);
+				    	 logger.log(Status.ERROR, "********* LINK FAILED ************** ----> "+ link);
 				    	
 				    	 findAndWait(reviewlink, 20).click();
 			    	 //driver.findElement(By.xpath("//div[@class='header-navigation pull-right font-transform-inherit']/ul/li[5]")).click();
@@ -185,7 +185,7 @@ public int checkVideos() throws InterruptedException{
 			    	 
 			    	 }else{
 			    		 
-			    		 logger.log(Status.ERROR, "Link Failed ----> "+ link);
+			    		 logger.log(Status.ERROR, "********* LINK FAILED ************** ----> "+ link);
 				    	 counter= counter+1; 
 				    findAndWait(reviewsidebarlink, 20).click();
 				    	 //driver.findElement(By.xpath("//div[@class='page-sidebar navbar-collapse collapse']/ul/li[5]/a")).click();
@@ -196,11 +196,11 @@ public int checkVideos() throws InterruptedException{
 			     }  
 			     else{
 			    	 
-			    	 logger.log(Status.INFO, "Link Passed --> "+ link);
+			    	 logger.log(Status.INFO, "********* LINK PASSED ************** --> "+ link);
 			    	 
 			    	// Check number of links in the Video    "HTML", "Usage: <b>BOLD TEXT</b>"
 				    	
-			    	 logger.log(Status.INFO, "Checking the Links on the Video: "+ link);
+			    	 logger.log(Status.INFO, "CHECKING LINKS ON THE VIDEO: "+ link);
 			    	 
 			    	 findLinksOnVideos();
 			    	 
@@ -220,7 +220,7 @@ public int checkVideos() throws InterruptedException{
 				
 			} // if ends
 			else {
-				logger.log(Status.INFO, "Record not found");
+				logger.log(Status.INFO, "******** RECORD NOT FOUND **********");
 		     	break;
 			}
 			
@@ -264,7 +264,7 @@ public int checkArticles() throws InterruptedException{
 		    	 
 		    	 if (title.equalsIgnoreCase("Page Not Found")){
 		    		 counter= counter+1; 
-			    	 logger.log(Status.ERROR, "Link Failed ----> "+ link);
+			    	 logger.log(Status.ERROR, "********* LINK FAILED ******** ----> "+ link);
 			    	
 			    	 findAndWait(reviewlink, 20).click();
 		    	 //driver.findElement(By.xpath("//div[@class='header-navigation pull-right font-transform-inherit']/ul/li[5]")).click();
@@ -275,7 +275,7 @@ public int checkArticles() throws InterruptedException{
 		    	 
 		    	 }else{
 		    		 
-		    		 logger.log(Status.ERROR, "Link Failed ----> "+ link);
+		    		 logger.log(Status.ERROR, "********* LINK FAILED ******** ----> "+ link);
 			    	 counter= counter+1; 
 			    findAndWait(reviewsidebarlink, 20).click();
 			    	 //driver.findElement(By.xpath("//div[@class='page-sidebar navbar-collapse collapse']/ul/li[5]/a")).click();
@@ -286,10 +286,10 @@ public int checkArticles() throws InterruptedException{
 		     }  
 		     else{
 		    	 
-		    	 logger.log(Status.INFO, "Link Passed --> "+ link);
+		    	 logger.log(Status.INFO, "******* LINK PASSED ********* -----> "+ link);
 // Check number of links in the Article    "HTML", "Usage: <b>BOLD TEXT</b>"
 		    	
-		    	 logger.log(Status.INFO, "Checking the Links on the Article: "+ link);
+		    	 logger.log(Status.INFO, "*******************  CHECKING LINKS ON THE ARTICLE **************: "+ link);
 		    	 
 		    	 findLinksOnArticle();
 		    	 
@@ -316,7 +316,7 @@ public int checkArticles() throws InterruptedException{
 			
 		} // if ends
 		else {
-			logger.log(Status.INFO, "Record not found");
+			logger.log(Status.INFO, "************** RECORD NOT FOUND *************");
 	     	break;
 		}
 		

@@ -83,7 +83,7 @@ public class VerifyBloodGlucoseLog extends BaseTest{
 	    	t.clickOnCalendar();
 	    	
 	    	if(data.get("Date").equalsIgnoreCase("Current")){
-	    		
+	    		System.out.println("************************* " + t.getCurrentDate());
 	    		t.pickDate(t.getCurrentDate());
 	    		
 	    	}
